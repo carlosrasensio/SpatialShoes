@@ -8,6 +8,8 @@
 - [Instalación](#instalación)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Funcionalidades](#funcionalidades)
+- [Modelo de Datos](#modelo-de-datos)
+- [Diseño de Interfaz](#diseño-de-interfaz)
 - [Arquitectura](#arquitectura)
 
 ## Requisitos
@@ -37,7 +39,7 @@
 ## Estructura del Proyecto
 
 - **Models**: Contiene el archivo `Shoe.swift` que define la estructura de datos del zapato.
-- **ViewModels**: Implementación de la lógica de negocio y enlace entre modelos y vistas (MVVM).
+- **ViewModels**: Implementación de la lógica de negocio y enlace entre modelos y vistas.
 - **Views**: Contiene las vistas de SwiftUI para la interfaz de usuario.
 - **Reality Assets**: Recursos 3D (`.usdz`) y escenas de Reality Composer Pro.
 - **Resources**: Archivo `Shoes.json` con la información del catálogo de zapatos.
@@ -51,6 +53,14 @@
 5. **Exploración Inmersiva**: Carrusel de zapatos con botones de "Siguiente" y "Anterior" para una experiencia de exploración envolvente.
 6. **Ventana Volumétrica**: Visualización detallada de cada zapato en una ventana volumétrica interactiva.
 
+## Modelo de Datos
+
+Los datos se cargan desde un archivo `Shoes.json` y no son editables desde la aplicación.
+
+## Diseño de interfaz
+
+La interfaz sigue la [Guía de Diseño para visionOS de Apple](https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos) y utiliza componentes nativos de SwiftUI para asegurar una experiencia de usuario coherente y accesible en dispositivos visionOS.
+
 ## Arquitectura
 
-Siguiendo las recomendaciones de Apple, se ha utilizado una arquitectura MMVM apoyandose en las bases de Clean Architecture.
+El proyecto adopta una arquitectura MVVM (Model-View-ViewModel) siguiendo los principios de Clean Architecture.
