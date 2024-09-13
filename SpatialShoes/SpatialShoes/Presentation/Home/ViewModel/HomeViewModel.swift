@@ -16,17 +16,25 @@ final class HomeViewModel {
     
     // MARK: - Private Properties
     
-    private var repository: ShoeDataRepositoryProtocol
+    private var repository: ShoeDataRepository
 
     // MARK: - Initializer
     
-    init(repository: ShoeDataRepositoryProtocol = ShoeDataRepository()) {
+    init(repository: ShoeDataRepository = ShoeDataRepository()) {
         self.repository = repository
         do {
-            shoes = try repository.loadShoes()
+            shoes = try repository.loadShoes(fileName: Constants.fileName)
         } catch {
             shoes = []
             print("❌ Error decoding JSON: \(error.localizedDescription)")
         }
+    }
+}
+
+// MARK: - Constants
+
+private extension HomeViewModel {
+    enum Constants {
+        static let fileName = "Shoes"
     }
 }

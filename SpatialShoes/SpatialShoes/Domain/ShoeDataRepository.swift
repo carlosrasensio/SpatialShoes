@@ -5,24 +5,11 @@
 //  Created by Carlos Rodriguez Asensio on 13/9/24.
 //
 
-protocol ShoeDataRepositoryProtocol {
-    func loadShoes() throws -> [Shoe]
-}
+import Foundation
 
-final class ShoeDataRepository {}
-
-// MARK: - ShoeDataRepositoryProtocol
-
-extension ShoeDataRepository: ShoeDataRepositoryProtocol {
-    func loadShoes() throws -> [Shoe] {
-        try JSONManager.load(fileName: Constants.fileName, type: [Shoe].self) ?? []
-    }
-}
-
-// MARK: - Constants
-
-private extension ShoeDataRepository {
-    enum Constants {
-        static let fileName = "Shoes"
+final class ShoeDataRepository {
+    func loadShoes(fileName: String,
+                   bundle: Bundle = Bundle(for: JSONManager.self)) throws -> [Shoe] {
+        try JSONManager.load(fileName: fileName, type: [Shoe].self, bundle: bundle) ?? []
     }
 }

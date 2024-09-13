@@ -20,7 +20,7 @@ private extension HomeFactory {
         .init(repository: makeShoeDataRepository())
     }
     
-    static func makeShoeDataRepository() -> ShoeDataRepositoryProtocol {
+    static func makeShoeDataRepository() -> ShoeDataRepository {
         ShoeDataRepository()
     }
 }

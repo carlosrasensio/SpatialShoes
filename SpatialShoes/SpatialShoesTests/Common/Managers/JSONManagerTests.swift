@@ -9,11 +9,15 @@ import XCTest
 @testable import SpatialShoes
 
 final class JSONManagerTests: XCTestCase {
-    func testLoadShoesFromJSON() throws {
+    func testLoadShoesFromJSONSuccess() throws {
+        // Given
+        let fileName = "ShoesTest"
+        let bundle = Bundle(for: ShoeDataRepositoryTests.self)
+
         // When
-        guard let shoes: [Shoe] = try JSONManager.load(fileName: "ShoesTest", 
+        guard let shoes: [Shoe] = try JSONManager.load(fileName: fileName,
                                                        type: [Shoe].self,
-                                                       bundle: Bundle(for: JSONManagerTests.self)) else {
+                                                       bundle: bundle) else {
             XCTFail("❌ Error decoding JSON file")
             return
         }
