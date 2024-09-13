@@ -8,8 +8,10 @@
 import Foundation
 
 final class JSONManager {
-    static func load<T: Decodable>(fileName: String, type: T.Type) throws -> T? {
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+    static func load<T: Decodable>(fileName: String,
+                                   type: T.Type,
+                                   bundle: Bundle = Bundle(for: JSONManager.self)) throws -> T? {
+        guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
             print("❌ JSON file not sound: \(fileName)")
             return nil
         }
