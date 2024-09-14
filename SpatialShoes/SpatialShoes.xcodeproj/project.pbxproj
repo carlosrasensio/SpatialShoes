@@ -76,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7014154A2C964E530099AD8F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				707516A42C93AEED000BEE92 /* Detail */,
+				707516902C93A744000BEE92 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7014154B2C964E690099AD8F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7075169D2C93AA92000BEE92 /* ShoeDataRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		7075166F2C93A680000BEE92 = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +119,7 @@
 				7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */,
 				707516952C93A7F7000BEE92 /* Common */,
 				7075168F2C93A734000BEE92 /* Presentation */,
-				7075169B2C93AA6E000BEE92 /* Data */,
+				7014154B2C964E690099AD8F /* Data */,
 				7075169C2C93AA73000BEE92 /* Domain */,
 				707516852C93A681000BEE92 /* Preview Content */,
 				7075168E2C93A721000BEE92 /* Resources */,
@@ -138,8 +155,7 @@
 		7075168F2C93A734000BEE92 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				707516A42C93AEED000BEE92 /* Detail */,
-				707516902C93A744000BEE92 /* Home */,
+				7014154A2C964E530099AD8F /* Modules */,
 				707516982C93A82B000BEE92 /* Models */,
 			);
 			path = Presentation;
@@ -171,17 +187,9 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7075169B2C93AA6E000BEE92 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		7075169C2C93AA73000BEE92 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				7075169D2C93AA92000BEE92 /* ShoeDataRepository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
