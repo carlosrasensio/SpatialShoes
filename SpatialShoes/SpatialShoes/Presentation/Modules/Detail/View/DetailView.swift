@@ -27,7 +27,8 @@ struct DetailView: View {
                 .font(.largeTitle)
                 .padding()
 
-            // TODO: Reality View
+            Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle)
+                .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
             
             Button("Ver en ventana volumétrica") {
                 isPresented.toggle()
