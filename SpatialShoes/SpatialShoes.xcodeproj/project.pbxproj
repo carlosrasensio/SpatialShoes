@@ -19,6 +19,7 @@
 		707516A62C93AF02000BEE92 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A52C93AF02000BEE92 /* DetailView.swift */; };
 		707516A92C93AF1B000BEE92 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A82C93AF1B000BEE92 /* DetailViewModel.swift */; };
 		707516AC2C93BA59000BEE92 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516AB2C93BA59000BEE92 /* HomeFactory.swift */; };
+		708108122C96698600C412B2 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 708108112C96698600C412B2 /* SpatialShoesScene */; };
 		708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */; };
 		708376FF2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FE2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift */; };
 		708377012C93D355008DC7AB /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 708377002C93D355008DC7AB /* ShoesTest.json */; };
@@ -49,6 +50,7 @@
 		707516A52C93AF02000BEE92 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		707516A82C93AF1B000BEE92 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		707516AB2C93BA59000BEE92 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		7081080F2C96697800C412B2 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = ../../../../SpatialShoesScene; sourceTree = "<group>"; };
 		708376EC2C93D118008DC7AB /* SpatialShoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpatialShoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerTests.swift; sourceTree = "<group>"; };
 		708376FE2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDataRepositoryTests.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				708108122C96698600C412B2 /* SpatialShoesScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +100,7 @@
 				7075167B2C93A680000BEE92 /* Packages */,
 				708376ED2C93D118008DC7AB /* SpatialShoesTests */,
 				707516792C93A680000BEE92 /* Products */,
+				708108102C96698600C412B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +131,7 @@
 		7075167B2C93A680000BEE92 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				7081080F2C96697800C412B2 /* SpatialShoesScene */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -247,6 +252,13 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		708108102C96698600C412B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		708376ED2C93D118008DC7AB /* SpatialShoesTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +318,7 @@
 			);
 			name = SpatialShoes;
 			packageProductDependencies = (
+				708108112C96698600C412B2 /* SpatialShoesScene */,
 			);
 			productName = SpatialShoes;
 			productReference = 707516782C93A680000BEE92 /* SpatialShoes.app */;
@@ -665,6 +678,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		708108112C96698600C412B2 /* SpatialShoesScene */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpatialShoesScene;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 707516702C93A680000BEE92 /* Project object */;
 }
