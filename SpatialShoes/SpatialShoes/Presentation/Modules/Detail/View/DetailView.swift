@@ -5,8 +5,9 @@
 //  Created by Carlos Rodriguez Asensio on 13/9/24.
 //
 
-import SwiftUI
 import RealityKit
+import SpatialShoesScene
+import SwiftUI
 
 struct DetailView: View {
     
@@ -39,7 +40,9 @@ struct DetailView: View {
 //                Text(shoe.certifications)
 //            }
 
-            // TODO: Reality View
+            Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle)
+                .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
+
             
             Button(action: {
                 viewModel.isRotating.toggle()
