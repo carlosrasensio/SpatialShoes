@@ -27,6 +27,7 @@
 		708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */; };
 		708376FF2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FE2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift */; };
 		708377012C93D355008DC7AB /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 708377002C93D355008DC7AB /* ShoesTest.json */; };
+		709982B62C979DFA00B0257A /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 709982B52C979DFA00B0257A /* SpatialShoesScene */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerTests.swift; sourceTree = "<group>"; };
 		708376FE2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDataRepositoryTests.swift; sourceTree = "<group>"; };
 		708377002C93D355008DC7AB /* ShoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
+		709982B32C979DEA00B0257A /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = ../../../../SpatialShoesScene; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709982B62C979DFA00B0257A /* SpatialShoesScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +119,7 @@
 				7075167B2C93A680000BEE92 /* Packages */,
 				708376ED2C93D118008DC7AB /* SpatialShoesTests */,
 				707516792C93A680000BEE92 /* Products */,
+				709982B42C979DFA00B0257A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +150,7 @@
 		7075167B2C93A680000BEE92 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				709982B32C979DEA00B0257A /* SpatialShoesScene */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -312,6 +317,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		709982B42C979DFA00B0257A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +341,7 @@
 			);
 			name = SpatialShoes;
 			packageProductDependencies = (
+				709982B52C979DFA00B0257A /* SpatialShoesScene */,
 			);
 			productName = SpatialShoes;
 			productReference = 707516782C93A680000BEE92 /* SpatialShoes.app */;
@@ -693,6 +706,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		709982B52C979DFA00B0257A /* SpatialShoesScene */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpatialShoesScene;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 707516702C93A680000BEE92 /* Project object */;
 }
