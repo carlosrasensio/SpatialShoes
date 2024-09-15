@@ -11,16 +11,16 @@ import RealityKitContent
 
 struct HomeView: View {
     
-    // MARK: - Properties
+    // MARK: - Private Properties
     
-    @State var viewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
 
     // MARK: - View
     
     var body: some View {
         NavigationView {
             List(viewModel.shoes) { shoe in
-                NavigationLink(destination: DetailView(shoe: shoe)) {
+                NavigationLink(destination: DetailFactory.make(with: shoe)) {
                     HStack {
                         Text(shoe.name)
                             .font(.headline)
@@ -46,5 +46,5 @@ private extension HomeView {
 // MARK: - Preview
 
 #Preview(windowStyle: .automatic) {
-    HomeView()
+    HomeView(viewModel: HomeViewModel(repository: ShoeDataRepository()))
 }
