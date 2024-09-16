@@ -13,7 +13,7 @@ final class ShoeDataRepository {
         guard let bundle else { throw ShoeDataError.bundleError }
         guard let result = try JSONManager.shared.load(fileName: fileName,
                                                        type: [Shoe].self,
-                                                       bundle: bundle) else { throw ShoeDataError.parsingError(fileName: fileName) }
+                                                       bundle: bundle) else { throw ShoeDataError.parsingError }
         return result
     }
 }
@@ -23,5 +23,25 @@ final class ShoeDataRepository {
 enum ShoeDataError: Error {
     case filenameError
     case bundleError
-    case parsingError(fileName: String)
+    case parsingError
+    
+    var message: String {
+        switch self {
+        case .filenameError: Localizables.Errors.fileName
+        case .bundleError: Localizables.Errors.bundle
+        case .parsingError: Localizables.Errors.parsing
+        }
+    }
+}
+
+// MARK: - ShoeDataError.Localizables
+
+private extension ShoeDataError {
+    enum Localizables {
+        enum Errors {
+            static let fileName = "Error con el nombre del fichero JSON"
+            static let bundle = "Error con el bundle"
+            static let parsing = "Error cargando el fichero JSON"
+        }
+    }
 }

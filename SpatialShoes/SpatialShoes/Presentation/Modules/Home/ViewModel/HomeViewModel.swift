@@ -11,10 +11,10 @@ final class HomeViewModel: ObservableObject {
     
     // MARK: - Public Properties
     
-    var shoes: [Shoe] = []
-    @Published var errorMessage: String?
     @Published var showLoader: Bool = false
     @Published var showAlert: Bool = false
+    var shoes: [Shoe] = []
+    var errorMessage: String?
     
     // MARK: - Private Properties
     
@@ -37,22 +37,15 @@ final class HomeViewModel: ObservableObject {
                                              bundle: Bundle(for: JSONManager.self))
             showLoader = false
         } catch let error as ShoeDataError {
-            switch error {
-            case .filenameError:
-                errorMessage = Localizables.fileNameError
-            case .bundleError:
-                errorMessage = Localizables.bundleError
-            case .parsingError(let fileName):
-                errorMessage = String(format: Localizables.parsingError, fileName)
-            }
+            errorMessage = error.message
             showLoader = false
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Localizables.Errors.unknown)")
         } catch {
-            errorMessage = Localizables.unknownError
+            errorMessage = Localizables.Errors.unknown
             showLoader = false
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Localizables.Errors.unknown)")
         }
     }
 }
@@ -69,9 +62,8 @@ private extension HomeViewModel {
 
 private extension HomeViewModel {
     enum Localizables {
-        static let fileNameError = "Error con el nombre del fichero JSON"
-        static let bundleError = "Error con el bundle"
-        static let parsingError = "Error cargando el fichero '%@.json'"
-        static let unknownError = "Error por determinar"
+        enum Errors {
+            static let unknown = "Error por determinar"
+        }
     }
 }
