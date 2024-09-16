@@ -9,8 +9,8 @@ import Foundation
 
 final class ShoeDataRepository {
     func loadShoes(fileName: String?, bundle: Bundle?) throws -> [Shoe] {
-        guard let fileName else { throw ShoeDataError.wrongFileName }
-        guard let bundle else { throw ShoeDataError.wrongBundle }
+        guard let fileName else { throw ShoeDataError.filenameError }
+        guard let bundle else { throw ShoeDataError.bundleError }
         guard let result = try JSONManager.shared.load(fileName: fileName,
                                                        type: [Shoe].self,
                                                        bundle: bundle) else { throw ShoeDataError.parsingError(fileName: fileName) }
@@ -21,7 +21,7 @@ final class ShoeDataRepository {
 // MARK: - ShoeDataError
 
 enum ShoeDataError: Error {
-    case wrongFileName
-    case wrongBundle
+    case filenameError
+    case bundleError
     case parsingError(fileName: String)
 }

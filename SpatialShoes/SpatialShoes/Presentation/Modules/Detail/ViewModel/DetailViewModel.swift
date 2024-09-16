@@ -17,6 +17,7 @@ final class DetailViewModel: ObservableObject {
     @Published var favoriteShoes: [Shoe] = []
     @Published var errorMessage: String?
     @Published var showLoader: Bool = false
+    @Published var showAlert: Bool = false
         
     // MARK: - Private Properties
     
@@ -31,10 +32,14 @@ final class DetailViewModel: ObservableObject {
     // MARK: - Public Functions
     
     func toggleFavorite(_ shoe: Shoe) {
+        showLoader = true
+        errorMessage = nil
+        
         do {
             try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, shoe: shoe)
             isFavorite.toggle()
             favoriteShoes = favoriteShoesUseCase.favoriteShoes
+            showLoader = false
         } catch let error as DomainError {
             switch error {
             case .inputError:
@@ -47,10 +52,12 @@ final class DetailViewModel: ObservableObject {
                 errorMessage = "Error obteniendo las zapatillas de Favoritos"
             }
             showLoader = true
+            showAlert = true
             print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
         } catch {
             errorMessage = Constants.unknownError
             showLoader = true
+            showAlert = true
             print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
         }
     }
