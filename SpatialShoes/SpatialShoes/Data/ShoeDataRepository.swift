@@ -10,6 +10,6 @@ import Foundation
 final class ShoeDataRepository {
     func loadShoes(fileName: String,
                    bundle: Bundle = Bundle(for: JSONManager.self)) throws -> [Shoe] {
-        try JSONManager.load(fileName: fileName, type: [Shoe].self, bundle: bundle) ?? []
+        try JSONManager.shared.load(fileName: fileName, type: [Shoe].self, bundle: bundle) ?? []
     }
 }

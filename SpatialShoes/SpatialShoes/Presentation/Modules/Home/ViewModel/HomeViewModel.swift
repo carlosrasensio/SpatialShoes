@@ -8,7 +8,7 @@
 import SwiftUI
 
 @Observable
-final class HomeViewModel {
+final class HomeViewModel: ObservableObject {
     
     // MARK: - Public Properties
     
@@ -20,7 +20,7 @@ final class HomeViewModel {
 
     // MARK: - Initializer
     
-    init(repository: ShoeDataRepository = ShoeDataRepository()) {
+    init(repository: ShoeDataRepository) {
         self.repository = repository
         do {
             shoes = try repository.loadShoes(fileName: Constants.fileName)

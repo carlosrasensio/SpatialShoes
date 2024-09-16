@@ -13,7 +13,7 @@ final class HomeFactory {
     }
 }
 
-// MARK: - Private methods
+// MARK: - Private Functions
 
 private extension HomeFactory {
     static func makeHomeViewModel() -> HomeViewModel {

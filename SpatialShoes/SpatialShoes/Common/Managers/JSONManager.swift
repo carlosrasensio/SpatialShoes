@@ -8,7 +8,14 @@
 import Foundation
 
 final class JSONManager {
-    static func load<T: Decodable>(fileName: String,
+    
+    // MARK: - Public Properties
+    
+    static let shared = JSONManager()
+    
+    // MARK: - Public Functions
+
+    func load<T: Decodable>(fileName: String,
                                    type: T.Type,
                                    bundle: Bundle = Bundle(for: JSONManager.self)) throws -> T? {
         guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
