@@ -13,6 +13,8 @@ final class HomeViewModel: ObservableObject {
     
     var shoes: [Shoe] = []
     @Published var errorMessage: String?
+    @Published var showLoader: Bool = false
+    @Published var showAlert: Bool = false
     
     // MARK: - Private Properties
     
@@ -27,22 +29,30 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Public Functions
     
     func loadShoes() {
+        showLoader = true
+        errorMessage = nil
+        
         do {
             shoes = try repository.loadShoes(fileName: Constants.fileName,
                                              bundle: Bundle(for: JSONManager.self))
+            showLoader = false
         } catch let error as ShoeDataError {
             switch error {
-            case .wrongFileName:
-                errorMessage = "Error con el nombre del fichero JSON"
-            case .wrongBundle:
-                errorMessage = "Error con el bundle"
+            case .filenameError:
+                errorMessage = Localizables.fileNameError
+            case .bundleError:
+                errorMessage = Localizables.bundleError
             case .parsingError(let fileName):
-                errorMessage = "Error cargando el fichero '\(fileName).json'"
+                errorMessage = String(format: Localizables.parsingError, fileName)
             }
-            print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
+            showLoader = false
+            showAlert = true
+            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
         } catch {
-            errorMessage = Constants.unknownError
-            print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
+            errorMessage = Localizables.unknownError
+            showLoader = false
+            showAlert = true
+            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
         }
     }
 }
@@ -52,6 +62,16 @@ final class HomeViewModel: ObservableObject {
 private extension HomeViewModel {
     enum Constants {
         static let fileName = "Shoes"
+    }
+}
+
+// MARK: - Localizables
+
+private extension HomeViewModel {
+    enum Localizables {
+        static let fileNameError = "Error con el nombre del fichero JSON"
+        static let bundleError = "Error con el bundle"
+        static let parsingError = "Error cargando el fichero '%@.json'"
         static let unknownError = "Error por determinar"
     }
 }

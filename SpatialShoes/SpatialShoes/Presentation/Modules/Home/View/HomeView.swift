@@ -18,15 +18,19 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.shoes) { shoe in
-                NavigationLink(destination: DetailFactory.make(with: shoe)) {
-                    HStack {
-                        Text(shoe.name)
-                            .font(.headline)
+            if viewModel.showLoader {
+                ProgressView(Localizables.loaderText)
+            } else {
+                List(viewModel.shoes) { shoe in
+                    NavigationLink(destination: DetailFactory.make(with: shoe)) {
+                        HStack {
+                            Text(shoe.name)
+                                .font(.headline)
+                        }
                     }
                 }
+                .navigationTitle(Localizables.navigationtitle)
             }
-            .navigationTitle(Constants.navigationtitle)
         }
         .onAppear {
             viewModel.loadShoes()
@@ -34,10 +38,11 @@ struct HomeView: View {
     }
 }
 
-// MARK: - Constants
+// MARK: - Localizables
 
 private extension HomeView {
-    enum Constants {
+    enum Localizables {
         static let navigationtitle = "Catálogo de Zapatillas"
+        static let loaderText = "Cargando..."
     }
 }
