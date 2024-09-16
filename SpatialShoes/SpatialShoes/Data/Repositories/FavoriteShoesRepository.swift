@@ -10,16 +10,36 @@ import Foundation
 final class FavoriteShoesRepository {
     
     // MARK: - Public Functions
-
-    func fetchFavoriteShoes() throws -> [Shoe] {
-        try SwiftDataManager.shared.fetchFavoriteShoes()
-    }
     
     func saveFavoriteShoe(_ shoe: Shoe) throws {
-        try SwiftDataManager.shared.saveFavoriteShoe(shoe)
+        do {
+            try SwiftDataManager.shared.saveFavoriteShoe(shoe)
+        } catch {
+            throw FavoriteShoesDataError.saveError
+        }
     }
     
-    func deleteFavoriteShoe(with id: Int) throws{
-        try SwiftDataManager.shared.deleteFavoriteShoe(with: id)
+    func deleteFavoriteShoe(with id: Int) throws {
+        do {
+            try SwiftDataManager.shared.deleteFavoriteShoe(with: id)
+        } catch {
+            throw FavoriteShoesDataError.deleteError
+        }
     }
+    
+    func fetchFavoriteShoes() throws -> [Shoe] {
+        do {
+            return try SwiftDataManager.shared.fetchFavoriteShoes()
+        } catch {
+            throw FavoriteShoesDataError.fetchError
+        }
+    }
+}
+
+// MARK: - FavoriteShoesDataError
+
+enum FavoriteShoesDataError: Error {
+    case saveError
+    case deleteError
+    case fetchError
 }

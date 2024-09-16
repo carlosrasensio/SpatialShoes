@@ -20,7 +20,7 @@ struct SplashView: View {
             HomeFactory.make()
         } else {
             VStack {
-                Image("splash")
+                Image(Constants.splashImage)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 600, height: 400)
@@ -43,8 +43,10 @@ struct SplashView: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Constants
 
-#Preview {
-    SplashView()
+private extension SplashView {
+    enum Constants {
+        static let splashImage = "splash"
+    }
 }

@@ -15,6 +15,8 @@ final class DetailViewModel: ObservableObject {
     @Published var isRotating = false
     @Published var isFavorite = false
     @Published var favoriteShoes: [Shoe] = []
+    @Published var errorMessage: String?
+    @Published var showLoader: Bool = false
         
     // MARK: - Private Properties
     
@@ -33,9 +35,23 @@ final class DetailViewModel: ObservableObject {
             try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, shoe: shoe)
             isFavorite.toggle()
             favoriteShoes = favoriteShoesUseCase.favoriteShoes
+        } catch let error as DomainError {
+            switch error {
+            case .inputError:
+                errorMessage = "Error al obtener la información de la zapatilla"
+            case .saveError:
+                errorMessage = "Error guardando la zapatilla en Favoritos"
+            case .deleteError:
+                errorMessage = "Error borando la zapatilla de Favoritos"
+            case .fetchError:
+                errorMessage = "Error obteniendo las zapatillas de Favoritos"
+            }
+            showLoader = true
+            print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
         } catch {
-            // TODO: Show alert
-            print("❌ Error in [toggleFavorite]: \(error.localizedDescription)")
+            errorMessage = Constants.unknownError
+            showLoader = true
+            print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
         }
     }
     
@@ -45,5 +61,13 @@ final class DetailViewModel: ObservableObject {
     
     func toggleRotation() {
         isRotating.toggle()
+    }
+}
+
+// MARK: - Constants
+
+private extension DetailViewModel {
+    enum Constants {
+        static let unknownError = "Error por determinar"
     }
 }
