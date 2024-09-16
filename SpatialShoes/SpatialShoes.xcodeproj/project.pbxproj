@@ -13,6 +13,7 @@
 		702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */; };
 		702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC14A2C979091003248BF /* SwiftDataManager.swift */; };
 		70500CB02C97A5590042D23D /* DetailView+InfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CAF2C97A5590042D23D /* DetailView+InfoPanel.swift */; };
+		70500CB42C97B21D0042D23D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CB32C97B21D0042D23D /* SplashView.swift */; };
 		707516802C93A680000BEE92 /* SpatialShoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */; };
 		707516842C93A681000BEE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707516832C93A681000BEE92 /* Assets.xcassets */; };
 		707516872C93A681000BEE92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707516862C93A681000BEE92 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesRepository.swift; sourceTree = "<group>"; };
 		702EC14A2C979091003248BF /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		70500CAF2C97A5590042D23D /* DetailView+InfoPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+InfoPanel.swift"; sourceTree = "<group>"; };
+		70500CB32C97B21D0042D23D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		707516782C93A680000BEE92 /* SpatialShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialShoesApp.swift; sourceTree = "<group>"; };
 		707516832C93A681000BEE92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				707516A42C93AEED000BEE92 /* Detail */,
 				707516902C93A744000BEE92 /* Home */,
+				70500CB22C97B2020042D23D /* Splash */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -121,6 +124,14 @@
 				702EC1412C9783AE003248BF /* DetailView+VolumetricWindow.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		70500CB22C97B2020042D23D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				70500CB32C97B21D0042D23D /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		7075166F2C93A680000BEE92 = {
@@ -441,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7075169A2C93A84B000BEE92 /* Shoe.swift in Sources */,
+				70500CB42C97B21D0042D23D /* SplashView.swift in Sources */,
 				702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */,
 				702EC1472C978B32003248BF /* DetailFactory.swift in Sources */,
 				702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */,
