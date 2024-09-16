@@ -15,9 +15,9 @@ final class DetailViewModel: ObservableObject {
     @Published var isRotating = false
     @Published var isFavorite = false
     @Published var favoriteShoes: [Shoe] = []
-    @Published var errorMessage: String?
     @Published var showLoader: Bool = false
     @Published var showAlert: Bool = false
+    var errorMessage: String?
         
     // MARK: - Private Properties
     
@@ -34,31 +34,22 @@ final class DetailViewModel: ObservableObject {
     func toggleFavorite(_ shoe: Shoe) {
         showLoader = true
         errorMessage = nil
-        
+
         do {
             try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, shoe: shoe)
             isFavorite.toggle()
             favoriteShoes = favoriteShoesUseCase.favoriteShoes
             showLoader = false
-        } catch let error as DomainError {
-            switch error {
-            case .inputError:
-                errorMessage = "Error al obtener la información de la zapatilla"
-            case .saveError:
-                errorMessage = "Error guardando la zapatilla en Favoritos"
-            case .deleteError:
-                errorMessage = "Error borando la zapatilla de Favoritos"
-            case .fetchError:
-                errorMessage = "Error obteniendo las zapatillas de Favoritos"
-            }
+        } catch let error as FavoriteShoesDomainError {
+            errorMessage = error.message
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
         } catch {
-            errorMessage = Constants.unknownError
+            errorMessage = Localizables.unknownError
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Constants.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
         }
     }
     
@@ -74,7 +65,7 @@ final class DetailViewModel: ObservableObject {
 // MARK: - Constants
 
 private extension DetailViewModel {
-    enum Constants {
+    enum Localizables {
         static let unknownError = "Error por determinar"
     }
 }

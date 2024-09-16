@@ -32,7 +32,7 @@ final class FavoriteShoesUseCase {
     // MARK: - Public Funtions
     
     func execute(action: FavoriteShoeAction, shoe: Shoe? = nil) throws {
-        guard let shoe else { throw DomainError.inputError }
+        guard let shoe else { throw FavoriteShoesDomainError.inputError }
         
         do {
             switch action {
@@ -67,17 +67,39 @@ private extension FavoriteShoesUseCase {
 
 // MARK: - DomainError
 
-enum DomainError: Error {
+enum FavoriteShoesDomainError: Error {
     case inputError
     case saveError
     case deleteError
     case fetchError
+    
+    var message: String {
+        switch self {
+        case .inputError: Localizables.Errors.input
+        case .saveError: Localizables.Errors.save
+        case .deleteError: Localizables.Errors.delete
+        case .fetchError: Localizables.Errors.fetch
+        }
+    }
+}
+
+// MARK: - FavoriteShoesDomainError.Localizables
+
+private extension FavoriteShoesDomainError {
+    enum Localizables {
+        enum Errors {
+            static let input = "Error al obtener la información de la zapatilla"
+            static let save = "Error guardando la zapatilla en Favoritos"
+            static let delete = "Error borando la zapatilla de Favoritos"
+            static let fetch = "Error obteniendo las zapatillas de Favoritos"
+        }
+    }
 }
 
 // MARK: - FavoriteShoesDataError
 
 private extension FavoriteShoesDataError {
-    func mapToDomainError() -> DomainError {
+    func mapToDomainError() -> FavoriteShoesDomainError {
         switch self {
         case .saveError: .saveError
         case .deleteError: .deleteError
