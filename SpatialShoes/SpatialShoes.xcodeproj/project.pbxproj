@@ -90,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		700484E82C9878BE002D8742 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */,
+				7075169D2C93AA92000BEE92 /* ShoeDataRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		7014154A2C964E530099AD8F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +112,7 @@
 		7014154B2C964E690099AD8F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */,
-				7075169D2C93AA92000BEE92 /* ShoeDataRepository.swift */,
+				700484E82C9878BE002D8742 /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -134,16 +142,6 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		70500CB52C97B6420042D23D /* System */ = {
-			isa = PBXGroup;
-			children = (
-				707516832C93A681000BEE92 /* Assets.xcassets */,
-				707516882C93A681000BEE92 /* Info.plist */,
-			);
-			name = System;
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		7075166F2C93A680000BEE92 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +165,7 @@
 		7075167A2C93A680000BEE92 /* SpatialShoes */ = {
 			isa = PBXGroup;
 			children = (
+				707516882C93A681000BEE92 /* Info.plist */,
 				7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */,
 				707516952C93A7F7000BEE92 /* Common */,
 				7075168F2C93A734000BEE92 /* Presentation */,
@@ -174,7 +173,6 @@
 				7014154B2C964E690099AD8F /* Data */,
 				707516852C93A681000BEE92 /* Preview Content */,
 				7075168E2C93A721000BEE92 /* Resources */,
-				70500CB52C97B6420042D23D /* System */,
 			);
 			path = SpatialShoes;
 			sourceTree = "<group>";
@@ -198,6 +196,7 @@
 		7075168E2C93A721000BEE92 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				707516832C93A681000BEE92 /* Assets.xcassets */,
 				707516932C93A7AC000BEE92 /* Shoes.json */,
 			);
 			path = Resources;

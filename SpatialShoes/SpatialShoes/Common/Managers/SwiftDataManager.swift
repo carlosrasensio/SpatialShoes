@@ -22,7 +22,7 @@ final class SwiftDataManager {
         // TODO
     }
     
-    func removeFavoriteShoe(with id: Int) throws {
+    func deleteFavoriteShoe(with id: Int) throws {
         var favoriteShoes = try fetchFavoriteShoes()
         favoriteShoes.removeAll { $0.id == id }
         // TODO: Guardar resultado

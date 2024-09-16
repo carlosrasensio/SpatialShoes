@@ -7,8 +7,18 @@
 
 import Foundation
 
+enum FavoriteShoeAction {
+    case save
+    case delete
+    case fetch
+}
+
 final class FavoriteShoesUseCase {
 
+    // MARK: - Public Properties
+
+    @Published var favoriteShoes: [Shoe] = []
+    
     // MARK: - Private Properties
     
     private var repository: FavoriteShoesRepository
@@ -21,6 +31,23 @@ final class FavoriteShoesUseCase {
     
     // MARK: - Public Funtions
     
+    func execute(action: FavoriteShoeAction, shoe: Shoe? = nil) throws {
+        switch action {
+        case .save:
+            guard let shoe else { return }
+            try saveFavoriteShoe(shoe)
+        case .delete:
+            guard let shoe else { return }
+            try deleteFavoriteShoe(with: shoe.id)
+        case .fetch:
+            favoriteShoes = try fetchFavoriteShoes()
+        }
+    }
+}
+
+// MARK: - Private Functions
+
+private extension FavoriteShoesUseCase {
     func fetchFavoriteShoes() throws -> [Shoe] {
         try repository.fetchFavoriteShoes()
     }
@@ -29,7 +56,7 @@ final class FavoriteShoesUseCase {
        try repository.saveFavoriteShoe(shoe)
     }
     
-    func removeFavoriteShoe(with id: Int) throws {
-        try repository.removeFavoriteShoe(with: id)
+    func deleteFavoriteShoe(with id: Int) throws {
+        try repository.deleteFavoriteShoe(with: id)
     }
 }

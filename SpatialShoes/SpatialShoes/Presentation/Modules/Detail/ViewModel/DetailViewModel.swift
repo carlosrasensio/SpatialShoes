@@ -30,12 +30,9 @@ final class DetailViewModel: ObservableObject {
     
     func toggleFavorite(_ shoe: Shoe) {
         do {
-            if isFavorite {
-                try favoriteShoesUseCase.removeFavoriteShoe(with: shoe.id)
-            } else {
-                try favoriteShoesUseCase.saveFavoriteShoe(shoe)
-            }
+            try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, shoe: shoe)
             isFavorite.toggle()
+            favoriteShoes = favoriteShoesUseCase.favoriteShoes
         } catch {
             // TODO: Show alert
             print("❌ Error in [toggleFavorite]: \(error.localizedDescription)")

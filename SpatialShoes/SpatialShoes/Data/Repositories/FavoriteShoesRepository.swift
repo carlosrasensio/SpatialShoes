@@ -19,7 +19,7 @@ final class FavoriteShoesRepository {
         try SwiftDataManager.shared.saveFavoriteShoe(shoe)
     }
     
-    func removeFavoriteShoe(with id: Int) throws{
-        try SwiftDataManager.shared.removeFavoriteShoe(with: id)
+    func deleteFavoriteShoe(with id: Int) throws{
+        try SwiftDataManager.shared.deleteFavoriteShoe(with: id)
     }
 }
