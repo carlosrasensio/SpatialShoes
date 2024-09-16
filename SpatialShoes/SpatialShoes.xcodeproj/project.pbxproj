@@ -157,7 +157,6 @@
 		7075167A2C93A680000BEE92 /* SpatialShoes */ = {
 			isa = PBXGroup;
 			children = (
-				707516882C93A681000BEE92 /* Info.plist */,
 				7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */,
 				707516952C93A7F7000BEE92 /* Common */,
 				7075168F2C93A734000BEE92 /* Presentation */,
@@ -188,8 +187,9 @@
 		7075168E2C93A721000BEE92 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				707516932C93A7AC000BEE92 /* Shoes.json */,
 				707516832C93A681000BEE92 /* Assets.xcassets */,
+				707516882C93A681000BEE92 /* Info.plist */,
+				707516932C93A7AC000BEE92 /* Shoes.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
