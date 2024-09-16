@@ -134,6 +134,16 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		70500CB52C97B6420042D23D /* System */ = {
+			isa = PBXGroup;
+			children = (
+				707516832C93A681000BEE92 /* Assets.xcassets */,
+				707516882C93A681000BEE92 /* Info.plist */,
+			);
+			name = System;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7075166F2C93A680000BEE92 = {
 			isa = PBXGroup;
 			children = (
@@ -160,10 +170,11 @@
 				7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */,
 				707516952C93A7F7000BEE92 /* Common */,
 				7075168F2C93A734000BEE92 /* Presentation */,
-				7014154B2C964E690099AD8F /* Data */,
 				7075169C2C93AA73000BEE92 /* Domain */,
+				7014154B2C964E690099AD8F /* Data */,
 				707516852C93A681000BEE92 /* Preview Content */,
 				7075168E2C93A721000BEE92 /* Resources */,
+				70500CB52C97B6420042D23D /* System */,
 			);
 			path = SpatialShoes;
 			sourceTree = "<group>";
@@ -187,8 +198,6 @@
 		7075168E2C93A721000BEE92 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				707516832C93A681000BEE92 /* Assets.xcassets */,
-				707516882C93A681000BEE92 /* Info.plist */,
 				707516932C93A7AC000BEE92 /* Shoes.json */,
 			);
 			path = Resources;
