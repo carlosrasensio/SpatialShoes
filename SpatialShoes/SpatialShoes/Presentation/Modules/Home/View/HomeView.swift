@@ -28,6 +28,9 @@ struct HomeView: View {
             }
             .navigationTitle(Constants.navigationtitle)
         }
+        .onAppear {
+            viewModel.loadShoes()
+        }
     }
 }
 
@@ -35,12 +38,6 @@ struct HomeView: View {
 
 private extension HomeView {
     enum Constants {
-        static let navigationtitle = "Shoes Catalog"
+        static let navigationtitle = "Catálogo de Zapatillas"
     }
-}
-
-// MARK: - Preview
-
-#Preview(windowStyle: .automatic) {
-    HomeView(viewModel: HomeViewModel(repository: ShoeDataRepository()))
 }
