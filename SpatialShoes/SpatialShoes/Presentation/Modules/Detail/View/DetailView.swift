@@ -23,60 +23,43 @@ struct DetailView: View {
     // MARK: - View
 
     var body: some View {
-        VStack {
-//            VStack {
-//                Text(shoe.brand)
-//                Text(shoe.size)
-//                Text(shoe.price)
-//                Text(shoe.brand)
-//                Text(shoe.description)
-//                Text(shoe.type)
-//                Text(shoe.materials)
-//                Text(shoe.origin)
-//                Text(shoe.gender)
-//                Text(shoe.weight)
-//                Text(shoe.colors)
-//                Text(shoe.warranty)
-//                Text(shoe.certifications)
-//            }
+        ScrollView {
+            VStack(spacing: 20) {
+                createInfoPanel()
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-            Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle)
-                .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
-
-            
-            Button(action: {
-                viewModel.isRotating.toggle()
-            }) {
-                Text(viewModel.isRotating ? "Activar Modo Expositor" : "Desactivar Modo Expositor")
-                    .font(.headline)
-                    .padding()
+                Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle)
+                    .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(5)
+
+                Button(action: {
+                    viewModel.isRotating.toggle()
+                }) {
+                    Text(viewModel.isRotating ? "Desactivar Modo Expositor" : "Activar Modo Expositor")
+                }
+
+                Button("Ver Ventana Volumétrica") {
+                    isPresented.toggle()
+                }
+                .sheet(isPresented: $isPresented) {
+                    createVolumetricWindow()
+                }
+
+                Spacer()
             }
-            .padding(.bottom)
-            
-            Button("Ver Ventana Volumétrica") {
-                isPresented.toggle()
-            }
-            .sheet(isPresented: $isPresented) {
-                Text(shoe.model3DName)
-                Detailed3DView(modelName: shoe.model3DName)
-            }
-            
-            Spacer()
+            .padding()
+            .frame(maxWidth: .infinity)
         }
         .navigationBarTitle(shoe.name, displayMode: .inline)
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        viewModel.toggleFavorite(shoe)
-                    }) {
-                        Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
-                            .foregroundColor(viewModel.isFavorite ? .red : .gray)
-                            .font(.title2)
-                    }
-                )
+        .navigationBarItems(trailing:
+            Button(action: {
+                viewModel.toggleFavorite(shoe)
+            }) {
+                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                    .foregroundColor(.red)
+                    .font(.title2)
+            }
+        )
     }
 }
 

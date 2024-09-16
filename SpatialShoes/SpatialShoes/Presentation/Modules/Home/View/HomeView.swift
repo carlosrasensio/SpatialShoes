@@ -23,9 +23,6 @@ struct HomeView: View {
                     HStack {
                         Text(shoe.name)
                             .font(.headline)
-                        Spacer()
-                        Text(String(format: "$%.2f", shoe.price))
-                            .foregroundColor(.secondary)
                     }
                 }
             }
