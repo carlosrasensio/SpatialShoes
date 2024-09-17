@@ -14,9 +14,9 @@ final class DetailViewModel: ObservableObject {
 
     @Published var isRotating = false
     @Published var isFavorite = false
-    @Published var favoriteShoes: [Shoe] = []
     @Published var showLoader: Bool = false
     @Published var showAlert: Bool = false
+    @Published var favoriteShoes: [Shoe] = []
     var errorMessage: String?
         
     // MARK: - Private Properties

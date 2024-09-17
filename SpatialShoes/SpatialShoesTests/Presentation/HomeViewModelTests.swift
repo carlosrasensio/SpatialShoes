@@ -1,0 +1,48 @@
+//
+//  HomeViewModelTests.swift
+//  SpatialShoesTests
+//
+//  Created by Carlos Rodriguez Asensio on 17/9/24.
+//
+
+import XCTest
+@testable import SpatialShoes
+
+final class HomeViewModelTests: XCTestCase {
+
+    // MARK: - Pivate Properties
+    
+    private var sut: HomeViewModel!
+    private var useCase: GetShoesUseCase!
+    private var repository: GetShoesRepositoryProtocol!
+    
+    // MARK: - Setup
+    
+    override func setUp() {
+        super.setUp()
+        repository = MockGetShoesRepository()
+        useCase = GetShoesUseCase(repository: repository)
+        sut = HomeViewModel(getShoesUseCase: useCase)
+    }
+    
+    override func tearDown() {
+        sut = nil
+        useCase = nil
+        repository = nil
+        super.tearDown()
+    }
+
+    // MARK: - Tests
+
+    func testLoadShoesWithSuccess() {
+        // Given
+        let fileName = "ShoesTest"
+        
+        // When
+        sut.loadShoes(with: fileName)
+        
+        // Then
+        XCTAssertFalse(sut.shoes.isEmpty)
+        XCTAssertEqual(sut.shoes.count, 3)
+    }
+}
