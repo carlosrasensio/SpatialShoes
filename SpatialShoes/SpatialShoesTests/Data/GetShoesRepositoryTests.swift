@@ -12,13 +12,13 @@ final class GetShoesRepositoryTests: XCTestCase {
     
     // MARK: - Pivate Properties
     
-    private var sut: GetShoesRepository!
+    private var sut: GetShoesRepositoryProtocol!
     
     // MARK: - Setup
     
     override func setUp() {
         super.setUp()
-        sut = GetShoesRepository()
+        sut = GetShoesRepository(bundle: Bundle(for: GetShoesRepositoryTests.self))
     }
     
     override func tearDown() {
@@ -31,11 +31,10 @@ final class GetShoesRepositoryTests: XCTestCase {
     func testLoadShoesWithSuccess() {
         // Given
         let fileName = "ShoesTest"
-        let bundle = Bundle(for: GetShoesRepositoryTests.self)
         
         do {
             // When
-            let shoes = try sut.loadShoes(fileName: fileName, bundle: bundle)
+            let shoes = try sut.loadShoes(fileName: fileName)
             
             // Then
             XCTAssertNotNil(shoes)

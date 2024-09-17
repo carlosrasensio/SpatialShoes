@@ -7,8 +7,29 @@
 
 import Foundation
 
+protocol GetShoesRepositoryProtocol {
+    var bundle: Bundle? { get }
+    
+    func loadShoes(fileName: String?) throws -> [Shoe]
+}
+
 final class GetShoesRepository {
-    func loadShoes(fileName: String?, bundle: Bundle?) throws -> [Shoe] {
+    
+    // MARK: - Internal Properties
+    
+    internal let bundle: Bundle?
+    
+    // MARK: - Initializer
+
+    init(bundle: Bundle? = Bundle(for: GetShoesRepository.self)) {
+        self.bundle = bundle
+    }
+}
+
+// MARK: - GetShoesRepositoryProtocol
+
+extension GetShoesRepository: GetShoesRepositoryProtocol {
+    func loadShoes(fileName: String?) throws -> [Shoe] {
         guard let fileName else { throw GetShoesDataError.filenameError }
         guard let bundle else { throw GetShoesDataError.bundleError }
         guard let result = try JSONManager.shared.load(fileName: fileName,
@@ -18,7 +39,7 @@ final class GetShoesRepository {
     }
 }
 
-// MARK: - ShoeDataError
+// MARK: - GetShoesDataError
 
 enum GetShoesDataError: Error {
     case filenameError

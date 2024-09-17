@@ -16,19 +16,19 @@ final class GetShoesUseCase {
     
     // MARK: - Private Properties
     
-    private var repository: GetShoesRepository
+    private var repository: GetShoesRepositoryProtocol
 
     // MARK: - Initializer
 
-    init(repository: GetShoesRepository) {
+    init(repository: GetShoesRepositoryProtocol) {
         self.repository = repository
     }
     
     // MARK: - Public Funtions
     
-    func execute(with fileName: String? = nil, in bundle: Bundle? = nil) throws {
+    func execute(with fileName: String? = nil) throws {
         do {
-            try loadShoes(with: fileName, in: bundle)
+            try loadShoes(with: fileName)
         } catch let error as GetShoesDataError {
             throw error.mapToDomainError()
         }
@@ -38,9 +38,8 @@ final class GetShoesUseCase {
 // MARK: - Private Functions
 
 private extension GetShoesUseCase {
-    func loadShoes(with fileName: String? = Constants.fileName,
-                   in bundle: Bundle? = Bundle(for: GetShoesUseCase.self)) throws {
-        shoes = try repository.loadShoes(fileName: fileName, bundle: bundle)
+    func loadShoes(with fileName: String? = Constants.fileName) throws {
+        shoes = try repository.loadShoes(fileName: fileName)
     }
 }
 

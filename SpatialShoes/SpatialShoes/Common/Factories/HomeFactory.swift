@@ -24,7 +24,7 @@ private extension HomeFactory {
         .init(repository: makeGetShoesRepository())
     }
     
-    static func makeGetShoesRepository() -> GetShoesRepository {
+    static func makeGetShoesRepository() -> GetShoesRepositoryProtocol {
         GetShoesRepository()
     }
 }
