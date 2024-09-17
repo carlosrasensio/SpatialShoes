@@ -8,20 +8,21 @@
 import Combine
 import Foundation
 
-final class DetailViewModel: ObservableObject {
+@Observable
+final class DetailViewModel {
     
     // MARK: - Public Properties
 
-    @Published var isRotating = false
-    @Published var isFavorite = false
-    @Published var showLoader: Bool = false
-    @Published var showAlert: Bool = false
-    @Published var favoriteShoes: [Shoe] = []
+    var isRotating = false
+    var isFavorite = false
+    var showLoader: Bool = false
+    var showAlert: Bool = false
+    var favoriteShoes: [Shoe] = []
     var errorMessage: String?
         
     // MARK: - Private Properties
     
-    private var favoriteShoesUseCase: FavoriteShoesUseCase
+    private let favoriteShoesUseCase: FavoriteShoesUseCase
         
     // MARK: - Initializer
     

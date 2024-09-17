@@ -12,7 +12,7 @@ struct HomeView: View {
     
     // MARK: - Private Properties
     
-    @ObservedObject var viewModel: HomeViewModel
+    @State var viewModel: HomeViewModel
 
     // MARK: - View
     
@@ -32,8 +32,13 @@ struct HomeView: View {
                 .navigationTitle(Localizables.navigationtitle)
             }
         }
-        .onAppear {
+        .onAppear(perform: {
             viewModel.loadShoes()
+        })
+        .alert(Localizables.alertTitle,
+               isPresented: $viewModel.showAlert)
+        {} message: {
+            Text(viewModel.errorMessage)
         }
     }
 }
@@ -44,5 +49,6 @@ private extension HomeView {
     enum Localizables {
         static let navigationtitle = "Catálogo de Zapatillas"
         static let loaderText = "Cargando..."
+        static let alertTitle = "ERROR"
     }
 }

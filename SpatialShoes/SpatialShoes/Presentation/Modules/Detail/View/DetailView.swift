@@ -13,7 +13,7 @@ struct DetailView: View {
     
     // MARK: - Public Properties
     
-    @ObservedObject var viewModel: DetailViewModel
+    @State var viewModel: DetailViewModel
     var shoe: Shoe
     
     // MARK: - Private Properties

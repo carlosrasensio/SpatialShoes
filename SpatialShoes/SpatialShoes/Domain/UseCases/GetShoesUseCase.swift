@@ -11,12 +11,11 @@ final class GetShoesUseCase {
     
     // MARK: - Public Properties
 
-    @Published var shoes: [Shoe] = []
+    var shoes: [Shoe] = []
 
-    
     // MARK: - Private Properties
     
-    private var repository: GetShoesRepositoryProtocol
+    private let repository: GetShoesRepositoryProtocol
 
     // MARK: - Initializer
 

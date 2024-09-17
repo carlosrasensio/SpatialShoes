@@ -21,7 +21,7 @@ final class FavoriteShoesUseCase {
     
     // MARK: - Private Properties
     
-    private var repository: FavoriteShoesRepository
+    private let repository: FavoriteShoesRepository
     
     // MARK: - Initializer
 

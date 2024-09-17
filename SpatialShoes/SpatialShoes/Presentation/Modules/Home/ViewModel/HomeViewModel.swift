@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-final class HomeViewModel: ObservableObject {
+@Observable
+final class HomeViewModel {
     
     // MARK: - Public Properties
     
-    @Published var showLoader: Bool = false
-    @Published var showAlert: Bool = false
     var shoes: [Shoe] = []
-    var errorMessage: String?
+    var showLoader: Bool = false
+    var showAlert: Bool = false
+    var errorMessage: String = ""
     
     // MARK: - Private Properties
     
@@ -30,7 +31,6 @@ final class HomeViewModel: ObservableObject {
     
     func loadShoes() {
         showLoader = true
-        errorMessage = nil
         
         do {
             try getShoesUseCase.execute()
@@ -40,12 +40,12 @@ final class HomeViewModel: ObservableObject {
             errorMessage = error.message
             showLoader = false
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Localizables.Errors.unknown)")
+            print("❌ [ERROR] \(errorMessage)")
         } catch {
             errorMessage = Localizables.Errors.unknown
             showLoader = false
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Localizables.Errors.unknown)")
+            print("❌ [ERROR] \(errorMessage)")
         }
     }
 }
