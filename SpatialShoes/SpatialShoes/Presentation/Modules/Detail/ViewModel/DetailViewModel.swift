@@ -36,7 +36,7 @@ final class DetailViewModel: ObservableObject {
         errorMessage = nil
 
         do {
-            try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, shoe: shoe)
+            try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, for: shoe)
             isFavorite.toggle()
             favoriteShoes = favoriteShoesUseCase.favoriteShoes
             showLoader = false
