@@ -65,7 +65,7 @@ private extension FavoriteShoesUseCase {
     }
 }
 
-// MARK: - DomainError
+// MARK: - FavoriteShoesDomainError
 
 enum FavoriteShoesDomainError: Error {
     case inputError
