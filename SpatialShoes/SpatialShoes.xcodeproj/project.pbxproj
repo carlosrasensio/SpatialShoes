@@ -12,6 +12,8 @@
 		7024313C2C98E77B005012A3 /* SplashView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024313B2C98E77B005012A3 /* SplashView_Preview.swift */; };
 		7024313F2C98F96E005012A3 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 7024313E2C98F96E005012A3 /* SpatialShoesScene */; };
 		702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431402C98F9A5005012A3 /* GetShoesUseCase.swift */; };
+		702431442C9900E3005012A3 /* GetShoesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431432C9900E3005012A3 /* GetShoesUseCaseTests.swift */; };
+		702431462C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */; };
 		702EC1422C9783AE003248BF /* DetailView+VolumetricWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1412C9783AE003248BF /* DetailView+VolumetricWindow.swift */; };
 		702EC1452C978AB0003248BF /* FavoriteShoesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1442C978AB0003248BF /* FavoriteShoesUseCase.swift */; };
 		702EC1472C978B32003248BF /* DetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1462C978B32003248BF /* DetailFactory.swift */; };
@@ -52,6 +54,8 @@
 		7024313B2C98E77B005012A3 /* SplashView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView_Preview.swift; sourceTree = "<group>"; };
 		7024313D2C98F963005012A3 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = ../../../../SpatialShoesScene; sourceTree = "<group>"; };
 		702431402C98F9A5005012A3 /* GetShoesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesUseCase.swift; sourceTree = "<group>"; };
+		702431432C9900E3005012A3 /* GetShoesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesUseCaseTests.swift; sourceTree = "<group>"; };
+		702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesUseCaseTests.swift; sourceTree = "<group>"; };
 		702EC1412C9783AE003248BF /* DetailView+VolumetricWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+VolumetricWindow.swift"; sourceTree = "<group>"; };
 		702EC1442C978AB0003248BF /* FavoriteShoesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesUseCase.swift; sourceTree = "<group>"; };
 		702EC1462C978B32003248BF /* DetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactory.swift; sourceTree = "<group>"; };
@@ -123,6 +127,15 @@
 				700484E82C9878BE002D8742 /* Repositories */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		702431422C9900C6005012A3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */,
+				702431432C9900E3005012A3 /* GetShoesUseCaseTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		702EC1432C978A97003248BF /* UseCases */ = {
@@ -322,6 +335,7 @@
 			children = (
 				708376FB2C93D1A7008DC7AB /* Common */,
 				708376FA2C93D19B008DC7AB /* Data */,
+				702431422C9900C6005012A3 /* Domain */,
 				708377022C93D359008DC7AB /* Utils */,
 			);
 			path = SpatialShoesTests;
@@ -498,7 +512,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702431462C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift in Sources */,
 				708376FF2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift in Sources */,
+				702431442C9900E3005012A3 /* GetShoesUseCaseTests.swift in Sources */,
 				708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

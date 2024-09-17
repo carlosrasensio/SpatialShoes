@@ -26,9 +26,9 @@ final class GetShoesUseCase {
     
     // MARK: - Public Funtions
     
-    func execute() throws {
+    func execute(with fileName: String? = nil, in bundle: Bundle? = nil) throws {
         do {
-            try loadShoes()
+            try loadShoes(with: fileName, in: bundle)
         } catch let error as GetShoesDataError {
             throw error.mapToDomainError()
         }
@@ -38,8 +38,9 @@ final class GetShoesUseCase {
 // MARK: - Private Functions
 
 private extension GetShoesUseCase {
-    func loadShoes(fileName: String? = Constants.fileName) throws {
-        shoes = try repository.loadShoes(fileName: fileName, bundle: Bundle(for: JSONManager.self))
+    func loadShoes(with fileName: String? = Constants.fileName,
+                   in bundle: Bundle? = Bundle(for: GetShoesUseCase.self)) throws {
+        shoes = try repository.loadShoes(fileName: fileName, bundle: bundle)
     }
 }
 

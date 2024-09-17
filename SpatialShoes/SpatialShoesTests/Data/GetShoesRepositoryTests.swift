@@ -12,34 +12,34 @@ final class GetShoesRepositoryTests: XCTestCase {
     
     // MARK: - Pivate Properties
     
-    private var repository: GetShoesRepository!
+    private var sut: GetShoesRepository!
     
     // MARK: - Setup
     
     override func setUp() {
         super.setUp()
-        repository = GetShoesRepository()
+        sut = GetShoesRepository()
     }
     
     override func tearDown() {
-        repository = nil
+        sut = nil
         super.tearDown()
     }
     
     // MARK: - Tests
     
-    func testLoadShoesSuccess() {
+    func testLoadShoesWithSuccess() {
         // Given
         let fileName = "ShoesTest"
         let bundle = Bundle(for: GetShoesRepositoryTests.self)
         
-        // When
         do {
-            let shoes = try repository.loadShoes(fileName: fileName, bundle: bundle)
+            // When
+            let shoes = try sut.loadShoes(fileName: fileName, bundle: bundle)
             
             // Then
-            XCTAssertNotNil(shoes, "El método loadShoes debería devolver un array de zapatos.")
-            XCTAssertFalse(shoes.isEmpty, "El array de zapatos debería contener al menos un zapato.")
+            XCTAssertNotNil(shoes)
+            XCTAssertFalse(shoes.isEmpty)
             
             guard let firstShoe = shoes.first else {
                 XCTFail("No se encontró ningún zapato en los datos cargados.")

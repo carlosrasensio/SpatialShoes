@@ -12,7 +12,7 @@ final class JSONManagerTests: XCTestCase {
     func testLoadShoesFromJSONSuccess() throws {
         // Given
         let fileName = "ShoesTest"
-        let bundle = Bundle(for: GetShoesRepositoryTests.self)
+        let bundle = Bundle(for: JSONManagerTests.self)
 
         // When
         guard let shoes: [Shoe] = try JSONManager.shared.load(fileName: fileName,

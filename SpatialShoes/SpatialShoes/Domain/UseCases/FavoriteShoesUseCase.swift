@@ -31,7 +31,7 @@ final class FavoriteShoesUseCase {
     
     // MARK: - Public Funtions
     
-    func execute(action: FavoriteShoeAction, shoe: Shoe? = nil) throws {
+    func execute(action: FavoriteShoeAction, for shoe: Shoe? = nil) throws {
         guard let shoe else { throw FavoriteShoesDomainError.inputError }
         
         do {
@@ -41,7 +41,7 @@ final class FavoriteShoesUseCase {
             case .delete:
                 try deleteFavoriteShoe(with: shoe.id)
             case .fetch:
-                favoriteShoes = try fetchFavoriteShoes()
+                favoriteShoes += try fetchFavoriteShoes()
             }
         } catch let error as FavoriteShoesDataError {
             throw error.mapToDomainError()
@@ -54,10 +54,12 @@ final class FavoriteShoesUseCase {
 private extension FavoriteShoesUseCase {
     func saveFavoriteShoe(_ shoe: Shoe) throws {
         try repository.saveFavoriteShoe(shoe)
+        favoriteShoes.append(shoe)
     }
     
     func deleteFavoriteShoe(with id: Int) throws {
         try repository.deleteFavoriteShoe(with: id)
+        favoriteShoes.removeAll { $0.id == id }
     }
     
     func fetchFavoriteShoes() throws -> [Shoe] {
