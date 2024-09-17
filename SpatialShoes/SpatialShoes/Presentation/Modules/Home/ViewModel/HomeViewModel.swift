@@ -18,12 +18,12 @@ final class HomeViewModel: ObservableObject {
     
     // MARK: - Private Properties
     
-    private var repository: ShoeDataRepository
+    private var getShoesUseCase: GetShoesUseCase
 
     // MARK: - Initializer
     
-    init(repository: ShoeDataRepository) {
-        self.repository = repository
+    init(getShoesUseCase: GetShoesUseCase) {
+        self.getShoesUseCase = getShoesUseCase
     }
     
     // MARK: - Public Functions
@@ -33,10 +33,10 @@ final class HomeViewModel: ObservableObject {
         errorMessage = nil
         
         do {
-            shoes = try repository.loadShoes(fileName: Constants.fileName,
-                                             bundle: Bundle(for: JSONManager.self))
+            try getShoesUseCase.execute()
+            shoes = getShoesUseCase.shoes
             showLoader = false
-        } catch let error as ShoeDataError {
+        } catch let error as GetShoesDomainError {
             errorMessage = error.message
             showLoader = false
             showAlert = true
@@ -47,14 +47,6 @@ final class HomeViewModel: ObservableObject {
             showAlert = true
             print("❌ [ERROR] \(errorMessage ?? Localizables.Errors.unknown)")
         }
-    }
-}
-
-// MARK: - Constants
-
-private extension HomeViewModel {
-    enum Constants {
-        static let fileName = "Shoes"
     }
 }
 

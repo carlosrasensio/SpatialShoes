@@ -8,17 +8,17 @@
 import XCTest
 @testable import SpatialShoes
 
-final class ShoeDataRepositoryTests: XCTestCase {
+final class GetShoesRepositoryTests: XCTestCase {
     
     // MARK: - Pivate Properties
     
-    private var repository: ShoeDataRepository!
+    private var repository: GetShoesRepository!
     
     // MARK: - Setup
     
     override func setUp() {
         super.setUp()
-        repository = ShoeDataRepository()
+        repository = GetShoesRepository()
     }
     
     override func tearDown() {
@@ -31,7 +31,7 @@ final class ShoeDataRepositoryTests: XCTestCase {
     func testLoadShoesSuccess() {
         // Given
         let fileName = "ShoesTest"
-        let bundle = Bundle(for: ShoeDataRepositoryTests.self)
+        let bundle = Bundle(for: GetShoesRepositoryTests.self)
         
         // When
         do {

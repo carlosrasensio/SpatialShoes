@@ -17,10 +17,14 @@ final class HomeFactory {
 
 private extension HomeFactory {
     static func makeHomeViewModel() -> HomeViewModel {
-        .init(repository: makeShoeDataRepository())
+        .init(getShoesUseCase: makeGetShoesUseCase())
     }
     
-    static func makeShoeDataRepository() -> ShoeDataRepository {
-        ShoeDataRepository()
+    static func makeGetShoesUseCase() -> GetShoesUseCase {
+        .init(repository: makeGetShoesRepository())
+    }
+    
+    static func makeGetShoesRepository() -> GetShoesRepository {
+        GetShoesRepository()
     }
 }
