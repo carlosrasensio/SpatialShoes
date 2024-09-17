@@ -26,9 +26,9 @@ final class GetShoesUseCase {
     
     // MARK: - Public Funtions
     
-    func execute(with fileName: String? = nil) throws {
+    func execute() throws {
         do {
-            try loadShoes(with: fileName)
+            try loadShoes()
         } catch let error as GetShoesDataError {
             throw error.mapToDomainError()
         }
@@ -38,16 +38,8 @@ final class GetShoesUseCase {
 // MARK: - Private Functions
 
 private extension GetShoesUseCase {
-    func loadShoes(with fileName: String? = Constants.fileName) throws {
-        shoes = try repository.loadShoes(fileName: fileName)
-    }
-}
-
-// MARK: - Constants
-
-private extension GetShoesUseCase {
-    enum Constants {
-        static let fileName = "Shoes"
+    func loadShoes() throws {
+        shoes = try repository.loadShoes()
     }
 }
 

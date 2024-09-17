@@ -8,28 +8,17 @@
 import Foundation
 
 protocol GetShoesRepositoryProtocol {
+    var fileName: String? { get }
     var bundle: Bundle? { get }
     
-    func loadShoes(fileName: String?) throws -> [Shoe]
+    func loadShoes() throws -> [Shoe]
 }
 
-final class GetShoesRepository {
+extension GetShoesRepositoryProtocol {
     
-    // MARK: - Internal Properties
+    // MARK: - Public Functions
     
-    internal let bundle: Bundle?
-    
-    // MARK: - Initializer
-
-    init(bundle: Bundle? = Bundle(for: GetShoesRepository.self)) {
-        self.bundle = bundle
-    }
-}
-
-// MARK: - GetShoesRepositoryProtocol
-
-extension GetShoesRepository: GetShoesRepositoryProtocol {
-    func loadShoes(fileName: String?) throws -> [Shoe] {
+    func loadShoes() throws -> [Shoe] {
         guard let fileName else { throw GetShoesDataError.filenameError }
         guard let bundle else { throw GetShoesDataError.bundleError }
         guard let result = try JSONManager.shared.load(fileName: fileName,
@@ -37,6 +26,16 @@ extension GetShoesRepository: GetShoesRepositoryProtocol {
                                                        bundle: bundle) else { throw GetShoesDataError.parsingError }
         return result
     }
+}
+
+// MARK: - GetShoesRepositoryProtocol
+
+final class GetShoesRepository: GetShoesRepositoryProtocol {
+    
+    // MARK: - Properties
+    
+    var fileName: String? { "Shoes" }
+    var bundle: Bundle? { Bundle(for: GetShoesRepository.self) }
 }
 
 // MARK: - GetShoesDataError

@@ -35,11 +35,8 @@ final class HomeViewModelTests: XCTestCase {
     // MARK: - Tests
 
     func testLoadShoesWithSuccess() {
-        // Given
-        let fileName = "ShoesTest"
-        
         // When
-        sut.loadShoes(with: fileName)
+        sut.loadShoes()
         
         // Then
         XCTAssertFalse(sut.shoes.isEmpty)

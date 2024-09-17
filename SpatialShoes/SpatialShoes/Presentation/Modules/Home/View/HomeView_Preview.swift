@@ -8,5 +8,5 @@
 import SwiftUI
 
 #Preview(windowStyle: .automatic) {
-    HomeView(viewModel: HomeViewModel(getShoesUseCase: GetShoesUseCase(repository: GetShoesRepository())))
+    HomeView(viewModel: HomeViewModel(getShoesUseCase: GetShoesUseCase(repository: GetShoesRepositoryTest())))
 }
