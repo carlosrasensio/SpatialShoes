@@ -13,13 +13,13 @@ final class GetShoesUseCaseTests: XCTestCase {
     // MARK: - Pivate Properties
     
     private var sut: GetShoesUseCase!
-    private var repository: GetShoesRepository!
+    private var repository: GetShoesRepositoryProtocol!
     
     // MARK: - Setup
     
     override func setUp() {
         super.setUp()
-        repository = GetShoesRepository()
+        repository = MockGetShoesRepository()
         sut = GetShoesUseCase(repository: repository)
     }
     
@@ -34,11 +34,10 @@ final class GetShoesUseCaseTests: XCTestCase {
     func testExecuteWithSuccess() {
         // Given
         let fileName = "ShoesTest"
-        let bundle = Bundle(for: GetShoesRepositoryTests.self)
 
         do {
             // When
-            try sut.execute(with: fileName, in: bundle)
+            try sut.execute(with: fileName)
             
             // Then
             XCTAssertFalse(sut.shoes.isEmpty)
