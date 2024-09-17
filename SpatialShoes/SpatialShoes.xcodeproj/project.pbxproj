@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7012159F2C9925DC00C4BC3B /* MockGetShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */; };
+		701509F22C99294C00FE6354 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701509F12C99294C00FE6354 /* HomeViewModelTests.swift */; };
+		701509F42C99295900FE6354 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701509F32C99295900FE6354 /* DetailViewModelTests.swift */; };
 		702431382C98E5E4005012A3 /* DetailView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431372C98E5E4005012A3 /* DetailView_Preview.swift */; };
 		7024313A2C98E615005012A3 /* HomeView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431392C98E615005012A3 /* HomeView_Preview.swift */; };
 		7024313C2C98E77B005012A3 /* SplashView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024313B2C98E77B005012A3 /* SplashView_Preview.swift */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetShoesRepository.swift; sourceTree = "<group>"; };
+		701509F12C99294C00FE6354 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		701509F32C99295900FE6354 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
 		702431372C98E5E4005012A3 /* DetailView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView_Preview.swift; sourceTree = "<group>"; };
 		702431392C98E615005012A3 /* HomeView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView_Preview.swift; sourceTree = "<group>"; };
 		7024313B2C98E77B005012A3 /* SplashView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView_Preview.swift; sourceTree = "<group>"; };
@@ -145,6 +149,15 @@
 				700484E82C9878BE002D8742 /* Repositories */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		701509F02C99292A00FE6354 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				701509F12C99294C00FE6354 /* HomeViewModelTests.swift */,
+				701509F32C99295900FE6354 /* DetailViewModelTests.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		702431422C9900C6005012A3 /* Domain */ = {
@@ -352,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				708376FB2C93D1A7008DC7AB /* Common */,
+				701509F02C99292A00FE6354 /* Presentation */,
 				702431422C9900C6005012A3 /* Domain */,
 				708376FA2C93D19B008DC7AB /* Data */,
 				701215A12C99262700C4BC3B /* Resources */,
@@ -534,8 +548,10 @@
 				702431462C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift in Sources */,
 				708376FF2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift in Sources */,
 				7012159F2C9925DC00C4BC3B /* MockGetShoesRepository.swift in Sources */,
+				701509F42C99295900FE6354 /* DetailViewModelTests.swift in Sources */,
 				702431442C9900E3005012A3 /* GetShoesUseCaseTests.swift in Sources */,
 				708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */,
+				701509F22C99294C00FE6354 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

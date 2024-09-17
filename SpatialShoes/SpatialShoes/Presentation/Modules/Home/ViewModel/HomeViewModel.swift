@@ -28,12 +28,12 @@ final class HomeViewModel: ObservableObject {
     
     // MARK: - Public Functions
     
-    func loadShoes() {
+    func loadShoes(with fileName: String? = nil) {
         showLoader = true
         errorMessage = nil
         
         do {
-            try getShoesUseCase.execute()
+            try getShoesUseCase.execute(with: fileName)
             shoes = getShoesUseCase.shoes
             showLoader = false
         } catch let error as GetShoesDomainError {
