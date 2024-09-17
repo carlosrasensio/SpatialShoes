@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7012159F2C9925DC00C4BC3B /* MockGetShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */; };
+		702431382C98E5E4005012A3 /* DetailView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431372C98E5E4005012A3 /* DetailView_Preview.swift */; };
+		7024313A2C98E615005012A3 /* HomeView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431392C98E615005012A3 /* HomeView_Preview.swift */; };
+		7024313C2C98E77B005012A3 /* SplashView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024313B2C98E77B005012A3 /* SplashView_Preview.swift */; };
+		7024313F2C98F96E005012A3 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 7024313E2C98F96E005012A3 /* SpatialShoesScene */; };
+		702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431402C98F9A5005012A3 /* GetShoesUseCase.swift */; };
+		702431442C9900E3005012A3 /* GetShoesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431432C9900E3005012A3 /* GetShoesUseCaseTests.swift */; };
+		702431462C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */; };
 		702EC1422C9783AE003248BF /* DetailView+VolumetricWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1412C9783AE003248BF /* DetailView+VolumetricWindow.swift */; };
 		702EC1452C978AB0003248BF /* FavoriteShoesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1442C978AB0003248BF /* FavoriteShoesUseCase.swift */; };
 		702EC1472C978B32003248BF /* DetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1462C978B32003248BF /* DetailFactory.swift */; };
@@ -21,15 +29,14 @@
 		707516942C93A7AC000BEE92 /* Shoes.json in Resources */ = {isa = PBXBuildFile; fileRef = 707516932C93A7AC000BEE92 /* Shoes.json */; };
 		707516972C93A80B000BEE92 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516962C93A80B000BEE92 /* JSONManager.swift */; };
 		7075169A2C93A84B000BEE92 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516992C93A84B000BEE92 /* Shoe.swift */; };
-		7075169E2C93AA92000BEE92 /* ShoeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075169D2C93AA92000BEE92 /* ShoeDataRepository.swift */; };
+		7075169E2C93AA92000BEE92 /* GetShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075169D2C93AA92000BEE92 /* GetShoesRepository.swift */; };
 		707516A22C93ABCF000BEE92 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A12C93ABCF000BEE92 /* HomeViewModel.swift */; };
 		707516A62C93AF02000BEE92 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A52C93AF02000BEE92 /* DetailView.swift */; };
 		707516A92C93AF1B000BEE92 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A82C93AF1B000BEE92 /* DetailViewModel.swift */; };
 		707516AC2C93BA59000BEE92 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516AB2C93BA59000BEE92 /* HomeFactory.swift */; };
 		708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */; };
-		708376FF2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FE2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift */; };
+		708376FF2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FE2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift */; };
 		708377012C93D355008DC7AB /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 708377002C93D355008DC7AB /* ShoesTest.json */; };
-		709982B62C979DFA00B0257A /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 709982B52C979DFA00B0257A /* SpatialShoesScene */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetShoesRepository.swift; sourceTree = "<group>"; };
+		702431372C98E5E4005012A3 /* DetailView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView_Preview.swift; sourceTree = "<group>"; };
+		702431392C98E615005012A3 /* HomeView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView_Preview.swift; sourceTree = "<group>"; };
+		7024313B2C98E77B005012A3 /* SplashView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView_Preview.swift; sourceTree = "<group>"; };
+		7024313D2C98F963005012A3 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = ../../../../SpatialShoesScene; sourceTree = "<group>"; };
+		702431402C98F9A5005012A3 /* GetShoesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesUseCase.swift; sourceTree = "<group>"; };
+		702431432C9900E3005012A3 /* GetShoesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesUseCaseTests.swift; sourceTree = "<group>"; };
+		702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesUseCaseTests.swift; sourceTree = "<group>"; };
 		702EC1412C9783AE003248BF /* DetailView+VolumetricWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+VolumetricWindow.swift"; sourceTree = "<group>"; };
 		702EC1442C978AB0003248BF /* FavoriteShoesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesUseCase.swift; sourceTree = "<group>"; };
 		702EC1462C978B32003248BF /* DetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactory.swift; sourceTree = "<group>"; };
@@ -59,16 +74,15 @@
 		707516932C93A7AC000BEE92 /* Shoes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shoes.json; sourceTree = "<group>"; };
 		707516962C93A80B000BEE92 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		707516992C93A84B000BEE92 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
-		7075169D2C93AA92000BEE92 /* ShoeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDataRepository.swift; sourceTree = "<group>"; };
+		7075169D2C93AA92000BEE92 /* GetShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepository.swift; sourceTree = "<group>"; };
 		707516A12C93ABCF000BEE92 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		707516A52C93AF02000BEE92 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		707516A82C93AF1B000BEE92 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		707516AB2C93BA59000BEE92 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		708376EC2C93D118008DC7AB /* SpatialShoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpatialShoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerTests.swift; sourceTree = "<group>"; };
-		708376FE2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDataRepositoryTests.swift; sourceTree = "<group>"; };
+		708376FE2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepositoryTests.swift; sourceTree = "<group>"; };
 		708377002C93D355008DC7AB /* ShoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
-		709982B32C979DEA00B0257A /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = ../../../../SpatialShoesScene; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				709982B62C979DFA00B0257A /* SpatialShoesScene in Frameworks */,
+				7024313F2C98F96E005012A3 /* SpatialShoesScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		700484E82C9878BE002D8742 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */,
+				7075169D2C93AA92000BEE92 /* GetShoesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		701215A02C99260200C4BC3B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		701215A12C99262700C4BC3B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				708377002C93D355008DC7AB /* ShoesTest.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7014154A2C964E530099AD8F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,16 +142,25 @@
 		7014154B2C964E690099AD8F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */,
-				7075169D2C93AA92000BEE92 /* ShoeDataRepository.swift */,
+				700484E82C9878BE002D8742 /* Repositories */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		702431422C9900C6005012A3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */,
+				702431432C9900E3005012A3 /* GetShoesUseCaseTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		702EC1432C978A97003248BF /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				702EC1442C978AB0003248BF /* FavoriteShoesUseCase.swift */,
+				702431402C98F9A5005012A3 /* GetShoesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -130,18 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				70500CB32C97B21D0042D23D /* SplashView.swift */,
+				7024313B2C98E77B005012A3 /* SplashView_Preview.swift */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		70500CB52C97B6420042D23D /* System */ = {
-			isa = PBXGroup;
-			children = (
-				707516832C93A681000BEE92 /* Assets.xcassets */,
-				707516882C93A681000BEE92 /* Info.plist */,
-			);
-			name = System;
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		7075166F2C93A680000BEE92 = {
@@ -167,6 +206,7 @@
 		7075167A2C93A680000BEE92 /* SpatialShoes */ = {
 			isa = PBXGroup;
 			children = (
+				707516882C93A681000BEE92 /* Info.plist */,
 				7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */,
 				707516952C93A7F7000BEE92 /* Common */,
 				7075168F2C93A734000BEE92 /* Presentation */,
@@ -174,7 +214,6 @@
 				7014154B2C964E690099AD8F /* Data */,
 				707516852C93A681000BEE92 /* Preview Content */,
 				7075168E2C93A721000BEE92 /* Resources */,
-				70500CB52C97B6420042D23D /* System */,
 			);
 			path = SpatialShoes;
 			sourceTree = "<group>";
@@ -182,7 +221,7 @@
 		7075167B2C93A680000BEE92 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				709982B32C979DEA00B0257A /* SpatialShoesScene */,
+				7024313D2C98F963005012A3 /* SpatialShoesScene */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -198,6 +237,7 @@
 		7075168E2C93A721000BEE92 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				707516832C93A681000BEE92 /* Assets.xcassets */,
 				707516932C93A7AC000BEE92 /* Shoes.json */,
 			);
 			path = Resources;
@@ -259,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				707516912C93A782000BEE92 /* HomeView.swift */,
+				702431392C98E615005012A3 /* HomeView_Preview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				707516A52C93AF02000BEE92 /* DetailView.swift */,
+				702431372C98E5E4005012A3 /* DetailView_Preview.swift */,
 				70500CB12C97A5AA0042D23D /* Subviews */,
 			);
 			path = View;
@@ -310,7 +352,9 @@
 			isa = PBXGroup;
 			children = (
 				708376FB2C93D1A7008DC7AB /* Common */,
-				708376FA2C93D19B008DC7AB /* Domain */,
+				702431422C9900C6005012A3 /* Domain */,
+				708376FA2C93D19B008DC7AB /* Data */,
+				701215A12C99262700C4BC3B /* Resources */,
 				708377022C93D359008DC7AB /* Utils */,
 			);
 			path = SpatialShoesTests;
@@ -324,12 +368,12 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		708376FA2C93D19B008DC7AB /* Domain */ = {
+		708376FA2C93D19B008DC7AB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				708376FE2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift */,
+				708376FE2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift */,
 			);
-			path = Domain;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		708376FB2C93D1A7008DC7AB /* Common */ = {
@@ -343,7 +387,7 @@
 		708377022C93D359008DC7AB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				708377002C93D355008DC7AB /* ShoesTest.json */,
+				701215A02C99260200C4BC3B /* Mocks */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,7 +416,7 @@
 			);
 			name = SpatialShoes;
 			packageProductDependencies = (
-				709982B52C979DFA00B0257A /* SpatialShoesScene */,
+				7024313E2C98F96E005012A3 /* SpatialShoesScene */,
 			);
 			productName = SpatialShoes;
 			productReference = 707516782C93A680000BEE92 /* SpatialShoes.app */;
@@ -466,14 +510,18 @@
 				702EC1472C978B32003248BF /* DetailFactory.swift in Sources */,
 				702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */,
 				707516A22C93ABCF000BEE92 /* HomeViewModel.swift in Sources */,
+				702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */,
 				707516802C93A680000BEE92 /* SpatialShoesApp.swift in Sources */,
 				70500CB02C97A5590042D23D /* DetailView+InfoPanel.swift in Sources */,
 				702EC1422C9783AE003248BF /* DetailView+VolumetricWindow.swift in Sources */,
 				707516A62C93AF02000BEE92 /* DetailView.swift in Sources */,
-				7075169E2C93AA92000BEE92 /* ShoeDataRepository.swift in Sources */,
+				7075169E2C93AA92000BEE92 /* GetShoesRepository.swift in Sources */,
 				707516972C93A80B000BEE92 /* JSONManager.swift in Sources */,
+				7024313A2C98E615005012A3 /* HomeView_Preview.swift in Sources */,
 				707516922C93A782000BEE92 /* HomeView.swift in Sources */,
+				702431382C98E5E4005012A3 /* DetailView_Preview.swift in Sources */,
 				702EC1452C978AB0003248BF /* FavoriteShoesUseCase.swift in Sources */,
+				7024313C2C98E77B005012A3 /* SplashView_Preview.swift in Sources */,
 				707516A92C93AF1B000BEE92 /* DetailViewModel.swift in Sources */,
 				707516AC2C93BA59000BEE92 /* HomeFactory.swift in Sources */,
 			);
@@ -483,7 +531,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				708376FF2C93D1F0008DC7AB /* ShoeDataRepositoryTests.swift in Sources */,
+				702431462C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift in Sources */,
+				708376FF2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift in Sources */,
+				7012159F2C9925DC00C4BC3B /* MockGetShoesRepository.swift in Sources */,
+				702431442C9900E3005012A3 /* GetShoesUseCaseTests.swift in Sources */,
 				708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,7 +792,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		709982B52C979DFA00B0257A /* SpatialShoesScene */ = {
+		7024313E2C98F96E005012A3 /* SpatialShoesScene */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpatialShoesScene;
 		};

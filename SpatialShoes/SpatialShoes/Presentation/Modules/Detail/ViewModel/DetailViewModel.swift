@@ -15,6 +15,9 @@ final class DetailViewModel: ObservableObject {
     @Published var isRotating = false
     @Published var isFavorite = false
     @Published var favoriteShoes: [Shoe] = []
+    @Published var showLoader: Bool = false
+    @Published var showAlert: Bool = false
+    var errorMessage: String?
         
     // MARK: - Private Properties
     
@@ -29,16 +32,24 @@ final class DetailViewModel: ObservableObject {
     // MARK: - Public Functions
     
     func toggleFavorite(_ shoe: Shoe) {
+        showLoader = true
+        errorMessage = nil
+
         do {
-            if isFavorite {
-                try favoriteShoesUseCase.removeFavoriteShoe(with: shoe.id)
-            } else {
-                try favoriteShoesUseCase.saveFavoriteShoe(shoe)
-            }
+            try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, for: shoe)
             isFavorite.toggle()
+            favoriteShoes = favoriteShoesUseCase.favoriteShoes
+            showLoader = false
+        } catch let error as FavoriteShoesDomainError {
+            errorMessage = error.message
+            showLoader = true
+            showAlert = true
+            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
         } catch {
-            // TODO: Show alert
-            print("❌ Error in [toggleFavorite]: \(error.localizedDescription)")
+            errorMessage = Localizables.unknownError
+            showLoader = true
+            showAlert = true
+            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
         }
     }
     
@@ -48,5 +59,13 @@ final class DetailViewModel: ObservableObject {
     
     func toggleRotation() {
         isRotating.toggle()
+    }
+}
+
+// MARK: - Constants
+
+private extension DetailViewModel {
+    enum Localizables {
+        static let unknownError = "Error por determinar"
     }
 }

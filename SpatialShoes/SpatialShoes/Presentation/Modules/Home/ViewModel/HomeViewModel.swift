@@ -7,34 +7,55 @@
 
 import SwiftUI
 
-@Observable
 final class HomeViewModel: ObservableObject {
     
     // MARK: - Public Properties
     
-    var shoes: [Shoe]
+    @Published var showLoader: Bool = false
+    @Published var showAlert: Bool = false
+    var shoes: [Shoe] = []
+    var errorMessage: String?
     
     // MARK: - Private Properties
     
-    private var repository: ShoeDataRepository
+    private var getShoesUseCase: GetShoesUseCase
 
     // MARK: - Initializer
     
-    init(repository: ShoeDataRepository) {
-        self.repository = repository
+    init(getShoesUseCase: GetShoesUseCase) {
+        self.getShoesUseCase = getShoesUseCase
+    }
+    
+    // MARK: - Public Functions
+    
+    func loadShoes() {
+        showLoader = true
+        errorMessage = nil
+        
         do {
-            shoes = try repository.loadShoes(fileName: Constants.fileName)
+            try getShoesUseCase.execute()
+            shoes = getShoesUseCase.shoes
+            showLoader = false
+        } catch let error as GetShoesDomainError {
+            errorMessage = error.message
+            showLoader = false
+            showAlert = true
+            print("❌ [ERROR] \(errorMessage ?? Localizables.Errors.unknown)")
         } catch {
-            shoes = []
-            print("❌ Error decoding JSON: \(error.localizedDescription)")
+            errorMessage = Localizables.Errors.unknown
+            showLoader = false
+            showAlert = true
+            print("❌ [ERROR] \(errorMessage ?? Localizables.Errors.unknown)")
         }
     }
 }
 
-// MARK: - Constants
+// MARK: - Localizables
 
 private extension HomeViewModel {
-    enum Constants {
-        static let fileName = "Shoes"
+    enum Localizables {
+        enum Errors {
+            static let unknown = "Error por determinar"
+        }
     }
 }

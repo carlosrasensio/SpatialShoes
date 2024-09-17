@@ -13,18 +13,16 @@ final class SwiftDataManager {
     
     // MARK: - Public Functions
     
-    func fetchFavoriteShoes() throws -> [Shoe] {
-        // TODO
-        []
-    }
-    
     func saveFavoriteShoe(_ shoe: Shoe) throws {
         // TODO
     }
     
-    func removeFavoriteShoe(with id: Int) throws {
-        var favoriteShoes = try fetchFavoriteShoes()
-        favoriteShoes.removeAll { $0.id == id }
-        // TODO: Guardar resultado
+    func deleteFavoriteShoe(with id: Int) throws {
+        // TODO
+    }
+    
+    func fetchFavoriteShoes() throws -> [Shoe] {
+        // TODO
+        []
     }
 }
