@@ -31,6 +31,8 @@ struct HomeView: View {
                 }
                 .navigationTitle(Localizables.navigationtitle)
                 .navigationSplitViewColumnWidth(250)
+                .background(Color.blue.opacity(0.5))
+                .foregroundColor(.white)
             }
         } content: {
             if let selectedShoe {

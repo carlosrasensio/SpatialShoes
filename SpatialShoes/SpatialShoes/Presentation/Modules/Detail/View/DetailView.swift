@@ -52,6 +52,8 @@ struct DetailView: View {
             .padding()
             .frame(maxWidth: .infinity)
         }
+        .background(Color.blue.opacity(0.2))
+        .foregroundColor(.white)
         .navigationBarItems(trailing:
                                 Button(action: {
             toggleFavorite()

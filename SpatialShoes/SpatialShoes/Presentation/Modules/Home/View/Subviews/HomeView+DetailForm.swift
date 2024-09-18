@@ -25,5 +25,7 @@ extension HomeView {
             LabeledContent("**Certificaciones**", value: shoe.certifications.joined(separator: ", "))
         }
         .navigationTitle(shoe.name)
+        .background(Color.blue.opacity(0.4))
+        .foregroundColor(.white)
     }
 }
