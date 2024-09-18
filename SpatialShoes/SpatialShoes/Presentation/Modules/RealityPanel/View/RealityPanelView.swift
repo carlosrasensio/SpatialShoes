@@ -1,24 +1,25 @@
 //
-//  DetailView.swift
+//  RealityPanelView.swift
 //  SpatialShoes
 //
-//  Created by Carlos Rodriguez Asensio on 13/9/24.
+//  Created by Carlos Rodriguez Asensio on 18/9/24.
 //
 
 import RealityKit
 import SpatialShoesScene
 import SwiftUI
 
-struct DetailView: View {
+struct RealityPanelView: View {
     
     // MARK: - Public Properties
     
-    @ObservedObject var viewModel: DetailViewModel
+    @State var viewModel: RealityPanelViewModel
     var shoe: Shoe
     
     // MARK: - Private Properties
     
-    @State private var isPresented: Bool = false
+    @State private var showVolumetricWindow: Bool = false
+    @State private var showFavoriteToast: Bool = false
     
     // MARK: - View
     
@@ -28,9 +29,6 @@ struct DetailView: View {
                 if viewModel.showLoader {
                     ProgressView(Localizables.loaderText)
                 } else {
-                    createInfoPanel()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
                     Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle)
                         .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
                         .frame(maxWidth: .infinity)
@@ -42,9 +40,9 @@ struct DetailView: View {
                     }
                     
                     Button(Localizables.showVolumetricWindow) {
-                        isPresented.toggle()
+                        showVolumetricWindow.toggle()
                     }
-                    .sheet(isPresented: $isPresented) {
+                    .sheet(isPresented: $showVolumetricWindow) {
                         createVolumetricWindow()
                     }
                     
@@ -54,28 +52,47 @@ struct DetailView: View {
             .padding()
             .frame(maxWidth: .infinity)
         }
-        .navigationBarTitle(shoe.name, displayMode: .inline)
+        .background(Color.blue.opacity(0.2))
+        .foregroundColor(.white)
         .navigationBarItems(trailing:
                                 Button(action: {
-            viewModel.toggleFavorite(shoe)
+            toggleFavorite()
         }) {
             Image(systemName: viewModel.isFavorite ? Constants.Icons.deleteFavorite : Constants.Icons.saveFavorite)
                 .foregroundColor(.red)
                 .font(.title2)
         })
-        .alert(isPresented: $viewModel.showAlert) {
-            Alert(
-                title: Text(Localizables.alertTitle),
-                message: Text(viewModel.errorMessage ?? Localizables.unknownError),
-                dismissButton: .default(Text(Localizables.alertDismissButton))
-            )
+        .overlay(
+            Group {
+                if showFavoriteToast {
+                    createToast()
+                }
+            },
+            alignment: .topTrailing
+        )
+        .alert(Localizables.alertTitle,
+               isPresented: $viewModel.showAlert)
+        {} message: {
+            Text(viewModel.errorMessage ?? Localizables.unknownError)
+        }
+    }
+}
+
+// MARK: - Private Functions
+
+private extension RealityPanelView {
+    func toggleFavorite() {
+        viewModel.toggleFavorite(shoe)
+        showFavoriteToast = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            showFavoriteToast = false
         }
     }
 }
 
 // MARK: - Constants
 
-private extension DetailView {
+private extension RealityPanelView {
     enum Constants {
         enum Icons {
             static let saveFavorite = "heart"
@@ -86,7 +103,7 @@ private extension DetailView {
 
 // MARK: - Localizables
 
-private extension DetailView {
+extension RealityPanelView {
     enum Localizables {
         static let loaderText = "Cargando..."
         static let showVolumetricWindow = "Ver Ventana Volumétrica"
@@ -94,6 +111,5 @@ private extension DetailView {
         static let disableExhibitorMode = "Desactivar Modo Expositor"
         static let unknownError = "Error por determinar"
         static let alertTitle = "Ups..."
-        static let alertDismissButton = "OK"
     }
 }

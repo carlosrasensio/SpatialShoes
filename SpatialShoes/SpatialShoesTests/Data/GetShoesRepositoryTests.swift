@@ -18,7 +18,7 @@ final class GetShoesRepositoryTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = GetShoesRepository(bundle: Bundle(for: GetShoesRepositoryTests.self))
+        sut = GetShoesRepository()
     }
     
     override func tearDown() {
@@ -29,12 +29,9 @@ final class GetShoesRepositoryTests: XCTestCase {
     // MARK: - Tests
     
     func testLoadShoesWithSuccess() {
-        // Given
-        let fileName = "ShoesTest"
-        
         do {
             // When
-            let shoes = try sut.loadShoes(fileName: fileName)
+            let shoes = try sut.loadShoes()
             
             // Then
             XCTAssertNotNil(shoes)

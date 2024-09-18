@@ -8,14 +8,14 @@
 import Foundation
 @testable import SpatialShoes
 
-final class MockGetShoesRepository: GetShoesRepositoryProtocol {
-    var bundle: Bundle? { Bundle(for: GetShoesUseCaseTests.self) }
+final class MockGetShoesRepository {}
+
+// MARK: - GetShoesRepositoryProtocol
+
+extension MockGetShoesRepository: GetShoesRepositoryProtocol {
     
-    func loadShoes(fileName: String?) throws -> [Shoe] {
-        guard let fileName else { throw GetShoesDataError.filenameError }
-        guard let result = try JSONManager.shared.load(fileName: fileName,
-                                                       type: [Shoe].self,
-                                                       bundle: bundle) else { throw GetShoesDataError.parsingError }
-        return result
-    }
+    // MARK: - Properties
+    
+    var fileName: String? { "ShoesTest" }
+    var bundle: Bundle? { Bundle(for: MockGetShoesRepository.self) }
 }

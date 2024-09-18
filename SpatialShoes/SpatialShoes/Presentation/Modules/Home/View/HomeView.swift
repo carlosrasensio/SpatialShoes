@@ -12,28 +12,46 @@ struct HomeView: View {
     
     // MARK: - Private Properties
     
-    @ObservedObject var viewModel: HomeViewModel
+    @State var viewModel: HomeViewModel
+    @State private var selectedShoe: Shoe?
 
     // MARK: - View
     
     var body: some View {
-        NavigationView {
+        NavigationSplitView {
             if viewModel.showLoader {
                 ProgressView(Localizables.loaderText)
             } else {
-                List(viewModel.shoes) { shoe in
-                    NavigationLink(destination: DetailFactory.make(with: shoe)) {
-                        HStack {
-                            Text(shoe.name)
-                                .font(.headline)
-                        }
+                List(selection: $selectedShoe) {
+                    ForEach(viewModel.shoes) { shoe in
+                        Text(shoe.name)
+                            .font(.headline)
+                            .tag(shoe)
                     }
                 }
                 .navigationTitle(Localizables.navigationtitle)
+                .navigationSplitViewColumnWidth(250)
+                .background(Color.blue.opacity(0.5))
+                .foregroundColor(.white)
+            }
+        } content: {
+            if let selectedShoe {
+                DetailPanelFactory.make(with: selectedShoe)
+            } else {
+                Text("Empieza a ojear el catálogo!")
+            }
+        } detail: {
+            if let selectedShoe {
+                RealityPanelFactory.make(with: selectedShoe)
             }
         }
-        .onAppear {
+        .onAppear(perform: {
             viewModel.loadShoes()
+        })
+        .alert(Localizables.alertTitle,
+               isPresented: $viewModel.showAlert)
+        {} message: {
+            Text(viewModel.errorMessage)
         }
     }
 }
@@ -42,7 +60,8 @@ struct HomeView: View {
 
 private extension HomeView {
     enum Localizables {
-        static let navigationtitle = "Catálogo de Zapatillas"
+        static let navigationtitle = "Zapatillas"
         static let loaderText = "Cargando..."
+        static let alertTitle = "ERROR"
     }
 }

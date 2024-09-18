@@ -1,5 +1,5 @@
 //
-//  DetailViewModelTests.swift
+//  RealityPanelViewModelTests.swift
 //  SpatialShoesTests
 //
 //  Created by Carlos Rodriguez Asensio on 17/9/24.
@@ -8,11 +8,11 @@
 import XCTest
 @testable import SpatialShoes
 
-final class DetailViewModelTests: XCTestCase {
+final class RealityPanelViewModelTests: XCTestCase {
 
     // MARK: - Pivate Properties
     
-    private var sut: DetailViewModel!
+    private var sut: RealityPanelViewModel!
     private var useCase: FavoriteShoesUseCase!
     private var repository: FavoriteShoesRepository!
     
@@ -22,7 +22,7 @@ final class DetailViewModelTests: XCTestCase {
         super.setUp()
         repository = FavoriteShoesRepository()
         useCase = FavoriteShoesUseCase(repository: repository)
-        sut = DetailViewModel(favoriteShoesUseCase: useCase)
+        sut = RealityPanelViewModel(favoriteShoesUseCase: useCase)
     }
     
     override func tearDown() {

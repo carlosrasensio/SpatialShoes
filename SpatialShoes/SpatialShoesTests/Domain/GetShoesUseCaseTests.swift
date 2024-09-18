@@ -32,12 +32,9 @@ final class GetShoesUseCaseTests: XCTestCase {
     // MARK: - Tests
 
     func testExecuteWithSuccess() {
-        // Given
-        let fileName = "ShoesTest"
-
         do {
             // When
-            try sut.execute(with: fileName)
+            try sut.execute()
             
             // Then
             XCTAssertFalse(sut.shoes.isEmpty)
