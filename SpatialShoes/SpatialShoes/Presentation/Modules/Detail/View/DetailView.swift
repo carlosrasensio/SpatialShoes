@@ -29,9 +29,6 @@ struct DetailView: View {
                 if viewModel.showLoader {
                     ProgressView(Localizables.loaderText)
                 } else {
-                    createInfoPanel()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
                     Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle)
                         .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
                         .frame(maxWidth: .infinity)
@@ -55,7 +52,6 @@ struct DetailView: View {
             .padding()
             .frame(maxWidth: .infinity)
         }
-        .navigationBarTitle(shoe.name, displayMode: .inline)
         .navigationBarItems(trailing:
                                 Button(action: {
             toggleFavorite()

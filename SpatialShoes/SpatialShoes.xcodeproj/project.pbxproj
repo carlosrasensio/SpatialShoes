@@ -21,7 +21,6 @@
 		702EC1472C978B32003248BF /* DetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1462C978B32003248BF /* DetailFactory.swift */; };
 		702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */; };
 		702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC14A2C979091003248BF /* SwiftDataManager.swift */; };
-		70500CB02C97A5590042D23D /* DetailView+InfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CAF2C97A5590042D23D /* DetailView+InfoPanel.swift */; };
 		70500CB42C97B21D0042D23D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CB32C97B21D0042D23D /* SplashView.swift */; };
 		707516802C93A680000BEE92 /* SpatialShoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */; };
 		707516842C93A681000BEE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707516832C93A681000BEE92 /* Assets.xcassets */; };
@@ -42,6 +41,7 @@
 		70E5277E2C9A390700C65367 /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 70E5277D2C9A390700C65367 /* ShoesTest.json */; };
 		70E527842C9A42BB00C65367 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 70E527832C9A42BB00C65367 /* SpatialShoesScene */; };
 		70E527862C9A5DF700C65367 /* DetailView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527852C9A5DF200C65367 /* DetailView+Toast.swift */; };
+		70E527892C9A624600C65367 /* HomeView+DetailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527882C9A624600C65367 /* HomeView+DetailForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		702EC1462C978B32003248BF /* DetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactory.swift; sourceTree = "<group>"; };
 		702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesRepository.swift; sourceTree = "<group>"; };
 		702EC14A2C979091003248BF /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
-		70500CAF2C97A5590042D23D /* DetailView+InfoPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+InfoPanel.swift"; sourceTree = "<group>"; };
 		70500CB32C97B21D0042D23D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		707516782C93A680000BEE92 /* SpatialShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialShoesApp.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		70E5277D2C9A390700C65367 /* ShoesTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
 		70E527822C9A42B300C65367 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = /Users/carlosrasensio/Developer/SpatialShoesScene; sourceTree = "<absolute>"; };
 		70E527852C9A5DF200C65367 /* DetailView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+Toast.swift"; sourceTree = "<group>"; };
+		70E527882C9A624600C65367 /* HomeView+DetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+DetailForm.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +187,6 @@
 		70500CB12C97A5AA0042D23D /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				70500CAF2C97A5590042D23D /* DetailView+InfoPanel.swift */,
 				70E527852C9A5DF200C65367 /* DetailView+Toast.swift */,
 				702EC1412C9783AE003248BF /* DetailView+VolumetricWindow.swift */,
 			);
@@ -314,6 +313,7 @@
 			children = (
 				707516912C93A782000BEE92 /* HomeView.swift */,
 				702431392C98E615005012A3 /* HomeView_Preview.swift */,
+				70E527872C9A623700C65367 /* Subviews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -420,6 +420,14 @@
 				70E527822C9A42B300C65367 /* SpatialShoesScene */,
 			);
 			path = Packages;
+			sourceTree = "<group>";
+		};
+		70E527872C9A623700C65367 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				70E527882C9A624600C65367 /* HomeView+DetailForm.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,8 +545,8 @@
 				702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */,
 				707516A22C93ABCF000BEE92 /* HomeViewModel.swift in Sources */,
 				702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */,
+				70E527892C9A624600C65367 /* HomeView+DetailForm.swift in Sources */,
 				707516802C93A680000BEE92 /* SpatialShoesApp.swift in Sources */,
-				70500CB02C97A5590042D23D /* DetailView+InfoPanel.swift in Sources */,
 				702EC1422C9783AE003248BF /* DetailView+VolumetricWindow.swift in Sources */,
 				707516A62C93AF02000BEE92 /* DetailView.swift in Sources */,
 				7075169E2C93AA92000BEE92 /* GetShoesRepository.swift in Sources */,

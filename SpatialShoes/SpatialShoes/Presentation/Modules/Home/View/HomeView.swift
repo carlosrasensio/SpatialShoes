@@ -13,23 +13,34 @@ struct HomeView: View {
     // MARK: - Private Properties
     
     @State var viewModel: HomeViewModel
+    @State private var selectedShoe: Shoe?
 
     // MARK: - View
     
     var body: some View {
-        NavigationView {
+        NavigationSplitView {
             if viewModel.showLoader {
                 ProgressView(Localizables.loaderText)
             } else {
-                List(viewModel.shoes) { shoe in
-                    NavigationLink(destination: DetailFactory.make(with: shoe)) {
-                        HStack {
-                            Text(shoe.name)
-                                .font(.headline)
-                        }
+                List(selection: $selectedShoe) {
+                    ForEach(viewModel.shoes) { shoe in
+                        Text(shoe.name)
+                            .font(.headline)
+                            .tag(shoe)
                     }
                 }
                 .navigationTitle(Localizables.navigationtitle)
+                .navigationSplitViewColumnWidth(250)
+            }
+        } content: {
+            if let selectedShoe {
+                createDetailForm(with: selectedShoe)
+            } else {
+                Text("Empieza a ojear el catálogo!")
+            }
+        } detail: {
+            if let selectedShoe {
+                DetailFactory.make(with: selectedShoe)
             }
         }
         .onAppear(perform: {
