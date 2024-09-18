@@ -18,7 +18,8 @@ struct DetailView: View {
     
     // MARK: - Private Properties
     
-    @State private var isPresented: Bool = false
+    @State private var showVolumetricWindow: Bool = false
+    @State private var showFavoriteToast: Bool = false
     
     // MARK: - View
     
@@ -42,9 +43,9 @@ struct DetailView: View {
                     }
                     
                     Button(Localizables.showVolumetricWindow) {
-                        isPresented.toggle()
+                        showVolumetricWindow.toggle()
                     }
-                    .sheet(isPresented: $isPresented) {
+                    .sheet(isPresented: $showVolumetricWindow) {
                         createVolumetricWindow()
                     }
                     
@@ -58,17 +59,34 @@ struct DetailView: View {
         .navigationBarItems(trailing:
                                 Button(action: {
             viewModel.toggleFavorite(shoe)
+            showFavoriteToast = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                showFavoriteToast = false
+            }
         }) {
             Image(systemName: viewModel.isFavorite ? Constants.Icons.deleteFavorite : Constants.Icons.saveFavorite)
                 .foregroundColor(.red)
                 .font(.title2)
         })
-        .alert(isPresented: $viewModel.showAlert) {
-            Alert(
-                title: Text(Localizables.alertTitle),
-                message: Text(viewModel.errorMessage ?? Localizables.unknownError),
-                dismissButton: .default(Text(Localizables.alertDismissButton))
-            )
+        .overlay(
+            Group {
+                if showFavoriteToast {
+                    Text(viewModel.isFavorite ? Localizables.toastSaveDescription : Localizables.toastDeleteDescription)
+                        .padding()
+                        .background(Color.red.opacity(0.1))
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .transition(.opacity)
+                        .padding(.top, 20)
+                        .padding(.trailing, 20)
+                }
+            },
+            alignment: .topTrailing
+        )
+        .alert(Localizables.alertTitle,
+               isPresented: $viewModel.showAlert)
+        {} message: {
+            Text(viewModel.errorMessage ?? Localizables.unknownError)
         }
     }
 }
@@ -94,6 +112,7 @@ private extension DetailView {
         static let disableExhibitorMode = "Desactivar Modo Expositor"
         static let unknownError = "Error por determinar"
         static let alertTitle = "Ups..."
-        static let alertDismissButton = "OK"
+        static let toastSaveDescription = "Zapatilla guardada en Favoritos con éxito!"
+        static let toastDeleteDescription = "Zapatilla eliminada de Favoritos con éxito!"
     }
 }

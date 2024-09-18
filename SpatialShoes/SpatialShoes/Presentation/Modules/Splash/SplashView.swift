@@ -24,7 +24,7 @@ struct SplashView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 600, height: 400)
-                    .cornerRadius(8)
+                    .cornerRadius(10)
                     .onTapGesture {
                         withAnimation {
                             isActive = true
@@ -33,7 +33,7 @@ struct SplashView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                     withAnimation {
                         isActive = true
                     }
