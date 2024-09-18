@@ -1,23 +1,9 @@
 //
-//  DetailViewTest.swift
+//  ShoeTest.swift
 //  SpatialShoes
 //
 //  Created by Carlos Rodriguez Asensio on 18/9/24.
 //
-
-import SwiftUI
-
-extension DetailView {
-    static var preview: some View {
-        let repository = FavoriteShoesRepository()
-        let useCase = FavoriteShoesUseCase(repository: repository)
-        let viewModel = DetailViewModel(favoriteShoesUseCase: useCase)
-        
-        return DetailView(viewModel: viewModel, shoe: Shoe.test)
-    }
-}
-
-// MARK: - Shoe
 
 extension Shoe {
     static let test = Shoe(id: 10345,
@@ -46,4 +32,3 @@ extension Shoe {
                            warranty: 2,
                            certifications: ["Materiales Reciclados", "Libre de Crueldad"])
 }
-

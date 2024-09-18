@@ -1,15 +1,21 @@
 //
-//  HomeView+DetailForm.swift
+//  DetailPanelView.swift
 //  SpatialShoes
 //
-//  Created by Carlos Rodriguez Asensio on 18/9/24.
+//  Created by Carlos Rodriguez Asensio on 13/9/24.
 //
 
 import SwiftUI
 
-extension HomeView {
-    @ViewBuilder
-    func createDetailForm(with shoe: Shoe) -> some View {
+struct DetailPanelView: View {
+    
+    // MARK: - Properties
+    
+    @State var shoe: Shoe
+    
+    // MARK: - View
+    
+    var body: some View {
         Form {
             LabeledContent("**Marca**", value: shoe.brand)
             LabeledContent("**Tallas**", value: shoe.size.map { String($0) }.joined(separator: ", "))

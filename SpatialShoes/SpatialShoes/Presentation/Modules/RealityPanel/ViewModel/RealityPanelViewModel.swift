@@ -1,15 +1,15 @@
 //
-//  DetailViewModel.swift
+//  RealityPanelViewModel.swift
 //  SpatialShoes
 //
-//  Created by Carlos Rodriguez Asensio on 13/9/24.
+//  Created by Carlos Rodriguez Asensio on 18/9/24.
 //
 
 import Combine
 import Foundation
 
 @Observable
-final class DetailViewModel {
+final class RealityPanelViewModel {
     
     // MARK: - Public Properties
 
@@ -65,8 +65,9 @@ final class DetailViewModel {
 
 // MARK: - Constants
 
-private extension DetailViewModel {
+private extension RealityPanelViewModel {
     enum Localizables {
         static let unknownError = "Error por determinar"
     }
 }
+
