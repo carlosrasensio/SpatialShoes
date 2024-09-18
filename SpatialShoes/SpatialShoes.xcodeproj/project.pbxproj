@@ -39,7 +39,6 @@
 		70AA2C0E2C9A6C48007BDA4A /* DetailPanelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA2C0D2C9A6C42007BDA4A /* DetailPanelFactory.swift */; };
 		70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */; };
 		70E5277E2C9A390700C65367 /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 70E5277D2C9A390700C65367 /* ShoesTest.json */; };
-		70E527842C9A42BB00C65367 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 70E527832C9A42BB00C65367 /* SpatialShoesScene */; };
 		70E5278B2C9A659800C65367 /* RealityPanelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5278A2C9A659300C65367 /* RealityPanelViewTest.swift */; };
 		70E5278D2C9A66EC00C65367 /* HomeViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5278C2C9A66E800C65367 /* HomeViewTest.swift */; };
 		70E527922C9A67DF00C65367 /* RealityPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527912C9A67DA00C65367 /* RealityPanelView.swift */; };
@@ -48,6 +47,7 @@
 		70E5279E2C9A6AA700C65367 /* RealityPanelView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5279D2C9A6AA700C65367 /* RealityPanelView+Toast.swift */; };
 		70E527A02C9A6ADE00C65367 /* DetailPanelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5279F2C9A6AD800C65367 /* DetailPanelViewTest.swift */; };
 		70E527A32C9A6B5900C65367 /* ShoeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527A22C9A6B5400C65367 /* ShoeTest.swift */; };
+		70EF86082C9A765100E23127 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 70EF86072C9A765100E23127 /* SpatialShoesScene */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +96,6 @@
 		70AA2C0D2C9A6C42007BDA4A /* DetailPanelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPanelFactory.swift; sourceTree = "<group>"; };
 		70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepositoryTest.swift; sourceTree = "<group>"; };
 		70E5277D2C9A390700C65367 /* ShoesTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
-		70E527822C9A42B300C65367 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = /Users/carlosrasensio/Developer/SpatialShoesScene; sourceTree = "<absolute>"; };
 		70E5278A2C9A659300C65367 /* RealityPanelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelViewTest.swift; sourceTree = "<group>"; };
 		70E5278C2C9A66E800C65367 /* HomeViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTest.swift; sourceTree = "<group>"; };
 		70E527912C9A67DA00C65367 /* RealityPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelView.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		70E5279D2C9A6AA700C65367 /* RealityPanelView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityPanelView+Toast.swift"; sourceTree = "<group>"; };
 		70E5279F2C9A6AD800C65367 /* DetailPanelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPanelViewTest.swift; sourceTree = "<group>"; };
 		70E527A22C9A6B5400C65367 /* ShoeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeTest.swift; sourceTree = "<group>"; };
+		70EF86062C9A764500E23127 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpatialShoesScene; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E527842C9A42BB00C65367 /* SpatialShoesScene in Frameworks */,
+				70EF86082C9A765100E23127 /* SpatialShoesScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +420,7 @@
 		70E527812C9A428600C65367 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				70E527822C9A42B300C65367 /* SpatialShoesScene */,
+				70EF86062C9A764500E23127 /* SpatialShoesScene */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -513,7 +513,7 @@
 			);
 			name = SpatialShoes;
 			packageProductDependencies = (
-				70E527832C9A42BB00C65367 /* SpatialShoesScene */,
+				70EF86072C9A765100E23127 /* SpatialShoesScene */,
 			);
 			productName = SpatialShoes;
 			productReference = 707516782C93A680000BEE92 /* SpatialShoes.app */;
@@ -900,7 +900,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		70E527832C9A42BB00C65367 /* SpatialShoesScene */ = {
+		70EF86072C9A765100E23127 /* SpatialShoesScene */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpatialShoesScene;
 		};

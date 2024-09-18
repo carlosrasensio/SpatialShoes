@@ -12,13 +12,13 @@ import Foundation
 final class RealityPanelViewModel {
     
     // MARK: - Public Properties
-
-    var isRotating = false
-    var isFavorite = false
+    
+    var favoriteShoes: [Shoe] = []
+    var isRotating: Bool = false
+    var isFavorite: Bool = false
     var showLoader: Bool = false
     var showAlert: Bool = false
-    var favoriteShoes: [Shoe] = []
-    var errorMessage: String?
+    @ObservationIgnored var errorMessage: String?
         
     // MARK: - Private Properties
     
