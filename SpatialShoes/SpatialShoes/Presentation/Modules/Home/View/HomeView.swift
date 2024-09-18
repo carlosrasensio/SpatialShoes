@@ -47,7 +47,7 @@ struct HomeView: View {
 
 private extension HomeView {
     enum Localizables {
-        static let navigationtitle = "Catálogo de Zapatillas"
+        static let navigationtitle = "Zapatillas"
         static let loaderText = "Cargando..."
         static let alertTitle = "ERROR"
     }

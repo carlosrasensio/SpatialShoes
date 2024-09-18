@@ -1,0 +1,29 @@
+//
+//  DetailView+Toast.swift
+//  SpatialShoes
+//
+//  Created by Carlos Rodriguez Asensio on 18/9/24.
+//
+
+import SwiftUI
+
+extension DetailView {
+    @ViewBuilder
+    func createToast() -> some View {
+        Text(viewModel.isFavorite ? Localizables.toastSaveDescription : Localizables.toastDeleteDescription)
+            .padding()
+            .background(Color.red.opacity(0.1))
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .transition(.opacity)
+            .padding(.top, 20)
+            .padding(.trailing, 20)
+    }
+}
+
+// MARK: - Localizables
+
+private extension DetailView.Localizables {
+    static let toastSaveDescription = "Zapatilla guardada en Favoritos con éxito!"
+    static let toastDeleteDescription = "Zapatilla eliminada de Favoritos con éxito!"
+}

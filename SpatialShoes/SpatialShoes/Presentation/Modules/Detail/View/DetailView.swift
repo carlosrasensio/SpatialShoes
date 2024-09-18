@@ -58,11 +58,7 @@ struct DetailView: View {
         .navigationBarTitle(shoe.name, displayMode: .inline)
         .navigationBarItems(trailing:
                                 Button(action: {
-            viewModel.toggleFavorite(shoe)
-            showFavoriteToast = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                showFavoriteToast = false
-            }
+            toggleFavorite()
         }) {
             Image(systemName: viewModel.isFavorite ? Constants.Icons.deleteFavorite : Constants.Icons.saveFavorite)
                 .foregroundColor(.red)
@@ -71,14 +67,7 @@ struct DetailView: View {
         .overlay(
             Group {
                 if showFavoriteToast {
-                    Text(viewModel.isFavorite ? Localizables.toastSaveDescription : Localizables.toastDeleteDescription)
-                        .padding()
-                        .background(Color.red.opacity(0.1))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .transition(.opacity)
-                        .padding(.top, 20)
-                        .padding(.trailing, 20)
+                    createToast()
                 }
             },
             alignment: .topTrailing
@@ -87,6 +76,18 @@ struct DetailView: View {
                isPresented: $viewModel.showAlert)
         {} message: {
             Text(viewModel.errorMessage ?? Localizables.unknownError)
+        }
+    }
+}
+
+// MARK: - Private Functions
+
+private extension DetailView {
+    func toggleFavorite() {
+        viewModel.toggleFavorite(shoe)
+        showFavoriteToast = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            showFavoriteToast = false
         }
     }
 }
@@ -104,7 +105,7 @@ private extension DetailView {
 
 // MARK: - Localizables
 
-private extension DetailView {
+extension DetailView {
     enum Localizables {
         static let loaderText = "Cargando..."
         static let showVolumetricWindow = "Ver Ventana Volumétrica"
@@ -112,7 +113,5 @@ private extension DetailView {
         static let disableExhibitorMode = "Desactivar Modo Expositor"
         static let unknownError = "Error por determinar"
         static let alertTitle = "Ups..."
-        static let toastSaveDescription = "Zapatilla guardada en Favoritos con éxito!"
-        static let toastDeleteDescription = "Zapatilla eliminada de Favoritos con éxito!"
     }
 }

@@ -41,6 +41,7 @@
 		70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */; };
 		70E5277E2C9A390700C65367 /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 70E5277D2C9A390700C65367 /* ShoesTest.json */; };
 		70E527842C9A42BB00C65367 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 70E527832C9A42BB00C65367 /* SpatialShoesScene */; };
+		70E527862C9A5DF700C65367 /* DetailView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527852C9A5DF200C65367 /* DetailView+Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepositoryTest.swift; sourceTree = "<group>"; };
 		70E5277D2C9A390700C65367 /* ShoesTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
 		70E527822C9A42B300C65367 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpatialShoesScene; path = /Users/carlosrasensio/Developer/SpatialShoesScene; sourceTree = "<absolute>"; };
+		70E527852C9A5DF200C65367 /* DetailView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+Toast.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				70500CAF2C97A5590042D23D /* DetailView+InfoPanel.swift */,
+				70E527852C9A5DF200C65367 /* DetailView+Toast.swift */,
 				702EC1412C9783AE003248BF /* DetailView+VolumetricWindow.swift */,
 			);
 			path = Subviews;
@@ -530,6 +533,7 @@
 				702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */,
 				70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */,
 				702EC1472C978B32003248BF /* DetailFactory.swift in Sources */,
+				70E527862C9A5DF700C65367 /* DetailView+Toast.swift in Sources */,
 				702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */,
 				707516A22C93ABCF000BEE92 /* HomeViewModel.swift in Sources */,
 				702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */,

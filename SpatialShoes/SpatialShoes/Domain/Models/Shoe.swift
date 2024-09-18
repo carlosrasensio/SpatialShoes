@@ -5,7 +5,7 @@
 //  Created by Carlos Rodriguez Asensio on 13/9/24.
 //
 
-struct Shoe: Codable, Identifiable {
+struct Shoe: Codable, Identifiable, Hashable {
     let id: Int
     let name: String
     let brand: String
