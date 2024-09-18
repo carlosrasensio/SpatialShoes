@@ -1,20 +1,20 @@
 //
-//  DetailView.swift
+//  RealityPanelView.swift
 //  SpatialShoes
 //
-//  Created by Carlos Rodriguez Asensio on 13/9/24.
+//  Created by Carlos Rodriguez Asensio on 18/9/24.
 //
 
 import RealityKit
 import SpatialShoesScene
 import SwiftUI
 
-struct DetailView: View {
+struct RealityPanelView: View {
     
     // MARK: - Public Properties
     
-    @State var viewModel: DetailViewModel
-    var shoe: Shoe
+    @State var viewModel: RealityPanelViewModel
+    @State var shoe: Shoe
     
     // MARK: - Private Properties
     
@@ -80,7 +80,7 @@ struct DetailView: View {
 
 // MARK: - Private Functions
 
-private extension DetailView {
+private extension RealityPanelView {
     func toggleFavorite() {
         viewModel.toggleFavorite(shoe)
         showFavoriteToast = true
@@ -92,7 +92,7 @@ private extension DetailView {
 
 // MARK: - Constants
 
-private extension DetailView {
+private extension RealityPanelView {
     enum Constants {
         enum Icons {
             static let saveFavorite = "heart"
@@ -103,7 +103,7 @@ private extension DetailView {
 
 // MARK: - Localizables
 
-extension DetailView {
+extension RealityPanelView {
     enum Localizables {
         static let loaderText = "Cargando..."
         static let showVolumetricWindow = "Ver Ventana Volumétrica"

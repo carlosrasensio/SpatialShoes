@@ -15,7 +15,7 @@ final class HomeViewModel {
     var shoes: [Shoe] = []
     var showLoader: Bool = false
     var showAlert: Bool = false
-    var errorMessage: String = ""
+    @ObservationIgnored var errorMessage: String = ""
     
     // MARK: - Private Properties
     

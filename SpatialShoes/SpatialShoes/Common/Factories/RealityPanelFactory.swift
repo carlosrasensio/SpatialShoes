@@ -1,5 +1,5 @@
 //
-//  DetailFactory.swift
+//  RealityPanelFactory.swift
 //  SpatialShoes
 //
 //  Created by Carlos Rodriguez Asensio on 15/9/24.
@@ -7,16 +7,16 @@
 
 import Foundation
 
-final class DetailFactory {
-    static func make(with shoe: Shoe) -> DetailView {
-        .init(viewModel: makeDetailViewModel(), shoe: shoe)
+final class RealityPanelFactory {
+    static func make(with shoe: Shoe) -> RealityPanelView {
+        .init(viewModel: makeRealityPanelViewModel(), shoe: shoe)
     }
 }
 
 // MARK: - Private Functions
 
-private extension DetailFactory {
-    static func makeDetailViewModel() -> DetailViewModel {
+private extension RealityPanelFactory {
+    static func makeRealityPanelViewModel() -> RealityPanelViewModel {
         .init(favoriteShoesUseCase: makeFavoriteShoesUseCase())
     }
     

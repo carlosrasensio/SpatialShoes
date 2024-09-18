@@ -36,13 +36,13 @@ struct HomeView: View {
             }
         } content: {
             if let selectedShoe {
-                createDetailForm(with: selectedShoe)
+                DetailPanelFactory.make(with: selectedShoe)
             } else {
                 Text("Empieza a ojear el catálogo!")
             }
         } detail: {
             if let selectedShoe {
-                DetailFactory.make(with: selectedShoe)
+                RealityPanelFactory.make(with: selectedShoe)
             }
         }
         .onAppear(perform: {

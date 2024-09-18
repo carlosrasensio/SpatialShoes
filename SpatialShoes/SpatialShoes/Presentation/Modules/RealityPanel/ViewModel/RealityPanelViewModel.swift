@@ -1,24 +1,24 @@
 //
-//  DetailViewModel.swift
+//  RealityPanelViewModel.swift
 //  SpatialShoes
 //
-//  Created by Carlos Rodriguez Asensio on 13/9/24.
+//  Created by Carlos Rodriguez Asensio on 18/9/24.
 //
 
 import Combine
 import Foundation
 
 @Observable
-final class DetailViewModel {
+final class RealityPanelViewModel {
     
     // MARK: - Public Properties
-
-    var isRotating = false
-    var isFavorite = false
+    
+    var favoriteShoes: [Shoe] = []
+    var isRotating: Bool = false
+    var isFavorite: Bool = false
     var showLoader: Bool = false
     var showAlert: Bool = false
-    var favoriteShoes: [Shoe] = []
-    var errorMessage: String?
+    @ObservationIgnored var errorMessage: String?
         
     // MARK: - Private Properties
     
@@ -65,8 +65,9 @@ final class DetailViewModel {
 
 // MARK: - Constants
 
-private extension DetailViewModel {
+private extension RealityPanelViewModel {
     enum Localizables {
         static let unknownError = "Error por determinar"
     }
 }
+
