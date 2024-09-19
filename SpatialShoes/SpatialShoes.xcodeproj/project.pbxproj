@@ -31,23 +31,23 @@
 		7075169A2C93A84B000BEE92 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516992C93A84B000BEE92 /* Shoe.swift */; };
 		7075169E2C93AA92000BEE92 /* GetShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075169D2C93AA92000BEE92 /* GetShoesRepository.swift */; };
 		707516A22C93ABCF000BEE92 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A12C93ABCF000BEE92 /* HomeViewModel.swift */; };
-		707516A62C93AF02000BEE92 /* DetailPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A52C93AF02000BEE92 /* DetailPanelView.swift */; };
+		707516A62C93AF02000BEE92 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A52C93AF02000BEE92 /* InfoPanelView.swift */; };
 		707516AC2C93BA59000BEE92 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516AB2C93BA59000BEE92 /* HomeFactory.swift */; };
 		708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */; };
 		708376FF2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FE2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift */; };
 		708377012C93D355008DC7AB /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 708377002C93D355008DC7AB /* ShoesTest.json */; };
-		70AA2C0E2C9A6C48007BDA4A /* DetailPanelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA2C0D2C9A6C42007BDA4A /* DetailPanelFactory.swift */; };
+		70AA2C0E2C9A6C48007BDA4A /* InfoPanelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AA2C0D2C9A6C42007BDA4A /* InfoPanelFactory.swift */; };
 		70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */; };
 		70E5277E2C9A390700C65367 /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 70E5277D2C9A390700C65367 /* ShoesTest.json */; };
 		70E5278B2C9A659800C65367 /* RealityPanelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5278A2C9A659300C65367 /* RealityPanelViewTest.swift */; };
 		70E5278D2C9A66EC00C65367 /* HomeViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5278C2C9A66E800C65367 /* HomeViewTest.swift */; };
 		70E527922C9A67DF00C65367 /* RealityPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527912C9A67DA00C65367 /* RealityPanelView.swift */; };
 		70E527942C9A67EC00C65367 /* RealityPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527932C9A67E900C65367 /* RealityPanelViewModel.swift */; };
-		70E5279C2C9A6A5D00C65367 /* DetailPanel_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5279B2C9A6A5300C65367 /* DetailPanel_Preview.swift */; };
+		70E5279C2C9A6A5D00C65367 /* InfoPanelView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5279B2C9A6A5300C65367 /* InfoPanelView_Preview.swift */; };
 		70E5279E2C9A6AA700C65367 /* RealityPanelView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5279D2C9A6AA700C65367 /* RealityPanelView+Toast.swift */; };
-		70E527A02C9A6ADE00C65367 /* DetailPanelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5279F2C9A6AD800C65367 /* DetailPanelViewTest.swift */; };
 		70E527A32C9A6B5900C65367 /* ShoeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E527A22C9A6B5400C65367 /* ShoeTest.swift */; };
 		70EF86082C9A765100E23127 /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 70EF86072C9A765100E23127 /* SpatialShoesScene */; };
+		70F7A1032C9BD10800C62A89 /* InfoPanelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7A1022C9BD10200C62A89 /* InfoPanelViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,24 +87,24 @@
 		707516992C93A84B000BEE92 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
 		7075169D2C93AA92000BEE92 /* GetShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepository.swift; sourceTree = "<group>"; };
 		707516A12C93ABCF000BEE92 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		707516A52C93AF02000BEE92 /* DetailPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPanelView.swift; sourceTree = "<group>"; };
+		707516A52C93AF02000BEE92 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 		707516AB2C93BA59000BEE92 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		708376EC2C93D118008DC7AB /* SpatialShoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpatialShoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerTests.swift; sourceTree = "<group>"; };
 		708376FE2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepositoryTests.swift; sourceTree = "<group>"; };
 		708377002C93D355008DC7AB /* ShoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
-		70AA2C0D2C9A6C42007BDA4A /* DetailPanelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPanelFactory.swift; sourceTree = "<group>"; };
+		70AA2C0D2C9A6C42007BDA4A /* InfoPanelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelFactory.swift; sourceTree = "<group>"; };
 		70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepositoryTest.swift; sourceTree = "<group>"; };
 		70E5277D2C9A390700C65367 /* ShoesTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
 		70E5278A2C9A659300C65367 /* RealityPanelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelViewTest.swift; sourceTree = "<group>"; };
 		70E5278C2C9A66E800C65367 /* HomeViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTest.swift; sourceTree = "<group>"; };
 		70E527912C9A67DA00C65367 /* RealityPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelView.swift; sourceTree = "<group>"; };
 		70E527932C9A67E900C65367 /* RealityPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelViewModel.swift; sourceTree = "<group>"; };
-		70E5279B2C9A6A5300C65367 /* DetailPanel_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPanel_Preview.swift; sourceTree = "<group>"; };
+		70E5279B2C9A6A5300C65367 /* InfoPanelView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView_Preview.swift; sourceTree = "<group>"; };
 		70E5279D2C9A6AA700C65367 /* RealityPanelView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityPanelView+Toast.swift"; sourceTree = "<group>"; };
-		70E5279F2C9A6AD800C65367 /* DetailPanelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPanelViewTest.swift; sourceTree = "<group>"; };
 		70E527A22C9A6B5400C65367 /* ShoeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeTest.swift; sourceTree = "<group>"; };
 		70EF86062C9A764500E23127 /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpatialShoesScene; sourceTree = "<group>"; };
+		70F7A1022C9BD10200C62A89 /* InfoPanelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +154,8 @@
 		7014154A2C964E530099AD8F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				707516A42C93AEED000BEE92 /* DetailPanel */,
 				707516902C93A744000BEE92 /* Home */,
+				707516A42C93AEED000BEE92 /* InfoPanel */,
 				70E527902C9A67CC00C65367 /* RealityPanel */,
 				70500CB22C97B2020042D23D /* Splash */,
 			);
@@ -253,8 +253,8 @@
 		707516852C93A681000BEE92 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				70E527A12C9A6B2B00C65367 /* DetailPanel */,
 				70E527992C9A689100C65367 /* Home */,
+				70E527A12C9A6B2B00C65367 /* InfoPanel */,
 				70E5279A2C9A689A00C65367 /* Reality */,
 				70E527A52C9A6B7000C65367 /* Resources */,
 				70E527A42C9A6B6300C65367 /* Utils */,
@@ -339,18 +339,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		707516A42C93AEED000BEE92 /* DetailPanel */ = {
+		707516A42C93AEED000BEE92 /* InfoPanel */ = {
 			isa = PBXGroup;
 			children = (
 				707516A72C93AF0C000BEE92 /* View */,
 			);
-			path = DetailPanel;
+			path = InfoPanel;
 			sourceTree = "<group>";
 		};
 		707516A72C93AF0C000BEE92 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				707516A52C93AF02000BEE92 /* DetailPanelView.swift */,
+				707516A52C93AF02000BEE92 /* InfoPanelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,8 +358,8 @@
 		707516AD2C93BA5F000BEE92 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				70AA2C0D2C9A6C42007BDA4A /* DetailPanelFactory.swift */,
 				707516AB2C93BA59000BEE92 /* HomeFactory.swift */,
+				70AA2C0D2C9A6C42007BDA4A /* InfoPanelFactory.swift */,
 				702EC1462C978B32003248BF /* RealityPanelFactory.swift */,
 			);
 			path = Factories;
@@ -470,13 +470,13 @@
 			path = Reality;
 			sourceTree = "<group>";
 		};
-		70E527A12C9A6B2B00C65367 /* DetailPanel */ = {
+		70E527A12C9A6B2B00C65367 /* InfoPanel */ = {
 			isa = PBXGroup;
 			children = (
-				70E5279B2C9A6A5300C65367 /* DetailPanel_Preview.swift */,
-				70E5279F2C9A6AD800C65367 /* DetailPanelViewTest.swift */,
+				70E5279B2C9A6A5300C65367 /* InfoPanelView_Preview.swift */,
+				70F7A1022C9BD10200C62A89 /* InfoPanelViewTest.swift */,
 			);
-			path = DetailPanel;
+			path = InfoPanel;
 			sourceTree = "<group>";
 		};
 		70E527A42C9A6B6300C65367 /* Utils */ = {
@@ -615,7 +615,8 @@
 				702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */,
 				707516802C93A680000BEE92 /* SpatialShoesApp.swift in Sources */,
 				702EC1422C9783AE003248BF /* RealityPanelView+VolumetricWindow.swift in Sources */,
-				707516A62C93AF02000BEE92 /* DetailPanelView.swift in Sources */,
+				70F7A1032C9BD10800C62A89 /* InfoPanelViewTest.swift in Sources */,
+				707516A62C93AF02000BEE92 /* InfoPanelView.swift in Sources */,
 				7075169E2C93AA92000BEE92 /* GetShoesRepository.swift in Sources */,
 				707516972C93A80B000BEE92 /* JSONManager.swift in Sources */,
 				70E5279E2C9A6AA700C65367 /* RealityPanelView+Toast.swift in Sources */,
@@ -623,9 +624,8 @@
 				7024313A2C98E615005012A3 /* HomeView_Preview.swift in Sources */,
 				707516922C93A782000BEE92 /* HomeView.swift in Sources */,
 				702431382C98E5E4005012A3 /* RealityPanelView_Preview.swift in Sources */,
-				70AA2C0E2C9A6C48007BDA4A /* DetailPanelFactory.swift in Sources */,
-				70E5279C2C9A6A5D00C65367 /* DetailPanel_Preview.swift in Sources */,
-				70E527A02C9A6ADE00C65367 /* DetailPanelViewTest.swift in Sources */,
+				70AA2C0E2C9A6C48007BDA4A /* InfoPanelFactory.swift in Sources */,
+				70E5279C2C9A6A5D00C65367 /* InfoPanelView_Preview.swift in Sources */,
 				702EC1452C978AB0003248BF /* FavoriteShoesUseCase.swift in Sources */,
 				7024313C2C98E77B005012A3 /* SplashView_Preview.swift in Sources */,
 				707516AC2C93BA59000BEE92 /* HomeFactory.swift in Sources */,
