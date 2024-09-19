@@ -197,13 +197,13 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		70500CB12C97A5AA0042D23D /* Subviews */ = {
+		70500CB12C97A5AA0042D23D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				70E5279D2C9A6AA700C65367 /* RealityPanelView+Toast.swift */,
 				702EC1412C9783AE003248BF /* RealityPanelView+VolumetricWindow.swift */,
 			);
-			path = Subviews;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		70500CB22C97B2020042D23D /* Splash */ = {
@@ -438,7 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				70E527912C9A67DA00C65367 /* RealityPanelView.swift */,
-				70500CB12C97A5AA0042D23D /* Subviews */,
+				70500CB12C97A5AA0042D23D /* Extensions */,
 			);
 			path = View;
 			sourceTree = "<group>";

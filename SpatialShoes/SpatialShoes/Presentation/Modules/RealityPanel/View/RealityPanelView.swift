@@ -69,7 +69,7 @@ struct RealityPanelView: View {
                     createToast()
                 }
             },
-            alignment: .topTrailing
+            alignment: .top
         )
         .alert(Localizables.alertTitle,
                isPresented: $viewModel.showAlert)
@@ -88,7 +88,7 @@ private extension RealityPanelView {
     func toggleFavorite() {
         viewModel.toggleFavorite(shoe)
         viewModel.showFavoriteToast = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             viewModel.showFavoriteToast = false
         }
     }
