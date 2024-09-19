@@ -16,11 +16,6 @@ struct RealityPanelView: View {
     @State var viewModel: RealityPanelViewModel
     let shoe: Shoe
     
-    // MARK: - Private Properties
-    
-    @State private var showVolumetricWindow: Bool = false
-    @State private var showFavoriteToast: Bool = false
-    
     // MARK: - View
     
     var body: some View {
@@ -47,9 +42,9 @@ struct RealityPanelView: View {
                     }
                     
                     Button(Localizables.showVolumetricWindow) {
-                        showVolumetricWindow.toggle()
+                        viewModel.showVolumetricWindow.toggle()
                     }
-                    .sheet(isPresented: $showVolumetricWindow) {
+                    .sheet(isPresented: $viewModel.showVolumetricWindow) {
                         createVolumetricWindow()
                     }
                     
@@ -70,7 +65,7 @@ struct RealityPanelView: View {
         })
         .overlay(
             Group {
-                if showFavoriteToast {
+                if viewModel.showFavoriteToast {
                     createToast()
                 }
             },
@@ -92,9 +87,9 @@ struct RealityPanelView: View {
 private extension RealityPanelView {
     func toggleFavorite() {
         viewModel.toggleFavorite(shoe)
-        showFavoriteToast = true
+        viewModel.showFavoriteToast = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            showFavoriteToast = false
+            viewModel.showFavoriteToast = false
         }
     }
 }
