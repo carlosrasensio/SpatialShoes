@@ -29,9 +29,14 @@ struct RealityPanelView: View {
                 if viewModel.showLoader {
                     ProgressView(Localizables.loaderText)
                 } else {
-                    Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle)
-                        .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
-                        .frame(maxWidth: .infinity)
+                    Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle) { model in
+                        model
+                            .resizable()
+                            .scaledToFit()
+                            .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
+                    } placeholder: {
+                        ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
+                    }
                     
                     Button(action: {
                         viewModel.isRotating.toggle()
@@ -49,7 +54,6 @@ struct RealityPanelView: View {
                     Spacer()
                 }
             }
-            .padding()
             .frame(maxWidth: .infinity)
         }
         .background(Color.blue.opacity(0.2))
