@@ -11,7 +11,7 @@ struct DetailPanelView: View {
     
     // MARK: - Properties
     
-    @State var shoe: Shoe
+    var shoe: Shoe
     
     // MARK: - View
     
