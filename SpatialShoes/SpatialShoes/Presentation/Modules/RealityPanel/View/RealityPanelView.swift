@@ -14,7 +14,7 @@ struct RealityPanelView: View {
     // MARK: - Public Properties
     
     @State var viewModel: RealityPanelViewModel
-    @State var shoe: Shoe
+    let shoe: Shoe
     
     // MARK: - Private Properties
     
