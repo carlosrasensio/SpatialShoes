@@ -36,9 +36,7 @@ struct HomeView: View {
             }
         } content: {
             if let selectedShoe {
-                DetailPanelFactory.make(with: selectedShoe)
-            } else {
-                Text("Empieza a ojear el catálogo!")
+                InfoPanelFactory.make(with: selectedShoe)
             }
         } detail: {
             if let selectedShoe {
@@ -60,7 +58,7 @@ struct HomeView: View {
 
 private extension HomeView {
     enum Localizables {
-        static let navigationtitle = "Zapatillas"
+        static let navigationtitle = "Catálogo"
         static let loaderText = "Cargando..."
         static let alertTitle = "ERROR"
     }

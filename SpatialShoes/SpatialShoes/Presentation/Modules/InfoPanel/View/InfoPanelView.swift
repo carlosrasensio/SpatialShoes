@@ -1,5 +1,5 @@
 //
-//  DetailPanelView.swift
+//  InfoPanelView.swift
 //  SpatialShoes
 //
 //  Created by Carlos Rodriguez Asensio on 13/9/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailPanelView: View {
+struct InfoPanelView: View {
     
     // MARK: - Properties
     
@@ -29,8 +29,6 @@ struct DetailPanelView: View {
                 LabeledContent("**\(Localizables.colors)**", value: shoe.colors.joined(separator: ", "))
                 LabeledContent("**\(Localizables.warranty)**", value: "\(shoe.warranty) años")
                 LabeledContent("**\(Localizables.certifications)**", value: shoe.certifications.joined(separator: ", "))
-            } header: {
-                Text("**Información**")
             }
             
             Section {
@@ -47,7 +45,7 @@ struct DetailPanelView: View {
 
 // MARK: - Localizables
 
-private extension DetailPanelView {
+private extension InfoPanelView {
     enum Localizables {
         static let description = "Descripción"
         static let brand = "Marca"
