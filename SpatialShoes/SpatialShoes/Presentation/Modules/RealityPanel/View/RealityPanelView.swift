@@ -34,6 +34,8 @@ struct RealityPanelView: View {
                             .resizable()
                             .scaledToFit()
                             .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
+                            .rotation3DEffect(.degrees(viewModel.rotationAngle),
+                                                       axis: (x: 0, y: 1, z: 0))
                     } placeholder: {
                         ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
                     }
@@ -78,6 +80,9 @@ struct RealityPanelView: View {
                isPresented: $viewModel.showAlert)
         {} message: {
             Text(viewModel.errorMessage ?? Localizables.unknownError)
+        }
+        .onDisappear {
+            viewModel.stopRotation()
         }
     }
 }
