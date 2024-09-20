@@ -16,6 +16,10 @@ struct RealityPanelView: View {
     @State var viewModel: RealityPanelViewModel
     let shoe: Shoe
     
+    // MARK: - Private Properties
+
+    @Environment(\.openWindow) private var openWindow
+    
     // MARK: - View
     
     var body: some View {
@@ -41,10 +45,7 @@ struct RealityPanelView: View {
                 }
                 
                 Button(Localizables.showVolumetricWindow) {
-                    viewModel.showVolumetricWindow.toggle()
-                }
-                .sheet(isPresented: $viewModel.showVolumetricWindow) {
-                    VolumetricWindowView()
+                    openWindow(id: Constants.volumetricWindowID)
                 }
                 
                 Spacer()
@@ -96,6 +97,10 @@ private extension RealityPanelView {
 
 private extension RealityPanelView {
     enum Constants {
+        static let volumetricWindowID = Global.Constants.shoeVolumetricWindowID
+        
+        // MARK: - Icons
+        
         enum Icons {
             static let saveFavorite = "heart"
             static let deleteFavorite = "heart.fill"
