@@ -82,7 +82,7 @@ private extension RealityPanelViewModel {
         stopRotation()
         rotationTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { [weak self] _ in
             guard let self = self else { return }
-            self.rotationAngle += 1.0
+            self.rotationAngle += 2.0
             if self.rotationAngle >= 360 {
                 self.rotationAngle = 0
             }
