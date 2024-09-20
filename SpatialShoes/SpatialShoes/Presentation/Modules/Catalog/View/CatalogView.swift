@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  CatalogView.swift
 //  SpatialShoes
 //
 //  Created by Carlos Rodriguez Asensio on 13/9/24.
@@ -8,11 +8,11 @@
 import SwiftUI
 import RealityKit
 
-struct HomeView: View {
+struct CatalogView: View {
     
     // MARK: - Private Properties
     
-    @Environment(HomeViewModel.self) private var viewModel
+    @Environment(CatalogViewModel.self) private var viewModel
 
     // MARK: - View
     
@@ -58,10 +58,10 @@ struct HomeView: View {
 
 // MARK: - Localizables
 
-private extension HomeView {
+private extension CatalogView {
     enum Localizables {
-        static let navigationtitle = "Catálogo"
-        static let loaderText = "Cargando..."
-        static let alertTitle = "ERROR"
+        static let navigationtitle = Global.Localizables.catalog
+        static let loaderText = Global.Localizables.loaderText
+        static let alertTitle = Global.Localizables.Errors.alertTitle
     }
 }

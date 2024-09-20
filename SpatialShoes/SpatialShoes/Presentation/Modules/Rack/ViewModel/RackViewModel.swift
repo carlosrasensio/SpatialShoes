@@ -1,57 +1,41 @@
 //
-//  RealityPanelViewModel.swift
+//  RackViewModel.swift
 //  SpatialShoes
 //
-//  Created by Carlos Rodriguez Asensio on 18/9/24.
+//  Created by Carlos Rodriguez Asensio on 20/9/24.
 //
 
-import Combine
 import Foundation
 
 @Observable
-final class RealityPanelViewModel {
+final class RackViewModel {
     
     // MARK: - Public Properties
     
-    var favoriteShoes: [Shoe] = []
-    var isFavorite: Bool = false
-    var showFavoriteToast: Bool = false
+    var favoriteShoes: [Shoe] = [Shoe.test, Shoe.test, Shoe.test, Shoe.test]
     var showLoader: Bool = false
-    var isRotating: Bool = false {
-        didSet {
-            if isRotating {
-                startRotation()
-            } else {
-                stopRotation()
-            }
-        }
-    }
-    var rotationAngle: Double = 0.0
+    var showInfoPanel: Bool = false
     var showAlert: Bool = false
     @ObservationIgnored var errorMessage: String?
-        
+    
     // MARK: - Private Properties
     
     private let favoriteShoesUseCase: FavoriteShoesUseCase
     private var rotationTimer: Timer?
-        
+    var rotationAngle: Double = 0.0
+    
     // MARK: - Initializer
     
     init(favoriteShoesUseCase: FavoriteShoesUseCase) {
         self.favoriteShoesUseCase = favoriteShoesUseCase
     }
-    
+        
     // MARK: - Public Functions
     
-    func toggleFavorite(_ shoe: Shoe) {
-        showLoader = true
-        errorMessage = nil
-
+    func getFavoriteShoes() {
         do {
-            try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, for: shoe)
-            isFavorite.toggle()
+            try favoriteShoesUseCase.execute(action: .fetch)
             favoriteShoes = favoriteShoesUseCase.favoriteShoes
-            showLoader = false
         } catch let error as FavoriteShoesDomainError {
             errorMessage = error.message
             showLoader = true
@@ -64,25 +48,15 @@ final class RealityPanelViewModel {
             print("❌ [ERROR] \(errorMessage ?? Global.Localizables.Errors.unknown)")
         }
     }
-    
-    func checkIfFavoriteShoe(with id: Int) {
-        isFavorite = favoriteShoes.contains { $0.id == id }
-    }
-    
-    func stopRotation() {
-        rotationTimer?.invalidate()
-        rotationTimer = nil
-    }
 }
 
 // MARK: - Model3DRotation
 
-extension RealityPanelViewModel: Model3DRotation {
+extension RackViewModel: Model3DRotation {
     func startRotation() {
-        stopRotation()
         rotationTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { [weak self] _ in
             guard let self = self else { return }
-            self.rotationAngle += 2.0
+            self.rotationAngle += 1.0
             if self.rotationAngle >= 360 {
                 self.rotationAngle = 0
             }
