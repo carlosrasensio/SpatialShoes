@@ -18,7 +18,7 @@ struct SplashView: View {
 
     var body: some View {
         if isActive {
-            CatalogView()
+            MainView()
                 .environment(catalogViewModel)
         } else {
             VStack {
