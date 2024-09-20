@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70058D772C9BA1CF00DB165E /* RackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70058D762C9BA1CF00DB165E /* RackView.swift */; };
+		70058D7B2C9BA22500DB165E /* RackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70058D7A2C9BA22500DB165E /* RackCellView.swift */; };
+		70058D7E2C9BA28700DB165E /* RackCellViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70058D7D2C9BA28400DB165E /* RackCellViewTest.swift */; };
+		70058D802C9BA2C300DB165E /* RackView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70058D7F2C9BA2B800DB165E /* RackView_Preview.swift */; };
+		70058D822C9BA2E200DB165E /* RackViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70058D812C9BA2DE00DB165E /* RackViewTest.swift */; };
+		70058D842C9BA31800DB165E /* RackCellView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70058D832C9BA31400DB165E /* RackCellView_Preview.swift */; };
 		700D70582C9D00A1007815EF /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 700D70572C9D00A1007815EF /* SpatialShoesScene */; };
 		7012159F2C9925DC00C4BC3B /* MockGetShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */; };
 		701509F22C99294C00FE6354 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701509F12C99294C00FE6354 /* HomeViewModelTests.swift */; };
@@ -62,6 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70058D762C9BA1CF00DB165E /* RackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackView.swift; sourceTree = "<group>"; };
+		70058D7A2C9BA22500DB165E /* RackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackCellView.swift; sourceTree = "<group>"; };
+		70058D7D2C9BA28400DB165E /* RackCellViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackCellViewTest.swift; sourceTree = "<group>"; };
+		70058D7F2C9BA2B800DB165E /* RackView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackView_Preview.swift; sourceTree = "<group>"; };
+		70058D812C9BA2DE00DB165E /* RackViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackViewTest.swift; sourceTree = "<group>"; };
+		70058D832C9BA31400DB165E /* RackCellView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackCellView_Preview.swift; sourceTree = "<group>"; };
 		700D70562C9D0092007815EF /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpatialShoesScene; sourceTree = "<group>"; };
 		7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetShoesRepository.swift; sourceTree = "<group>"; };
 		701509F12C99294C00FE6354 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
@@ -137,6 +149,34 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		70058D732C9BA1B500DB165E /* Rack */ = {
+			isa = PBXGroup;
+			children = (
+				70058D752C9BA1BF00DB165E /* View */,
+			);
+			path = Rack;
+			sourceTree = "<group>";
+		};
+		70058D752C9BA1BF00DB165E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70058D762C9BA1CF00DB165E /* RackView.swift */,
+				70058D7A2C9BA22500DB165E /* RackCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70058D7C2C9BA27600DB165E /* Rack */ = {
+			isa = PBXGroup;
+			children = (
+				70058D832C9BA31400DB165E /* RackCellView_Preview.swift */,
+				70058D7D2C9BA28400DB165E /* RackCellViewTest.swift */,
+				70058D7F2C9BA2B800DB165E /* RackView_Preview.swift */,
+				70058D812C9BA2DE00DB165E /* RackViewTest.swift */,
+			);
+			path = Rack;
+			sourceTree = "<group>";
+		};
 		701215A02C99260200C4BC3B /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +198,7 @@
 			children = (
 				707516902C93A744000BEE92 /* Home */,
 				707516A42C93AEED000BEE92 /* InfoPanel */,
+				70058D732C9BA1B500DB165E /* Rack */,
 				70E527902C9A67CC00C65367 /* RealityPanel */,
 				70500CB22C97B2020042D23D /* Splash */,
 				706C01082C9D02130055F7F3 /* VolumetricWindow */,
@@ -191,6 +232,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		7024B9AF2C9D201200722D26 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				7024313B2C98E77B005012A3 /* SplashView_Preview.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		702EC1432C978A97003248BF /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				70500CB32C97B21D0042D23D /* SplashView.swift */,
-				7024313B2C98E77B005012A3 /* SplashView_Preview.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -281,8 +329,10 @@
 			children = (
 				70E527992C9A689100C65367 /* Home */,
 				70E527A12C9A6B2B00C65367 /* InfoPanel */,
+				70058D7C2C9BA27600DB165E /* Rack */,
 				70E5279A2C9A689A00C65367 /* Reality */,
 				70E527A52C9A6B7000C65367 /* Resources */,
+				7024B9AF2C9D201200722D26 /* Splash */,
 				70E527A42C9A6B6300C65367 /* Utils */,
 				706C010E2C9D03B30055F7F3 /* VolumetricView */,
 			);
@@ -629,6 +679,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70058D7B2C9BA22500DB165E /* RackCellView.swift in Sources */,
+				70058D822C9BA2E200DB165E /* RackViewTest.swift in Sources */,
 				7075169A2C93A84B000BEE92 /* Shoe.swift in Sources */,
 				70E5278D2C9A66EC00C65367 /* HomeViewTest.swift in Sources */,
 				70500CB42C97B21D0042D23D /* SplashView.swift in Sources */,
@@ -636,19 +688,23 @@
 				70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */,
 				706C01102C9D057E0055F7F3 /* Constants.swift in Sources */,
 				702EC1472C978B32003248BF /* RealityPanelFactory.swift in Sources */,
+				70058D842C9BA31800DB165E /* RackCellView_Preview.swift in Sources */,
 				70E527942C9A67EC00C65367 /* RealityPanelViewModel.swift in Sources */,
 				70E527A32C9A6B5900C65367 /* ShoeTest.swift in Sources */,
 				706C010D2C9D039E0055F7F3 /* VolumetricWindowView_Preview.swift in Sources */,
 				702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */,
 				707516A22C93ABCF000BEE92 /* HomeViewModel.swift in Sources */,
 				702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */,
+				70058D7E2C9BA28700DB165E /* RackCellViewTest.swift in Sources */,
 				707516802C93A680000BEE92 /* SpatialShoesApp.swift in Sources */,
 				70F7A1032C9BD10800C62A89 /* InfoPanelViewTest.swift in Sources */,
 				706C010A2C9D02220055F7F3 /* VolumetricWindowView.swift in Sources */,
 				707516A62C93AF02000BEE92 /* InfoPanelView.swift in Sources */,
+				70058D802C9BA2C300DB165E /* RackView_Preview.swift in Sources */,
 				7075169E2C93AA92000BEE92 /* GetShoesRepository.swift in Sources */,
 				707516972C93A80B000BEE92 /* JSONManager.swift in Sources */,
 				70E5279E2C9A6AA700C65367 /* RealityPanelView+Toast.swift in Sources */,
+				70058D772C9BA1CF00DB165E /* RackView.swift in Sources */,
 				70E5278B2C9A659800C65367 /* RealityPanelViewTest.swift in Sources */,
 				7024313A2C98E615005012A3 /* HomeView_Preview.swift in Sources */,
 				707516922C93A782000BEE92 /* HomeView.swift in Sources */,
