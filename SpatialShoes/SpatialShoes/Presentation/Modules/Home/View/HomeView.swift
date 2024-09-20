@@ -37,7 +37,7 @@ struct HomeView: View {
             }
         } content: {
             if let selectedShoe = viewModel.selectedShoe {
-                InfoPanelFactory.make(with: selectedShoe)
+                InfoPanelView(shoe: selectedShoe)
             }
         } detail: {
             if let selectedShoe = viewModel.selectedShoe {
