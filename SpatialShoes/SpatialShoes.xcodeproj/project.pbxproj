@@ -79,6 +79,7 @@
 		702EC14A2C979091003248BF /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		70500CB32C97B21D0042D23D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView.swift; sourceTree = "<group>"; };
+		706C010C2C9D03930055F7F3 /* VolumetricWindowView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView_Preview.swift; sourceTree = "<group>"; };
 		706C010F2C9D057B0055F7F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		707516782C93A680000BEE92 /* SpatialShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialShoesApp.swift; sourceTree = "<group>"; };
@@ -234,6 +235,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		706C010E2C9D03B30055F7F3 /* VolumetricView */ = {
+			isa = PBXGroup;
+			children = (
+				706C010C2C9D03930055F7F3 /* VolumetricWindowView_Preview.swift */,
+			);
+			path = VolumetricView;
+			sourceTree = "<group>";
+		};
 		7075166F2C93A680000BEE92 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +286,7 @@
 				70E5279A2C9A689A00C65367 /* Reality */,
 				70E527A52C9A6B7000C65367 /* Resources */,
 				70E527A42C9A6B6300C65367 /* Utils */,
+				706C010E2C9D03B30055F7F3 /* VolumetricView */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -631,6 +641,7 @@
 				702EC1472C978B32003248BF /* RealityPanelFactory.swift in Sources */,
 				70E527942C9A67EC00C65367 /* RealityPanelViewModel.swift in Sources */,
 				70E527A32C9A6B5900C65367 /* ShoeTest.swift in Sources */,
+				706C010D2C9D039E0055F7F3 /* VolumetricWindowView_Preview.swift in Sources */,
 				702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */,
 				707516A22C93ABCF000BEE92 /* HomeViewModel.swift in Sources */,
 				702431412C98F9A5005012A3 /* GetShoesUseCase.swift in Sources */,
