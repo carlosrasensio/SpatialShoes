@@ -12,17 +12,18 @@ struct HomeView: View {
     
     // MARK: - Private Properties
     
-    @State var viewModel: HomeViewModel
-    @State private var selectedShoe: Shoe?
+    @Environment(HomeViewModel.self) private var viewModel
 
     // MARK: - View
     
     var body: some View {
+        @Bindable var viewModelBindable = viewModel
+        
         NavigationSplitView {
             if viewModel.showLoader {
                 ProgressView(Localizables.loaderText)
             } else {
-                List(selection: $selectedShoe) {
+                List(selection: $viewModelBindable.selectedShoe) {
                     ForEach(viewModel.shoes) { shoe in
                         Text(shoe.name)
                             .font(.headline)
@@ -35,11 +36,11 @@ struct HomeView: View {
                 .foregroundColor(.white)
             }
         } content: {
-            if let selectedShoe {
+            if let selectedShoe = viewModel.selectedShoe {
                 InfoPanelFactory.make(with: selectedShoe)
             }
         } detail: {
-            if let selectedShoe {
+            if let selectedShoe = viewModel.selectedShoe {
                 RealityPanelFactory.make(with: selectedShoe)
             }
         }
@@ -48,7 +49,7 @@ struct HomeView: View {
             viewModel.loadShoes()
         })
         .alert(Localizables.alertTitle,
-               isPresented: $viewModel.showAlert)
+               isPresented: $viewModelBindable.showAlert)
         {} message: {
             Text(viewModel.errorMessage)
         }

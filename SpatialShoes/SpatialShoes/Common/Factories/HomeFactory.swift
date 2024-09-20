@@ -9,17 +9,17 @@ import Foundation
 
 final class HomeFactory {
     static func make() -> HomeView {
-        .init(viewModel: makeHomeViewModel())
+        HomeView()
+    }
+    
+    static func makeHomeViewModel() -> HomeViewModel {
+        .init(getShoesUseCase: makeGetShoesUseCase())
     }
 }
 
 // MARK: - Private Functions
 
 private extension HomeFactory {
-    static func makeHomeViewModel() -> HomeViewModel {
-        .init(getShoesUseCase: makeGetShoesUseCase())
-    }
-    
     static func makeGetShoesUseCase() -> GetShoesUseCase {
         .init(repository: makeGetShoesRepository())
     }

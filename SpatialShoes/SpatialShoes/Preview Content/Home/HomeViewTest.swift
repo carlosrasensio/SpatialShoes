@@ -11,8 +11,8 @@ extension HomeView {
     static var preview: some View {
         let repository = GetShoesRepositoryTest()
         let useCase = GetShoesUseCase(repository: repository)
-        let viewModel = HomeViewModel(getShoesUseCase: useCase)
         
-        return HomeView(viewModel: viewModel)
+        return HomeView()
+            .environment(HomeViewModel(getShoesUseCase: useCase))
     }
 }

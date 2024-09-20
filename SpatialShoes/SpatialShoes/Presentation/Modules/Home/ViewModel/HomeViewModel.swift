@@ -12,6 +12,7 @@ final class HomeViewModel {
     
     // MARK: - Public Properties
     
+    var selectedShoe: Shoe?
     var shoes: [Shoe] = []
     var showLoader: Bool = false
     var showAlert: Bool = false
