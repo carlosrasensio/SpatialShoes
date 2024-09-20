@@ -13,7 +13,7 @@ struct VolumetricWindowView: View {
     
     // MARK: - Private Properties
     
-    @Environment(HomeViewModel.self) private var homeViewModel
+    @Environment(CatalogViewModel.self) private var catalogViewModel
     @State private var showAlert: Bool = false
     @State private var errorMessage: String = ""
 
@@ -21,7 +21,7 @@ struct VolumetricWindowView: View {
     
     var body: some View {
         RealityView { content in
-            guard let selectedShoe = homeViewModel.selectedShoe else { return }
+            guard let selectedShoe = catalogViewModel.selectedShoe else { return }
             do {
                 let shoe = try await Entity(named: selectedShoe.model3DName, in: SpatialShoesScene.spatialShoesSceneBundle)
                 content.add(shoe)
@@ -36,7 +36,7 @@ struct VolumetricWindowView: View {
                 print("❌ [ERROR] \(errorMessage)")
             }
         } placeholder: {
-            if let selectedShoe = homeViewModel.selectedShoe {
+            if let selectedShoe = catalogViewModel.selectedShoe {
                 ProgressView("\(selectedShoe) \(Localizables.loaderText.lowercased())")
             }
         }
@@ -54,7 +54,7 @@ private extension VolumetricWindowView {
   enum Localizables {
       static let loaderText = "Cargando..."
       static let alertTitle = "ERROR"
-      static let unknownError = "Error por determinar"
+      static let unknownError = Global.Localizables.unknownError
   }
 }
 

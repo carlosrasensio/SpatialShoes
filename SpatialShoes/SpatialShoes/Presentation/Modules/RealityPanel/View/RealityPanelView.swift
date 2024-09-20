@@ -116,7 +116,7 @@ extension RealityPanelView {
         static let showVolumetricWindow = "Ver Ventana Volumétrica"
         static let enableExhibitorMode = "Activar Modo Expositor"
         static let disableExhibitorMode = "Desactivar Modo Expositor"
-        static let unknownError = "Error por determinar"
         static let alertTitle = "Ups..."
+        static let unknownError = Global.Localizables.unknownError
     }
 }

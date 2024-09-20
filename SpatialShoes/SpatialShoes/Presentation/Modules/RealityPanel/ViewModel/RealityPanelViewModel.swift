@@ -56,12 +56,12 @@ final class RealityPanelViewModel {
             errorMessage = error.message
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.unknownError)")
         } catch {
-            errorMessage = Localizables.unknownError
+            errorMessage = Global.Localizables.unknownError
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Localizables.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.unknownError)")
         }
     }
     
@@ -87,13 +87,5 @@ private extension RealityPanelViewModel {
                 self.rotationAngle = 0
             }
         }
-    }
-}
-
-// MARK: - Constants
-
-private extension RealityPanelViewModel {
-    enum Localizables {
-        static let unknownError = "Error por determinar"
     }
 }
