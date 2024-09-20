@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  CatalogViewModel.swift
 //  SpatialShoes
 //
 //  Created by Carlos Rodriguez Asensio on 13/9/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @Observable
-final class HomeViewModel {
+final class CatalogViewModel {
     
     // MARK: - Public Properties
     
@@ -53,7 +53,7 @@ final class HomeViewModel {
 
 // MARK: - Localizables
 
-private extension HomeViewModel {
+private extension CatalogViewModel {
     enum Localizables {
         enum Errors {
             static let unknown = "Error por determinar"

@@ -1,5 +1,5 @@
 //
-//  HomeViewModelTests.swift
+//  CatalogViewModelTests.swift
 //  SpatialShoesTests
 //
 //  Created by Carlos Rodriguez Asensio on 17/9/24.
@@ -8,11 +8,11 @@
 import XCTest
 @testable import SpatialShoes
 
-final class HomeViewModelTests: XCTestCase {
+final class CatalogViewModelTests: XCTestCase {
 
     // MARK: - Pivate Properties
     
-    private var sut: HomeViewModel!
+    private var sut: CatalogViewModel!
     private var useCase: GetShoesUseCase!
     private var repository: GetShoesRepositoryProtocol!
     
@@ -22,7 +22,7 @@ final class HomeViewModelTests: XCTestCase {
         super.setUp()
         repository = MockGetShoesRepository()
         useCase = GetShoesUseCase(repository: repository)
-        sut = HomeViewModel(getShoesUseCase: useCase)
+        sut = CatalogViewModel(getShoesUseCase: useCase)
     }
     
     override func tearDown() {

@@ -6,7 +6,17 @@
 //
 
 public enum Global {
+    
+    // MARK: - Constants
+    
     enum Constants {
         static let shoeVolumetricWindowID = "ShoeVolumetricWindow"
+    }
+    
+    // MARK: - Localizables
+
+    enum Localizables {
+        static let catalog = "Catálogo"
+        static let unknownError = "Error por determinar"
     }
 }

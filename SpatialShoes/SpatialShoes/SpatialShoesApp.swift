@@ -12,19 +12,19 @@ struct SpatialShoesApp: App {
     
     // MARK: - Private Properties
 
-    @State private var homeViewModel = HomeFactory.makeHomeViewModel()
+    @State private var catalogViewModel = CatalogFactory.makeCatalogViewModel()
 
     // MARK: - View
     
     var body: some Scene {
         WindowGroup {
             SplashView()
-                .environment(homeViewModel)
+                .environment(catalogViewModel)
         }
         
         WindowGroup(id: Global.Constants.shoeVolumetricWindowID) {
             VolumetricWindowView()
-                .environment(homeViewModel)
+                .environment(catalogViewModel)
         }
         .windowStyle(.volumetric)
         .defaultSize(width: 1.0, height: 1.0, depth: 1.0, in: .meters)
