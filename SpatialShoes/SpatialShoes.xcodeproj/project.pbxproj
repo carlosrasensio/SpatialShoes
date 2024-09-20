@@ -25,6 +25,8 @@
 		702431462C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */; };
 		7024B9B62C9DD50100722D26 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9B52C9DD50100722D26 /* MainView.swift */; };
 		7024B9BA2C9DD52A00722D26 /* MainView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9B92C9DD52500722D26 /* MainView_Preview.swift */; };
+		7024B9BC2C9DD6C000722D26 /* RackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9BB2C9DD6BF00722D26 /* RackFactory.swift */; };
+		7024B9BE2C9DD70700722D26 /* RackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9BD2C9DD70200722D26 /* RackViewModel.swift */; };
 		702EC1452C978AB0003248BF /* FavoriteShoesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1442C978AB0003248BF /* FavoriteShoesUseCase.swift */; };
 		702EC1472C978B32003248BF /* RealityPanelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1462C978B32003248BF /* RealityPanelFactory.swift */; };
 		702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */; };
@@ -88,6 +90,8 @@
 		702431452C9900EF005012A3 /* FavoriteShoesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesUseCaseTests.swift; sourceTree = "<group>"; };
 		7024B9B52C9DD50100722D26 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7024B9B92C9DD52500722D26 /* MainView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView_Preview.swift; sourceTree = "<group>"; };
+		7024B9BB2C9DD6BF00722D26 /* RackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackFactory.swift; sourceTree = "<group>"; };
+		7024B9BD2C9DD70200722D26 /* RackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackViewModel.swift; sourceTree = "<group>"; };
 		702EC1442C978AB0003248BF /* FavoriteShoesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesUseCase.swift; sourceTree = "<group>"; };
 		702EC1462C978B32003248BF /* RealityPanelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelFactory.swift; sourceTree = "<group>"; };
 		702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesRepository.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				70058D752C9BA1BF00DB165E /* View */,
+				7024B9BF2C9DD70900722D26 /* ViewModel */,
 			);
 			path = Rack;
 			sourceTree = "<group>";
@@ -222,8 +227,8 @@
 		701509F02C99292A00FE6354 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				701509F32C99295900FE6354 /* RealityPanelViewModelTests.swift */,
 				7024B9B22C9DD4A000722D26 /* Catalog */,
+				7024B9B32C9DD4A600722D26 /* RealityPanel */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -253,6 +258,14 @@
 			path = Catalog;
 			sourceTree = "<group>";
 		};
+		7024B9B32C9DD4A600722D26 /* RealityPanel */ = {
+			isa = PBXGroup;
+			children = (
+				701509F32C99295900FE6354 /* RealityPanelViewModelTests.swift */,
+			);
+			path = RealityPanel;
+			sourceTree = "<group>";
+		};
 		7024B9B42C9DD4E800722D26 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +288,14 @@
 				7024B9B92C9DD52500722D26 /* MainView_Preview.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		7024B9BF2C9DD70900722D26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7024B9BD2C9DD70200722D26 /* RackViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		702EC1432C978A97003248BF /* UseCases */ = {
@@ -475,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				707516AB2C93BA59000BEE92 /* CatalogFactory.swift */,
+				7024B9BB2C9DD6BF00722D26 /* RackFactory.swift */,
 				702EC1462C978B32003248BF /* RealityPanelFactory.swift */,
 			);
 			path = Factories;
@@ -720,6 +742,7 @@
 				70058D7B2C9BA22500DB165E /* RackCellView.swift in Sources */,
 				7024B9B62C9DD50100722D26 /* MainView.swift in Sources */,
 				70058D822C9BA2E200DB165E /* RackViewTest.swift in Sources */,
+				7024B9BC2C9DD6C000722D26 /* RackFactory.swift in Sources */,
 				7075169A2C93A84B000BEE92 /* Shoe.swift in Sources */,
 				70E5278D2C9A66EC00C65367 /* CatalogViewTest.swift in Sources */,
 				70500CB42C97B21D0042D23D /* SplashView.swift in Sources */,
@@ -729,6 +752,7 @@
 				702EC1472C978B32003248BF /* RealityPanelFactory.swift in Sources */,
 				70058D842C9BA31800DB165E /* RackCellView_Preview.swift in Sources */,
 				70E527942C9A67EC00C65367 /* RealityPanelViewModel.swift in Sources */,
+				7024B9BE2C9DD70700722D26 /* RackViewModel.swift in Sources */,
 				70E527A32C9A6B5900C65367 /* ShoeTest.swift in Sources */,
 				706C010D2C9D039E0055F7F3 /* VolumetricWindowView_Preview.swift in Sources */,
 				702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */,

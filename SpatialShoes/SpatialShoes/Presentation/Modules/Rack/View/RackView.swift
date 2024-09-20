@@ -11,8 +11,9 @@ struct RackView: View {
     
     // MARK: - Properties
 
-    let favoriteShoes: [Shoe]
-    var onSelect: (Shoe) -> Void
+    @State var viewModel: RackViewModel
+    let favoriteShoes: [Shoe] = []
+    
     
     // MARK: - View
     
@@ -21,7 +22,7 @@ struct RackView: View {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], spacing: 16) {
                 ForEach(favoriteShoes) { favoriteShoe in
                     Button(action: {
-                        onSelect(favoriteShoe)
+                        // TODO: Display window with InfoPanelView
                     }) {
                         RackCellView(shoe: favoriteShoe)
                     }

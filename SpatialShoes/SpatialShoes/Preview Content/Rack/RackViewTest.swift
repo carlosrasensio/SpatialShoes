@@ -9,13 +9,14 @@ import SwiftUI
 
 extension RackView {
     static var preview: some View {
+        let repository = FavoriteShoesRepository()
+        let useCase = FavoriteShoesUseCase(repository: repository)
+        let viewModel = RackViewModel(favoriteShoesUseCase: useCase)
         let shoes = [Shoe.test,
                      Shoe.test,
                      Shoe.test,
                      Shoe.test]
         
-        return RackView(favoriteShoes: shoes, onSelect: { shoe in
-            print("ℹ️ Seleccionada zapatilla \(shoe.name) - \(shoe.brand)")
-        })
+        return RackView(viewModel: viewModel)
     }
 }
