@@ -27,7 +27,6 @@ final class RealityPanelViewModel {
         }
     }
     var rotationAngle: Double = 0.0
-    var showVolumetricWindow: Bool = false
     var showAlert: Bool = false
     @ObservationIgnored var errorMessage: String?
         

@@ -13,6 +13,7 @@ final class HomeViewModel {
     // MARK: - Public Properties
     
     var shoes: [Shoe] = []
+    var selectedShoe: Shoe?
     var showLoader: Bool = false
     var showAlert: Bool = false
     @ObservationIgnored var errorMessage: String = ""

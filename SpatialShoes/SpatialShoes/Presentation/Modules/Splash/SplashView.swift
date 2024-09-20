@@ -11,13 +11,15 @@ struct SplashView: View {
     
     // MARK: - Private Properties
     
+    @Environment(HomeViewModel.self) private var homeViewModel
     @State private var isActive: Bool = false
 
     // MARK: - View
 
     var body: some View {
         if isActive {
-            HomeFactory.make()
+            HomeView()
+                .environment(homeViewModel)
         } else {
             VStack {
                 Image(Constants.splashImage)
