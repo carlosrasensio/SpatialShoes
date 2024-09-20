@@ -23,6 +23,8 @@
 		702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC14A2C979091003248BF /* SwiftDataManager.swift */; };
 		70500CB42C97B21D0042D23D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CB32C97B21D0042D23D /* SplashView.swift */; };
 		706C010A2C9D02220055F7F3 /* VolumetricWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */; };
+		706C010D2C9D039E0055F7F3 /* VolumetricWindowView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C010C2C9D03930055F7F3 /* VolumetricWindowView_Preview.swift */; };
+		706C01102C9D057E0055F7F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C010F2C9D057B0055F7F3 /* Constants.swift */; };
 		707516802C93A680000BEE92 /* SpatialShoesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */; };
 		707516842C93A681000BEE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707516832C93A681000BEE92 /* Assets.xcassets */; };
 		707516872C93A681000BEE92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707516862C93A681000BEE92 /* Preview Assets.xcassets */; };
@@ -77,6 +79,7 @@
 		702EC14A2C979091003248BF /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		70500CB32C97B21D0042D23D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView.swift; sourceTree = "<group>"; };
+		706C010F2C9D057B0055F7F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		707516782C93A680000BEE92 /* SpatialShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7075167F2C93A680000BEE92 /* SpatialShoesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialShoesApp.swift; sourceTree = "<group>"; };
 		707516832C93A681000BEE92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -307,6 +310,7 @@
 		707516952C93A7F7000BEE92 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				706C010F2C9D057B0055F7F3 /* Constants.swift */,
 				707516AD2C93BA5F000BEE92 /* Factories */,
 				7075169F2C93AB9A000BEE92 /* Managers */,
 			);
@@ -623,6 +627,7 @@
 				70500CB42C97B21D0042D23D /* SplashView.swift in Sources */,
 				702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */,
 				70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */,
+				706C01102C9D057E0055F7F3 /* Constants.swift in Sources */,
 				702EC1472C978B32003248BF /* RealityPanelFactory.swift in Sources */,
 				70E527942C9A67EC00C65367 /* RealityPanelViewModel.swift in Sources */,
 				70E527A32C9A6B5900C65367 /* ShoeTest.swift in Sources */,
