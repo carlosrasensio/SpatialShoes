@@ -19,40 +19,38 @@ struct RealityPanelView: View {
     // MARK: - View
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                if viewModel.showLoader {
-                    ProgressView(Localizables.loaderText)
-                } else {
-                    Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle) { model in
-                        model
-                            .resizable()
-                            .scaledToFit()
-                            .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
-                            .rotation3DEffect(.degrees(viewModel.rotationAngle),
-                                                       axis: (x: 0, y: 1, z: 0))
-                    } placeholder: {
-                        ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
-                    }
-                    
-                    Button(action: {
-                        viewModel.isRotating.toggle()
-                    }) {
-                        Text(viewModel.isRotating ? Localizables.disableExhibitorMode : Localizables.enableExhibitorMode)
-                    }
-                    
-                    Button(Localizables.showVolumetricWindow) {
-                        viewModel.showVolumetricWindow.toggle()
-                    }
-                    .sheet(isPresented: $viewModel.showVolumetricWindow) {
-                        createVolumetricWindow()
-                    }
-                    
-                    Spacer()
+        VStack(spacing: 20) {
+            if viewModel.showLoader {
+                ProgressView(Localizables.loaderText)
+            } else {
+                Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle) { model in
+                    model
+                        .resizable()
+                        .scaledToFit()
+                        .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
+                        .rotation3DEffect(.degrees(viewModel.rotationAngle),
+                                          axis: (x: 0, y: 1, z: 0))
+                } placeholder: {
+                    ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
                 }
+                
+                Button(action: {
+                    viewModel.isRotating.toggle()
+                }) {
+                    Text(viewModel.isRotating ? Localizables.disableExhibitorMode : Localizables.enableExhibitorMode)
+                }
+                
+                Button(Localizables.showVolumetricWindow) {
+                    viewModel.showVolumetricWindow.toggle()
+                }
+                .sheet(isPresented: $viewModel.showVolumetricWindow) {
+                    createVolumetricWindow()
+                }
+                
+                Spacer()
             }
-            .frame(maxWidth: .infinity)
         }
+        .frame(maxWidth: .infinity)
         .background(Color.blue.opacity(0.2))
         .foregroundColor(.white)
         .navigationBarItems(trailing:
