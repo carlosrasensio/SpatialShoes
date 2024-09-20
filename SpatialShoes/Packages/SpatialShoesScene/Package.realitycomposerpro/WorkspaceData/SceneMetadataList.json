@@ -1,0 +1,177 @@
+{
+  "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC" : {
+    "objectMetadataList" : [
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "ProvocativePinkShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "fashionSportShoe"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : true
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "MoonShoes"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : true
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "leatherShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "RedHighHeelShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : true
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "OldManShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "WoodShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "NBSportShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "SkateShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "WinterShoe"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+        "Root",
+        "militaryShoes"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      }
+    ]
+  },
+  "164A899F-0820-44CE-B68E-8A01E0BD6826" : {
+    "objectMetadataList" : [
+      [
+        "164A899F-0820-44CE-B68E-8A01E0BD6826",
+        "Root",
+        "Transform_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "164A899F-0820-44CE-B68E-8A01E0BD6826",
+        "Root",
+        "Transform"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "164A899F-0820-44CE-B68E-8A01E0BD6826",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "4279B7E2-5D1D-4096-848D-7BDE204A0BCD" : {
+    "objectMetadataList" : [
+      [
+        "4279B7E2-5D1D-4096-848D-7BDE204A0BCD",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "A5E5E5AA-308C-4DEA-9C99-1BC958FA2CDA" : {
+    "objectMetadataList" : [
+      [
+        "A5E5E5AA-308C-4DEA-9C99-1BC958FA2CDA",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}

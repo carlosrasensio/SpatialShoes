@@ -1,0 +1,310 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.0.16.0.3)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["fashionSportShoe", "AirJordan", "AirSportShoe", "ArntShoes", "BlueVansShoe", "CanguroShoes", "CanvasShoe", "FemaleShoes", "JapaneseShoesGeta", "RedHighHeelShoes", "MaleShoes", "MoonShoes", "NBSportShoes", "OldManShoes", "ProvocativePinkShoes", "SkateShoes"]
+    def "fashionSportShoe" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (2.8183747e-17, 0.17453292, -1.891379e-9)
+        }
+        references = @fashionSportShoe.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9961947, 8.242229e-11, 0.087155744, -9.42091e-10)
+        float3 xformOp:scale = (0.1, 0.1, 0.1)
+        float3 xformOp:translate = (-3.032164, -2.16369, -0.3488652)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "AirJordan" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.0583378, 0)
+        }
+        references = @AirJordan.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.8632269, 0, -0.50481606, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-6.0386133, -3.5653362, -2.7594914)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "AirSportShoe" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 4.160685, 0)
+        }
+        references = @AirSportShoe.usdz@
+    )
+    {
+        quatf xformOp:orient = (-0.48778123, 0, 0.8729658, 0)
+        float3 xformOp:scale = (0.03, 0.03, 0.03)
+        float3 xformOp:translate = (-18.108013, -0.9400101, -8.252996)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "ArntShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.78539807, 0)
+        }
+        references = @ArntShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, -0.3826834, 0)
+        float3 xformOp:scale = (0.2, 0.2, 0.2)
+        float3 xformOp:translate = (-9.249296, -3.2115736, -2.7697978)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "BlueVansShoe" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.78539807, 0)
+        }
+        references = @BlueVansShoe.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, 0.3826834, 0)
+        float3 xformOp:scale = (0.013, 0.013, 0.013)
+        float3 xformOp:translate = (-9.780352, -1.1444588, -3.5571325)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "CanguroShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.78539807, 0)
+        }
+        references = @CanguroShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, -0.3826834, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-11.655781, -0.12008667, -3.9567385)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "CanvasShoe" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.78539807, 0)
+        }
+        references = @CanvasShoe.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, -0.3826834, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-12.195441, -2.4490728, -4.8499203)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "FemaleShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.78539807, 0)
+        }
+        references = @FemaleShoes.usdz@
+    )
+    {
+        reorder nameChildren = ["JapaneseShoesGeta", "Materials", "Meshes"]
+        quatf xformOp:orient = (0.92387956, 0, 0.3826834, 0)
+        float3 xformOp:scale = (0.012, 0.012, 0.012)
+        float3 xformOp:translate = (-8.833177, -0.3699932, -2.2263355)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "MaleShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.78539807, 0)
+        }
+        references = @MaleShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, 0.3826834, 0)
+        float3 xformOp:scale = (0.02, 0.02, 0.02)
+        float3 xformOp:translate = (-3.9960134, -2.1257782, -2.1297174)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "MoonShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.78539807, 0)
+        }
+        references = @MoonShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, -0.3826834, 0)
+        float3 xformOp:scale = (0.15, 0.15, 0.15)
+        float3 xformOp:translate = (-5.2519293, -0.7229862, -1.302377)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "NBSportShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.78539807, 0)
+        }
+        references = @NBSportShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, 0.3826834, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-18.632088, 0.6199913, -7.1764135)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "OldManShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.60540366, 0)
+        }
+        references = @OldManShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9545345, 0, -0.29810026, 0)
+        float3 xformOp:scale = (0.1, 0.1, 0.1)
+        float3 xformOp:translate = (-8.185658, -3.246176, -3.459942)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "ProvocativePinkShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.24880964, 0)
+        }
+        references = @ProvocativePinkShoes.usdz@
+    )
+    {
+        reorder nameChildren = ["SkateShoes", "Materials", "Meshes"]
+        quatf xformOp:orient = (0.9922717, 0, 0.12408417, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-8.31785, -4.4931526, -3.476684)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "JapaneseShoesGeta" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.67443323, 0)
+        }
+        references = @JapaneseShoesGeta.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9436792, 0, -0.33086175, 0)
+        float3 xformOp:scale = (0.004, 0.004, 0.0039999997)
+        float3 xformOp:translate = (-9.551863, -9.262544, -3.3409433)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "RedHighHeelShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.34906587, 0)
+        }
+        references = @RedHighHeelShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9848077, 0, -0.17364818, 0)
+        float3 xformOp:scale = (0.03, 0.03, 0.03)
+        float3 xformOp:translate = (-6.434599, 1.6835365, -1.55246)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "SkateShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -0.78539807, 0)
+        }
+        references = @SkateShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, -0.3826834, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-11.551565, -4.4797554, -3.6845148)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "WinterShoe" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.78539807, 0)
+        }
+        prepend references = @WinterShoe.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.92387956, 0, 0.3826834, 0)
+        float3 xformOp:scale = (0.03, 0.03, 0.03)
+        float3 xformOp:translate = (-11.458823, -1.7173824, -3.7035966)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "WoodShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.32756296, 0)
+        }
+        prepend references = @WoodShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9866177, 0, 0.16305023, 0)
+        float3 xformOp:scale = (0.2, 0.2, 0.2)
+        float3 xformOp:translate = (-12.492088, -4.270344, -3.8241131)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "leatherShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.23462634, 0)
+        }
+        prepend references = @leatherShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9931267, 0, 0.11704427, 0)
+        float3 xformOp:scale = (0.00015, 0.00015, 0.00015)
+        float3 xformOp:translate = (-10.334888, -1.6198113, -2.8694897)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "militaryShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 0.70993805, 0)
+        }
+        prepend references = @militaryShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.9376573, 0, 0.34756136, 0)
+        float3 xformOp:scale = (0.15, 0.15, 0.15)
+        float3 xformOp:translate = (-8.077507, -1.8795242, -2.6047115)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "oldFashionSportShoes" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.0471976, 0)
+        }
+        prepend references = @oldFashionSportShoes.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.8660254, 0, -0.5, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-10.009962, -1.1947718, -2.802504)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

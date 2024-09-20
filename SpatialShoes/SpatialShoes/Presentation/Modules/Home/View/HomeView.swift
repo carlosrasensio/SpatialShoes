@@ -43,6 +43,7 @@ struct HomeView: View {
                 RealityPanelFactory.make(with: selectedShoe)
             }
         }
+        .background(Color.blue.opacity(0.2))
         .onAppear(perform: {
             viewModel.loadShoes()
         })

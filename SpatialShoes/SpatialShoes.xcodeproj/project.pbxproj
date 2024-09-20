@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700D70582C9D00A1007815EF /* SpatialShoesScene in Frameworks */ = {isa = PBXBuildFile; productRef = 700D70572C9D00A1007815EF /* SpatialShoesScene */; };
 		7012159F2C9925DC00C4BC3B /* MockGetShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */; };
 		701509F22C99294C00FE6354 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701509F12C99294C00FE6354 /* HomeViewModelTests.swift */; };
 		701509F42C99295900FE6354 /* RealityPanelViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701509F32C99295900FE6354 /* RealityPanelViewModelTests.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		700D70562C9D0092007815EF /* SpatialShoesScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpatialShoesScene; sourceTree = "<group>"; };
 		7012159E2C9925DB00C4BC3B /* MockGetShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetShoesRepository.swift; sourceTree = "<group>"; };
 		701509F12C99294C00FE6354 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		701509F32C99295900FE6354 /* RealityPanelViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelViewModelTests.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700D70582C9D00A1007815EF /* SpatialShoesScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +420,7 @@
 		70E527812C9A428600C65367 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				700D70562C9D0092007815EF /* SpatialShoesScene */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -509,6 +513,7 @@
 			);
 			name = SpatialShoes;
 			packageProductDependencies = (
+				700D70572C9D00A1007815EF /* SpatialShoesScene */,
 			);
 			productName = SpatialShoes;
 			productReference = 707516782C93A680000BEE92 /* SpatialShoes.app */;
@@ -893,6 +898,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		700D70572C9D00A1007815EF /* SpatialShoesScene */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpatialShoesScene;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 707516702C93A680000BEE92 /* Project object */;
 }
