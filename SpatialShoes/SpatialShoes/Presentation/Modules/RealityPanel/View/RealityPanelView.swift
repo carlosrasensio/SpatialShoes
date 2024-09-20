@@ -44,7 +44,7 @@ struct RealityPanelView: View {
                     viewModel.showVolumetricWindow.toggle()
                 }
                 .sheet(isPresented: $viewModel.showVolumetricWindow) {
-                    createVolumetricWindow()
+                    VolumetricWindowView()
                 }
                 
                 Spacer()
