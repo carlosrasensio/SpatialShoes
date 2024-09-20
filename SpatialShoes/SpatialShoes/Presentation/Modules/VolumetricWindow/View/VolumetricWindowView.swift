@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct VolumetricWindowView: View {
+    
+    // MARK: - Private Properties
+    
+    @Environment(HomeViewModel.self) private var homeViewModel
+
+    // MARK: - View
+    
     var body: some View {
-        Text("Ventana volumétrica")
+        
     }
 }

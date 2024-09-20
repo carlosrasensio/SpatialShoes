@@ -10,16 +10,15 @@ import SwiftUI
 @main
 struct SpatialShoesApp: App {
     
-    // MARK: - Public Properties
+    // MARK: - Private Properties
 
-    @State var homeViewModel = HomeFactory.makeHomeViewModel()
+    @State private var homeViewModel = HomeFactory.makeHomeViewModel()
 
     // MARK: - View
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environment(homeViewModel)
+            SplashView()
         }
         
         WindowGroup(id: Global.Constants.shoeVolumetricWindowID) {
