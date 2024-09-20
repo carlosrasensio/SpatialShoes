@@ -16,25 +16,27 @@ struct InfoPanelView: View {
     // MARK: - View
     
     var body: some View {
-        Form {
-            Section {
-                LabeledContent("**\(Localizables.brand)**", value: shoe.brand)
-                LabeledContent("**\(Localizables.size)**", value: shoe.size.map { String($0) }.joined(separator: ", "))
-                LabeledContent("**\(Localizables.price)**", value: "\(shoe.price) €")
-                LabeledContent("**\(Localizables.type)**", value: shoe.type)
-                LabeledContent("**\(Localizables.materials)**", value: shoe.materials.joined(separator: ", "))
-                LabeledContent("**\(Localizables.origin)**", value: shoe.origin)
-                LabeledContent("**\(Localizables.gender)**", value: shoe.gender)
-                LabeledContent("**\(Localizables.weight)**", value: "\(shoe.weight) kg")
-                LabeledContent("**\(Localizables.colors)**", value: shoe.colors.joined(separator: ", "))
-                LabeledContent("**\(Localizables.warranty)**", value: "\(shoe.warranty) años")
-                LabeledContent("**\(Localizables.certifications)**", value: shoe.certifications.joined(separator: ", "))
-            }
-            
-            Section {
-                Text(shoe.description)
-            } header: {
-                Text("**\(Localizables.description)**")
+        VStack {
+            Form {
+                Section {
+                    LabeledContent("**\(Localizables.brand)**", value: shoe.brand)
+                    LabeledContent("**\(Localizables.size)**", value: shoe.size.map { String($0) }.joined(separator: ", "))
+                    LabeledContent("**\(Localizables.price)**", value: "\(shoe.price) €")
+                    LabeledContent("**\(Localizables.type)**", value: shoe.type)
+                    LabeledContent("**\(Localizables.materials)**", value: shoe.materials.joined(separator: ", "))
+                    LabeledContent("**\(Localizables.origin)**", value: shoe.origin)
+                    LabeledContent("**\(Localizables.gender)**", value: shoe.gender)
+                    LabeledContent("**\(Localizables.weight)**", value: "\(shoe.weight) kg")
+                    LabeledContent("**\(Localizables.colors)**", value: shoe.colors.joined(separator: ", "))
+                    LabeledContent("**\(Localizables.warranty)**", value: "\(shoe.warranty) años")
+                    LabeledContent("**\(Localizables.certifications)**", value: shoe.certifications.joined(separator: ", "))
+                }
+                
+                Section {
+                    Text(shoe.description)
+                } header: {
+                    Text("**\(Localizables.description)**")
+                }
             }
         }
         .navigationTitle(shoe.name)

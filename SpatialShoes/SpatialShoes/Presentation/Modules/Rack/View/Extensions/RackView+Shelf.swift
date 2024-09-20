@@ -30,7 +30,10 @@ extension RackView {
                 viewModel.showInfoPanel.toggle()
             }
             .sheet(isPresented: $viewModel.showInfoPanel) {
-                InfoPanelView(shoe: favoriteShoe)
+                VStack {
+                    Spacer()
+                    InfoPanelView(shoe: favoriteShoe)
+                }
             }
         }
         .padding()
