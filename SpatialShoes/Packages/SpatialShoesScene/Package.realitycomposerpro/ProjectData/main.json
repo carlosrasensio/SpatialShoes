@@ -1,5 +1,8 @@
 {
   "pathsToIds" : {
-    "SpatialShoesScene\/Sources\/SpatialShoesScene\/SpatialShoesScene.rkassets\/Scene.usda" : "562FD8E5-6089-4BE7-A644-DEA11FB7A85E"
+    "SpatialShoesScene\/Sources\/SpatialShoesScene\/SpatialShoesScene.rkassets\/Prueba.usda" : "A5E5E5AA-308C-4DEA-9C99-1BC958FA2CDA",
+    "SpatialShoesScene\/Sources\/SpatialShoesScene\/SpatialShoesScene.rkassets\/Scene.usda" : "7CECB41A-C6A2-4C72-91D3-86B4AED8EEEC",
+    "SpatialShoesScene\/Sources\/SpatialShoesScene\/SpatialShoesScene.rkassets\/Scene2.usda" : "4279B7E2-5D1D-4096-848D-7BDE204A0BCD",
+    "SpatialShoesScene\/Sources\/SpatialShoesScene\/SpatialShoesScene.rkassets\/Transformed.usda" : "164A899F-0820-44CE-B68E-8A01E0BD6826"
   }
 }

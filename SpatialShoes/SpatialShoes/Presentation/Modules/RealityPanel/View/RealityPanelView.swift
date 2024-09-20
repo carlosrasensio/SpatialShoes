@@ -16,48 +16,41 @@ struct RealityPanelView: View {
     @State var viewModel: RealityPanelViewModel
     let shoe: Shoe
     
-    // MARK: - Private Properties
-    
-    @State private var showVolumetricWindow: Bool = false
-    @State private var showFavoriteToast: Bool = false
-    
     // MARK: - View
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                if viewModel.showLoader {
-                    ProgressView(Localizables.loaderText)
-                } else {
-                    Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle) { model in
-                        model
-                            .resizable()
-                            .scaledToFit()
-                            .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
-                            .rotation3DEffect(.degrees(viewModel.rotationAngle),
-                                                       axis: (x: 0, y: 1, z: 0))
-                    } placeholder: {
-                        ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
-                    }
-                    
-                    Button(action: {
-                        viewModel.isRotating.toggle()
-                    }) {
-                        Text(viewModel.isRotating ? Localizables.disableExhibitorMode : Localizables.enableExhibitorMode)
-                    }
-                    
-                    Button(Localizables.showVolumetricWindow) {
-                        showVolumetricWindow.toggle()
-                    }
-                    .sheet(isPresented: $showVolumetricWindow) {
-                        createVolumetricWindow()
-                    }
-                    
-                    Spacer()
+        VStack(spacing: 20) {
+            if viewModel.showLoader {
+                ProgressView(Localizables.loaderText)
+            } else {
+                Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle) { model in
+                    model
+                        .resizable()
+                        .scaledToFit()
+                        .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
+                        .rotation3DEffect(.degrees(viewModel.rotationAngle),
+                                          axis: (x: 0, y: 1, z: 0))
+                } placeholder: {
+                    ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
                 }
+                
+                Button(action: {
+                    viewModel.isRotating.toggle()
+                }) {
+                    Text(viewModel.isRotating ? Localizables.disableExhibitorMode : Localizables.enableExhibitorMode)
+                }
+                
+                Button(Localizables.showVolumetricWindow) {
+                    viewModel.showVolumetricWindow.toggle()
+                }
+                .sheet(isPresented: $viewModel.showVolumetricWindow) {
+                    createVolumetricWindow()
+                }
+                
+                Spacer()
             }
-            .frame(maxWidth: .infinity)
         }
+        .frame(maxWidth: .infinity)
         .background(Color.blue.opacity(0.2))
         .foregroundColor(.white)
         .navigationBarItems(trailing:
@@ -70,11 +63,11 @@ struct RealityPanelView: View {
         })
         .overlay(
             Group {
-                if showFavoriteToast {
+                if viewModel.showFavoriteToast {
                     createToast()
                 }
             },
-            alignment: .topTrailing
+            alignment: .top
         )
         .alert(Localizables.alertTitle,
                isPresented: $viewModel.showAlert)
@@ -92,9 +85,9 @@ struct RealityPanelView: View {
 private extension RealityPanelView {
     func toggleFavorite() {
         viewModel.toggleFavorite(shoe)
-        showFavoriteToast = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            showFavoriteToast = false
+        viewModel.showFavoriteToast = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            viewModel.showFavoriteToast = false
         }
     }
 }
