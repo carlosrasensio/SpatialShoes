@@ -75,9 +75,9 @@ final class RealityPanelViewModel {
     }
 }
 
-// MARK: - Private Functions
+// MARK: - Model3DRotation
 
-private extension RealityPanelViewModel {
+extension RealityPanelViewModel: Model3DRotation {
     func startRotation() {
         stopRotation()
         rotationTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { [weak self] _ in

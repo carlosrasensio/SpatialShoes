@@ -48,7 +48,11 @@ final class RackViewModel {
             print("❌ [ERROR] \(errorMessage ?? Global.Localizables.Errors.unknown)")
         }
     }
-    
+}
+
+// MARK: - Model3DRotation
+
+extension RackViewModel: Model3DRotation {
     func startRotation() {
         rotationTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { [weak self] _ in
             guard let self = self else { return }
