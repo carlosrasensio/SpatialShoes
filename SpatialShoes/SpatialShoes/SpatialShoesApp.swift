@@ -13,5 +13,11 @@ struct SpatialShoesApp: App {
         WindowGroup {
             SplashView()
         }
+        
+        WindowGroup(id: "ShoeVolumetricWindow") {
+            VolumetricWindowView()
+        }
+        .windowStyle(.volumetric)
+        .defaultSize(width: 1.0, height: 1.0, depth: 1.0, in: .meters)
     }
 }
