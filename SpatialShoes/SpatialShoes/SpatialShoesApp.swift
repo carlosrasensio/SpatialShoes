@@ -19,6 +19,7 @@ struct SpatialShoesApp: App {
     var body: some Scene {
         WindowGroup {
             SplashView()
+                .environment(homeViewModel)
         }
         
         WindowGroup(id: Global.Constants.shoeVolumetricWindowID) {

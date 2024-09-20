@@ -11,7 +11,7 @@ struct SplashView: View {
     
     // MARK: - Private Properties
     
-    @State private var homeViewModel = HomeFactory.makeHomeViewModel()
+    @Environment(HomeViewModel.self) private var homeViewModel
     @State private var isActive: Bool = false
 
     // MARK: - View
