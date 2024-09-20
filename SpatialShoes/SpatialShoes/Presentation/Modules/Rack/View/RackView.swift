@@ -9,35 +9,31 @@ import SwiftUI
 
 struct RackView: View {
     
-    // MARK: - Properties
+    // MARK: - Public Properties
 
     @State var viewModel: RackViewModel
-    let favoriteShoes: [Shoe] = []
+
+    // MARK: - Private Properties
     
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
     
     // MARK: - View
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], spacing: 16) {
-                ForEach(favoriteShoes) { favoriteShoe in
-                    Button(action: {
-                        // TODO: Display window with InfoPanelView
-                    }) {
-                        RackCellView(shoe: favoriteShoe)
-                    }
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(viewModel.favoriteShoes) { favoriteShoe in
+                    createShelf(with: favoriteShoe)
                 }
             }
             .padding()
         }
-        .navigationTitle(Localizables.title)
-    }
-}
-
-// MARK: - Localizables
-
-private extension RackView {
-    enum Localizables {
-        static let title = "Zapatillas Favoritas"
+        .navigationTitle(Global.Localizables.favorites)
+        .onAppear {
+            viewModel.startRotation()
+        }
     }
 }

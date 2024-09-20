@@ -18,6 +18,13 @@ public enum Global {
     enum Localizables {
         static let catalog = "Catálogo"
         static let favorites = "Favoritos"
-        static let unknownError = "Error por determinar"
+        static let loaderText = "Cargando..."
+        
+        // MARK: - Errors
+        
+        enum Errors {
+            static let alertTitle = "ERROR"
+            static let unknown = "Error por determinar"
+        }
     }
 }

@@ -56,12 +56,12 @@ final class RealityPanelViewModel {
             errorMessage = error.message
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.Errors.unknown)")
         } catch {
-            errorMessage = Global.Localizables.unknownError
+            errorMessage = Global.Localizables.Errors.unknown
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.unknownError)")
+            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.Errors.unknown)")
         }
     }
     

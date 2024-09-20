@@ -112,11 +112,11 @@ private extension RealityPanelView {
 
 extension RealityPanelView {
     enum Localizables {
-        static let loaderText = "Cargando..."
+        static let loaderText = Global.Localizables.loaderText
         static let showVolumetricWindow = "Ver Ventana Volumétrica"
         static let enableExhibitorMode = "Activar Modo Expositor"
         static let disableExhibitorMode = "Desactivar Modo Expositor"
         static let alertTitle = "Ups..."
-        static let unknownError = Global.Localizables.unknownError
+        static let unknownError = Global.Localizables.Errors.unknown
     }
 }

@@ -61,7 +61,7 @@ struct CatalogView: View {
 private extension CatalogView {
     enum Localizables {
         static let navigationtitle = Global.Localizables.catalog
-        static let loaderText = "Cargando..."
-        static let alertTitle = "ERROR"
+        static let loaderText = Global.Localizables.loaderText
+        static let alertTitle = Global.Localizables.Errors.alertTitle
     }
 }

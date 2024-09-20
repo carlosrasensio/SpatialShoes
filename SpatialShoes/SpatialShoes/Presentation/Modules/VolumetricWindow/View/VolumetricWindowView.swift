@@ -51,9 +51,9 @@ struct VolumetricWindowView: View {
                               
 private extension VolumetricWindowView {
   enum Localizables {
-      static let loaderText = "Cargando..."
-      static let alertTitle = "ERROR"
-      static let unknownError = Global.Localizables.unknownError
+      static let loaderText = Global.Localizables.loaderText
+      static let alertTitle = Global.Localizables.Errors.alertTitle
+      static let unknownError = Global.Localizables.Errors.unknown
   }
 }
 
