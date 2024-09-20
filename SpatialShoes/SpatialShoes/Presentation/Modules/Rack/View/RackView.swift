@@ -29,6 +29,14 @@ struct RackView: View {
             }
             .padding()
         }
-        .navigationTitle("Zapatillas Favoritas")
+        .navigationTitle(Localizables.title)
+    }
+}
+
+// MARK: - Localizables
+
+private extension RackView {
+    enum Localizables {
+        static let title = "Zapatillas Favoritas"
     }
 }
