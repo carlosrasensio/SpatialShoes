@@ -25,7 +25,6 @@ struct VolumetricWindowView: View {
             do {
                 let shoe = try await Entity(named: selectedShoe.model3DName, in: SpatialShoesScene.spatialShoesSceneBundle)
                 content.add(shoe)
-                shoe.position = []
             } catch let error as VolumetricWindowError {
                 errorMessage = error.message
                 showAlert = true
