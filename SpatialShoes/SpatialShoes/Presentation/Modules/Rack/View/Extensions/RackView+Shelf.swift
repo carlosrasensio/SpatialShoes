@@ -30,9 +30,25 @@ extension RackView {
                 viewModel.showInfoPanel.toggle()
             }
             .sheet(isPresented: $viewModel.showInfoPanel) {
-                InfoPanelView(shoe: favoriteShoe)
+                VStack {
+                    Spacer()
+                    InfoPanelView(shoe: favoriteShoe)
+                }
+            }
+            
+            Button(Localizables.deleteFavoriteShoe) {
+                favoriteShoe.isFavorite = false
+                modelContext.delete(favoriteShoe)
             }
         }
         .padding()
+    }
+}
+
+// MARK: - Localizables
+
+private extension RackView {
+    enum Localizables {
+        static let deleteFavoriteShoe = "Eliminar de Favoritos"
     }
 }

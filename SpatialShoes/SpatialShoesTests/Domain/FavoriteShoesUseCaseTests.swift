@@ -20,7 +20,7 @@ final class FavoriteShoesUseCaseTests: XCTestCase {
                             brand: "Vans",
                             size: [44, 45],
                             price: 60.0,
-                            description: "Classics!",
+                            descriptionString: "Classics!",
                             model3DName: "VansAuthentic",
                             type: "Casual",
                             materials: ["Casual"],

@@ -11,7 +11,7 @@ extension Shoe {
                            brand: "EleganceWalk",
                            size: [36, 37, 38, 39, 40],
                            price: 89.99,
-                           description: """
+                           descriptionString: """
             Descubre el estilo y la comodidad con nuestras **Sporty Chic** de **EleganceWalk**. Diseñadas para las mujeres activas que no quieren sacrificar el estilo por la funcionalidad, estas zapatillas deportivas femeninas ofrecen una combinación perfecta de rendimiento y elegancia. Ideales para actividades deportivas y para el uso diario.
             
             **Características Destacadas:**
@@ -30,5 +30,6 @@ extension Shoe {
                            weight: 0.8,
                            colors: ["Rojo", "Blanco", "Negro"],
                            warranty: 2,
-                           certifications: ["Materiales Reciclados", "Libre de Crueldad"])
+                           certifications: ["Materiales Reciclados", "Libre de Crueldad"],
+                           isFavorite: false)
 }

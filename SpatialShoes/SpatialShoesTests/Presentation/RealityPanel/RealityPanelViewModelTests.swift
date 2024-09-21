@@ -41,7 +41,7 @@ final class RealityPanelViewModelTests: XCTestCase {
                         brand: "Vans",
                         size: [45],
                         price: 60.0,
-                        description: "Classics!",
+                        descriptionString: "Classics!",
                         model3DName: "VansAuthentic",
                         type: "Casual",
                         materials: ["Casual"],

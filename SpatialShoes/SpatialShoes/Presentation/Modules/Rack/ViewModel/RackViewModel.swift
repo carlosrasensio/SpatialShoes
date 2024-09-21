@@ -12,7 +12,7 @@ final class RackViewModel {
     
     // MARK: - Public Properties
     
-    var favoriteShoes: [Shoe] = [Shoe.test, Shoe.test, Shoe.test, Shoe.test]
+    var favoriteShoes: [Shoe] = []
     var showLoader: Bool = false
     var showInfoPanel: Bool = false
     var showAlert: Bool = false
