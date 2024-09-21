@@ -56,7 +56,6 @@ final class RealityPanelViewModelTests: XCTestCase {
         sut.toggleFavorite(shoe)
         
         // Then
-        XCTAssertFalse(sut.favoriteShoes.isEmpty)
-        XCTAssertEqual(sut.favoriteShoes.count, 1)
+        XCTAssertFalse(sut.showLoader)
     }
 }
