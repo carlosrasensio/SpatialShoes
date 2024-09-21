@@ -10,11 +10,13 @@ import SwiftUI
 extension RealityPanelView {
     @ViewBuilder
     func createToast() -> some View {
-        Text(viewModel.isFavorite ? Localizables.toastSaveDescription : Localizables.toastDeleteDescription)
-            .background(viewModel.isFavorite ? Color.green.opacity(0.1) : Color.red.opacity(0.1))
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .transition(.opacity)
+        VStack {
+            Text(shoe.isFavorite ? Localizables.toastSaveDescription : Localizables.toastDeleteDescription)
+                .background(shoe.isFavorite ? Color.green.opacity(0.1) : Color.red.opacity(0.1))
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .transition(.opacity)
+        }
     }
 }
 
