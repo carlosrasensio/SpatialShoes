@@ -71,7 +71,7 @@ final class FavoriteShoesUseCaseTests: XCTestCase {
         
         // Then
         XCTAssertTrue(sut.favoriteShoes.isEmpty)
-    }
+    }
     
     func testExecuteSaveActionWithFailure() {
         do {
