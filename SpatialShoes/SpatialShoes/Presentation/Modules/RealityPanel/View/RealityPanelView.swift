@@ -63,6 +63,10 @@ struct RealityPanelView: View {
 private extension RealityPanelView {
     func toggleFavorite() {
         viewModel.toggleFavorite(shoe)
+        showFavoriteToast()
+    }
+    
+    func showFavoriteToast() {
         viewModel.showFavoriteToast = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             viewModel.showFavoriteToast = false

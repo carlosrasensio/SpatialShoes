@@ -16,7 +16,7 @@ struct SpatialShoesApp: App {
     @State private var catalogViewModel = CatalogFactory.makeCatalogViewModel()
         
     private var modelContainer: ModelContainer = {
-        let schema = Schema([ShoeModel.self ])
+        let schema = Schema([Shoe.self ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         
         do {

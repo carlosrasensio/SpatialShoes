@@ -33,7 +33,7 @@ struct InfoPanelView: View {
                 }
                 
                 Section {
-                    Text(shoe.description)
+                    Text(shoe.descriptionString)
                 } header: {
                     Text("**\(Localizables.description)**")
                 }

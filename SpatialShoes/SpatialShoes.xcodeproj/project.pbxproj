@@ -31,9 +31,8 @@
 		702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC14A2C979091003248BF /* SwiftDataManager.swift */; };
 		703E72F82C9E10CB007FAD82 /* RealityPanelView+RealityPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703E72F72C9E10BF007FAD82 /* RealityPanelView+RealityPanel.swift */; };
 		70500CB42C97B21D0042D23D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CB32C97B21D0042D23D /* SplashView.swift */; };
-		705CAD1C2C9E52E40024F31B /* ShoeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CAD1B2C9E52E10024F31B /* ShoeModel.swift */; };
-		705CAD202C9E5A880024F31B /* Shoe+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CAD1F2C9E5A860024F31B /* Shoe+.swift */; };
-		705CAD222C9E5A8F0024F31B /* ShoeModel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CAD212C9E5A8C0024F31B /* ShoeModel+.swift */; };
+		705CAD1C2C9E52E40024F31B /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CAD1B2C9E52E10024F31B /* Shoe.swift */; };
+		705CAD202C9E5A880024F31B /* ShoeDTO+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CAD1F2C9E5A860024F31B /* ShoeDTO+.swift */; };
 		706AFAE72C9DED1D00585A5D /* Model3DRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AFAE62C9DECF600585A5D /* Model3DRotation.swift */; };
 		706C010A2C9D02220055F7F3 /* VolumetricWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */; };
 		706C010D2C9D039E0055F7F3 /* VolumetricWindowView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C010C2C9D03930055F7F3 /* VolumetricWindowView_Preview.swift */; };
@@ -44,7 +43,7 @@
 		707516922C93A782000BEE92 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516912C93A782000BEE92 /* CatalogView.swift */; };
 		707516942C93A7AC000BEE92 /* Shoes.json in Resources */ = {isa = PBXBuildFile; fileRef = 707516932C93A7AC000BEE92 /* Shoes.json */; };
 		707516972C93A80B000BEE92 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516962C93A80B000BEE92 /* JSONManager.swift */; };
-		7075169A2C93A84B000BEE92 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516992C93A84B000BEE92 /* Shoe.swift */; };
+		7075169A2C93A84B000BEE92 /* ShoeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516992C93A84B000BEE92 /* ShoeDTO.swift */; };
 		7075169E2C93AA92000BEE92 /* GetShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075169D2C93AA92000BEE92 /* GetShoesRepository.swift */; };
 		707516A22C93ABCF000BEE92 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A12C93ABCF000BEE92 /* CatalogViewModel.swift */; };
 		707516A62C93AF02000BEE92 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707516A52C93AF02000BEE92 /* InfoPanelView.swift */; };
@@ -99,9 +98,8 @@
 		702EC14A2C979091003248BF /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		703E72F72C9E10BF007FAD82 /* RealityPanelView+RealityPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityPanelView+RealityPanel.swift"; sourceTree = "<group>"; };
 		70500CB32C97B21D0042D23D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		705CAD1B2C9E52E10024F31B /* ShoeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeModel.swift; sourceTree = "<group>"; };
-		705CAD1F2C9E5A860024F31B /* Shoe+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shoe+.swift"; sourceTree = "<group>"; };
-		705CAD212C9E5A8C0024F31B /* ShoeModel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoeModel+.swift"; sourceTree = "<group>"; };
+		705CAD1B2C9E52E10024F31B /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		705CAD1F2C9E5A860024F31B /* ShoeDTO+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoeDTO+.swift"; sourceTree = "<group>"; };
 		706AFAE62C9DECF600585A5D /* Model3DRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model3DRotation.swift; sourceTree = "<group>"; };
 		706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView.swift; sourceTree = "<group>"; };
 		706C010C2C9D03930055F7F3 /* VolumetricWindowView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView_Preview.swift; sourceTree = "<group>"; };
@@ -114,7 +112,7 @@
 		707516912C93A782000BEE92 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		707516932C93A7AC000BEE92 /* Shoes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shoes.json; sourceTree = "<group>"; };
 		707516962C93A80B000BEE92 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
-		707516992C93A84B000BEE92 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		707516992C93A84B000BEE92 /* ShoeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDTO.swift; sourceTree = "<group>"; };
 		7075169D2C93AA92000BEE92 /* GetShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepository.swift; sourceTree = "<group>"; };
 		707516A12C93ABCF000BEE92 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		707516A52C93AF02000BEE92 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
@@ -340,7 +338,7 @@
 		705CAD1D2C9E52E80024F31B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				705CAD1B2C9E52E10024F31B /* ShoeModel.swift */,
+				707516992C93A84B000BEE92 /* ShoeDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,8 +346,7 @@
 		705CAD1E2C9E5A780024F31B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				705CAD1F2C9E5A860024F31B /* Shoe+.swift */,
-				705CAD212C9E5A8C0024F31B /* ShoeModel+.swift */,
+				705CAD1F2C9E5A860024F31B /* ShoeDTO+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -478,7 +475,7 @@
 		707516982C93A82B000BEE92 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				707516992C93A84B000BEE92 /* Shoe.swift */,
+				705CAD1B2C9E52E10024F31B /* Shoe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -781,16 +778,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7024B9B62C9DD50100722D26 /* MainView.swift in Sources */,
-				705CAD202C9E5A880024F31B /* Shoe+.swift in Sources */,
+				705CAD202C9E5A880024F31B /* ShoeDTO+.swift in Sources */,
 				70058D822C9BA2E200DB165E /* RackViewTest.swift in Sources */,
-				705CAD1C2C9E52E40024F31B /* ShoeModel.swift in Sources */,
+				705CAD1C2C9E52E40024F31B /* Shoe.swift in Sources */,
 				7024B9BC2C9DD6C000722D26 /* RackFactory.swift in Sources */,
-				7075169A2C93A84B000BEE92 /* Shoe.swift in Sources */,
+				7075169A2C93A84B000BEE92 /* ShoeDTO.swift in Sources */,
 				70E5278D2C9A66EC00C65367 /* CatalogViewTest.swift in Sources */,
 				70500CB42C97B21D0042D23D /* SplashView.swift in Sources */,
 				702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */,
 				70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */,
-				705CAD222C9E5A8F0024F31B /* ShoeModel+.swift in Sources */,
 				706C01102C9D057E0055F7F3 /* Constants.swift in Sources */,
 				702EC1472C978B32003248BF /* RealityPanelFactory.swift in Sources */,
 				70E527942C9A67EC00C65367 /* RealityPanelViewModel.swift in Sources */,

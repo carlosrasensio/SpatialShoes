@@ -14,7 +14,6 @@ final class RealityPanelViewModel {
     // MARK: - Public Properties
     
     var favoriteShoes: [Shoe] = []
-    var isFavorite: Bool = false
     var showFavoriteToast: Bool = false
     var showLoader: Bool = false
     var isRotating: Bool = false {
@@ -48,8 +47,7 @@ final class RealityPanelViewModel {
         errorMessage = nil
 
         do {
-            try favoriteShoesUseCase.execute(action: isFavorite ? .delete : .save, for: shoe)
-            isFavorite.toggle()
+            try favoriteShoesUseCase.execute(action: shoe.isFavorite ? .save : .delete, for: shoe)
             favoriteShoes = favoriteShoesUseCase.favoriteShoes
             showLoader = false
         } catch let error as FavoriteShoesDomainError {

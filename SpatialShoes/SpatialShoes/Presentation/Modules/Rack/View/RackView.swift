@@ -37,3 +37,12 @@ struct RackView: View {
         }
     }
 }
+
+// MARK: - Localizables
+
+private extension RackView {
+    enum Localizables {
+        static let emptyRackTitle = "Vaya.."
+        static let emptyRackDescription = "Parece que actualmente no tienes zapatillas guardadas en Favoritos"
+    }
+}
