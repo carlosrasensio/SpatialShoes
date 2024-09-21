@@ -29,6 +29,7 @@
 		702EC1472C978B32003248BF /* RealityPanelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1462C978B32003248BF /* RealityPanelFactory.swift */; };
 		702EC1492C978F39003248BF /* FavoriteShoesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */; };
 		702EC14B2C979091003248BF /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EC14A2C979091003248BF /* SwiftDataManager.swift */; };
+		703E72F82C9E10CB007FAD82 /* RealityPanelView+RealityPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703E72F72C9E10BF007FAD82 /* RealityPanelView+RealityPanel.swift */; };
 		70500CB42C97B21D0042D23D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CB32C97B21D0042D23D /* SplashView.swift */; };
 		706AFAE72C9DED1D00585A5D /* Model3DRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AFAE62C9DECF600585A5D /* Model3DRotation.swift */; };
 		706C010A2C9D02220055F7F3 /* VolumetricWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */; };
@@ -93,6 +94,7 @@
 		702EC1462C978B32003248BF /* RealityPanelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelFactory.swift; sourceTree = "<group>"; };
 		702EC1482C978F39003248BF /* FavoriteShoesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShoesRepository.swift; sourceTree = "<group>"; };
 		702EC14A2C979091003248BF /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
+		703E72F72C9E10BF007FAD82 /* RealityPanelView+RealityPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealityPanelView+RealityPanel.swift"; sourceTree = "<group>"; };
 		70500CB32C97B21D0042D23D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		706AFAE62C9DECF600585A5D /* Model3DRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model3DRotation.swift; sourceTree = "<group>"; };
 		706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 		70500CB12C97A5AA0042D23D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				703E72F72C9E10BF007FAD82 /* RealityPanelView+RealityPanel.swift */,
 				70E5279D2C9A6AA700C65367 /* RealityPanelView+Toast.swift */,
 			);
 			path = Extensions;
@@ -781,6 +784,7 @@
 				70E5279E2C9A6AA700C65367 /* RealityPanelView+Toast.swift in Sources */,
 				70058D772C9BA1CF00DB165E /* RackView.swift in Sources */,
 				70E5278B2C9A659800C65367 /* RealityPanelViewTest.swift in Sources */,
+				703E72F82C9E10CB007FAD82 /* RealityPanelView+RealityPanel.swift in Sources */,
 				7024313A2C98E615005012A3 /* CatalogView_Preview.swift in Sources */,
 				707516922C93A782000BEE92 /* CatalogView.swift in Sources */,
 				702431382C98E5E4005012A3 /* RealityPanelView_Preview.swift in Sources */,
