@@ -65,10 +65,6 @@ final class RealityPanelViewModel {
         }
     }
     
-    func checkIfFavoriteShoe(with id: Int) {
-        isFavorite = favoriteShoes.contains { $0.id == id }
-    }
-    
     func stopRotation() {
         rotationTimer?.invalidate()
         rotationTimer = nil
