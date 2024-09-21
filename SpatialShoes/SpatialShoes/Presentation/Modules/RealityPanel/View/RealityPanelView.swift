@@ -45,7 +45,7 @@ struct RealityPanelView: View {
                     createToast()
                 }
             },
-            alignment: .top
+            alignment: .center
         )
         .alert(Localizables.alertTitle,
                isPresented: $viewModel.showAlert)

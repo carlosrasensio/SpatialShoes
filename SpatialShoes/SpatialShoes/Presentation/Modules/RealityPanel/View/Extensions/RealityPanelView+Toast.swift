@@ -11,7 +11,7 @@ extension RealityPanelView {
     @ViewBuilder
     func createToast() -> some View {
         Text(viewModel.isFavorite ? Localizables.toastSaveDescription : Localizables.toastDeleteDescription)
-            .background(Color.red.opacity(0.1))
+            .background(viewModel.isFavorite ? Color.green.opacity(0.1) : Color.red.opacity(0.1))
             .foregroundColor(.white)
             .cornerRadius(10)
             .transition(.opacity)
