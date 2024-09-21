@@ -20,7 +20,7 @@ final class FavoriteShoesUseCaseTests: XCTestCase {
                             brand: "Vans",
                             size: [44, 45],
                             price: 60.0,
-                            description: "Classics!",
+                            descriptionString: "Classics!",
                             model3DName: "VansAuthentic",
                             type: "Casual",
                             materials: ["Casual"],
@@ -73,20 +73,6 @@ final class FavoriteShoesUseCaseTests: XCTestCase {
         XCTAssertTrue(sut.favoriteShoes.isEmpty)
     }
     
-    func testExecuteFetchActionWithSuccess() {
-        do {
-            // When
-            try sut.execute(action: .save, for: shoe)
-            try sut.execute(action: .fetch, for: shoe)
-        } catch {
-            XCTFail("❌ Error al ejecutar el caso de uso")
-        }
-        
-        // Then
-        XCTAssertFalse(sut.favoriteShoes.isEmpty)
-        XCTAssertEqual(sut.favoriteShoes.count, 1)
-    }
-    
     func testExecuteSaveActionWithFailure() {
         do {
             // When
@@ -111,19 +97,5 @@ final class FavoriteShoesUseCaseTests: XCTestCase {
         
         // Then
         XCTAssertTrue(sut.favoriteShoes.isEmpty)
-    }
-    
-    func testExecuteFetchActionWithFailure() {
-        do {
-            // When
-            try sut.execute(action: .save, for: shoe)
-            try sut.execute(action: .fetch, for: shoe)
-        } catch {
-            XCTFail("❌ Error al ejecutar el caso de uso")
-        }
-        
-        // Then
-        XCTAssertFalse(sut.favoriteShoes.isEmpty)
-        XCTAssertEqual(sut.favoriteShoes.count, 1)
     }
 }

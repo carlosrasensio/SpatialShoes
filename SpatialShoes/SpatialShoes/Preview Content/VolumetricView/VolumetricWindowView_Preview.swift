@@ -14,5 +14,5 @@ import SwiftUI
     let useCase = GetShoesUseCase(repository: repository)
     
     return VolumetricWindowView()
-        .environment(HomeViewModel(getShoesUseCase: useCase))
+        .environment(CatalogViewModel(getShoesUseCase: useCase))
 })

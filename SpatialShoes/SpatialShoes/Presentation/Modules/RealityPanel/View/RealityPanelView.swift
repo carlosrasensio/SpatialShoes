@@ -5,20 +5,16 @@
 //  Created by Carlos Rodriguez Asensio on 18/9/24.
 //
 
-import RealityKit
-import SpatialShoesScene
 import SwiftUI
 
 struct RealityPanelView: View {
     
     // MARK: - Public Properties
     
+    @Environment(\.modelContext) var modelContext
+    @Environment(\.openWindow) var openWindow
     @State var viewModel: RealityPanelViewModel
-    let shoe: Shoe
-    
-    // MARK: - Private Properties
-
-    @Environment(\.openWindow) private var openWindow
+    var shoe: Shoe
     
     // MARK: - View
     
@@ -27,28 +23,7 @@ struct RealityPanelView: View {
             if viewModel.showLoader {
                 ProgressView(Localizables.loaderText)
             } else {
-                Model3D(named: shoe.model3DName, bundle: spatialShoesSceneBundle) { model in
-                    model
-                        .resizable()
-                        .scaledToFit()
-                        .scaleEffect(x: 0.3, y: 0.3, z: 0.3)
-                        .rotation3DEffect(.degrees(viewModel.rotationAngle),
-                                          axis: (x: 0, y: 1, z: 0))
-                } placeholder: {
-                    ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
-                }
-                
-                Button(action: {
-                    viewModel.isRotating.toggle()
-                }) {
-                    Text(viewModel.isRotating ? Localizables.disableExhibitorMode : Localizables.enableExhibitorMode)
-                }
-                
-                Button(Localizables.showVolumetricWindow) {
-                    openWindow(id: Constants.volumetricWindowID)
-                }
-                
-                Spacer()
+                createRealityPanel(with: shoe)
             }
         }
         .frame(maxWidth: .infinity)
@@ -58,7 +33,7 @@ struct RealityPanelView: View {
                                 Button(action: {
             toggleFavorite()
         }) {
-            Image(systemName: viewModel.isFavorite ? Constants.Icons.deleteFavorite : Constants.Icons.saveFavorite)
+            Image(systemName: shoe.isFavorite ? Constants.Icons.deleteFavorite : Constants.Icons.saveFavorite)
                 .foregroundColor(.red)
                 .font(.title2)
         })
@@ -68,7 +43,7 @@ struct RealityPanelView: View {
                     createToast()
                 }
             },
-            alignment: .top
+            alignment: .leading
         )
         .alert(Localizables.alertTitle,
                isPresented: $viewModel.showAlert)
@@ -85,7 +60,17 @@ struct RealityPanelView: View {
 
 private extension RealityPanelView {
     func toggleFavorite() {
+        shoe.isFavorite.toggle()
+        if shoe.isFavorite {
+            modelContext.insert(shoe)
+        } else {
+            modelContext.delete(shoe)
+        }
         viewModel.toggleFavorite(shoe)
+        showFavoriteToast()
+    }
+    
+    func showFavoriteToast() {
         viewModel.showFavoriteToast = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             viewModel.showFavoriteToast = false
@@ -95,9 +80,8 @@ private extension RealityPanelView {
 
 // MARK: - Constants
 
-private extension RealityPanelView {
+extension RealityPanelView {
     enum Constants {
-        static let volumetricWindowID = Global.Constants.shoeVolumetricWindowID
         
         // MARK: - Icons
         
@@ -112,11 +96,11 @@ private extension RealityPanelView {
 
 extension RealityPanelView {
     enum Localizables {
-        static let loaderText = "Cargando..."
+        static let loaderText = Global.Localizables.loaderText
         static let showVolumetricWindow = "Ver Ventana Volumétrica"
         static let enableExhibitorMode = "Activar Modo Expositor"
         static let disableExhibitorMode = "Desactivar Modo Expositor"
-        static let unknownError = "Error por determinar"
         static let alertTitle = "Ups..."
+        static let unknownError = Global.Localizables.Errors.unknown
     }
 }

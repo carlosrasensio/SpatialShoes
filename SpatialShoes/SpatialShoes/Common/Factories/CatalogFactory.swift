@@ -1,5 +1,5 @@
 //
-//  HomeFactory.swift
+//  CatalogFactory.swift
 //  SpatialShoes
 //
 //  Created by Carlos Rodriguez Asensio on 13/9/24.
@@ -7,19 +7,19 @@
 
 import Foundation
 
-final class HomeFactory {
-    static func make() -> HomeView {
-        HomeView()
+final class CatalogFactory {
+    static func make() -> CatalogView {
+        CatalogView()
     }
     
-    static func makeHomeViewModel() -> HomeViewModel {
+    static func makeCatalogViewModel() -> CatalogViewModel {
         .init(getShoesUseCase: makeGetShoesUseCase())
     }
 }
 
 // MARK: - Private Functions
 
-private extension HomeFactory {
+private extension CatalogFactory {
     static func makeGetShoesUseCase() -> GetShoesUseCase {
         .init(repository: makeGetShoesRepository())
     }

@@ -22,9 +22,9 @@ extension GetShoesRepositoryProtocol {
         guard let fileName else { throw GetShoesDataError.filenameError }
         guard let bundle else { throw GetShoesDataError.bundleError }
         guard let result = try JSONManager.shared.load(fileName: fileName,
-                                                       type: [Shoe].self,
+                                                       type: [ShoeDTO].self,
                                                        bundle: bundle) else { throw GetShoesDataError.parsingError }
-        return result
+        return result.map { $0.toShoe }
     }
 }
 

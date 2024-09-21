@@ -41,7 +41,7 @@ final class FavoriteShoesUseCase {
             case .delete:
                 try deleteFavoriteShoe(with: shoe.id)
             case .fetch:
-                favoriteShoes += try fetchFavoriteShoes()
+                favoriteShoes = try fetchFavoriteShoes()
             }
         } catch let error as FavoriteShoesDataError {
             throw error.mapToDomainError()

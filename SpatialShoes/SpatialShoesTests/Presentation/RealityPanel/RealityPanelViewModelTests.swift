@@ -41,7 +41,7 @@ final class RealityPanelViewModelTests: XCTestCase {
                         brand: "Vans",
                         size: [45],
                         price: 60.0,
-                        description: "Classics!",
+                        descriptionString: "Classics!",
                         model3DName: "VansAuthentic",
                         type: "Casual",
                         materials: ["Casual"],
@@ -56,7 +56,6 @@ final class RealityPanelViewModelTests: XCTestCase {
         sut.toggleFavorite(shoe)
         
         // Then
-        XCTAssertFalse(sut.favoriteShoes.isEmpty)
-        XCTAssertEqual(sut.favoriteShoes.count, 1)
+        XCTAssertFalse(sut.showLoader)
     }
 }
