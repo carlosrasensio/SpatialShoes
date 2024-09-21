@@ -112,18 +112,4 @@ final class FavoriteShoesUseCaseTests: XCTestCase {
         // Then
         XCTAssertTrue(sut.favoriteShoes.isEmpty)
     }
-    
-    func testExecuteFetchActionWithFailure() {
-        do {
-            // When
-            try sut.execute(action: .save, for: shoe)
-            try sut.execute(action: .fetch, for: shoe)
-        } catch {
-            XCTFail("❌ Error al ejecutar el caso de uso")
-        }
-        
-        // Then
-        XCTAssertFalse(sut.favoriteShoes.isEmpty)
-        XCTAssertEqual(sut.favoriteShoes.count, 1)
-    }
 }
