@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+/// NOTA 1: En este caso, esta claseno tiene funcionalidad, ya que la persistencia con SwifData se realiza desde las propias vistas. En un principio estaba pensado para utilizar UseCase, Repository y SwiftDataManager, pero no se ha terminado de desarrollar la idea.
+/// NOTA 2: Se ha dejado el código básicamente para dejar reflejado el trabajo planteado, así como el manejo de errores.
 final class FavoriteShoesRepository {
     
     // MARK: - Public Functions

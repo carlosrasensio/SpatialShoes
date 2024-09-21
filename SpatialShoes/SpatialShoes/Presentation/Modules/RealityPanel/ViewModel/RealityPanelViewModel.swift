@@ -13,7 +13,6 @@ final class RealityPanelViewModel {
     
     // MARK: - Public Properties
     
-    var favoriteShoes: [Shoe] = []
     var showFavoriteToast: Bool = false
     var showLoader: Bool = false
     var isRotating: Bool = false {
@@ -47,8 +46,9 @@ final class RealityPanelViewModel {
         errorMessage = nil
 
         do {
+            /// NOTA 1: En este caso el caso de uso no tiene funcionalidad, ya que la persistencia con SwifData se realiza desde las propias vistas. En un principio estaba pensado para utilizar UseCase, Repository y SwiftDataManager, pero no se ha terminado de desarrollar la idea.
+            /// NOTA 2: Se ha dejado el código básicamente para dejar reflejado el trabajo planteado, así como el manejo de errores. Además de que en esta función se gestiona el funcionamiento del loader.
             try favoriteShoesUseCase.execute(action: shoe.isFavorite ? .save : .delete, for: shoe)
-            favoriteShoes = favoriteShoesUseCase.favoriteShoes
             showLoader = false
         } catch let error as FavoriteShoesDomainError {
             errorMessage = error.message
