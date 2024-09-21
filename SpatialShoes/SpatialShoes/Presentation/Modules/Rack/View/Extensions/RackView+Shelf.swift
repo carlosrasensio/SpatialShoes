@@ -35,7 +35,19 @@ extension RackView {
                     InfoPanelView(shoe: favoriteShoe)
                 }
             }
+            
+            Button(Localizables.deleteFavoriteShoe) {
+                modelContext.delete(favoriteShoe)
+            }
         }
         .padding()
+    }
+}
+
+// MARK: - Localizables
+
+private extension RackView {
+    enum Localizables {
+        static let deleteFavoriteShoe = "Eliminar de Favoritos"
     }
 }
