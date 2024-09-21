@@ -32,6 +32,8 @@ final class RackViewModel {
         
     // MARK: - Public Functions
     
+    /// NOTA 1: En este caso, esta función no se llama desde la vista y el caso de uso no tiene funcionalidad, ya que la persistencia con SwifData se realiza desde las propias vistas. En un principio estaba pensado para utilizar UseCase, Repository y SwiftDataManager, pero no se ha terminado de desarrollar la idea. En este módulo es más claro, ya que con la propiedad Query de SwiftData es muy sencilla la obtención de los datos persistidos.
+    /// NOTA 2: Se ha dejado el código básicamente para dejar reflejado el trabajo planteado, así como el manejo de errores. Además de que en esta función se gestiona el funcionamiento del loader.
     func getFavoriteShoes() {
         do {
             try favoriteShoesUseCase.execute(action: .fetch)
