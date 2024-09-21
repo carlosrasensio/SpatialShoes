@@ -11,6 +11,7 @@ struct RealityPanelView: View {
     
     // MARK: - Public Properties
     
+    @Environment(\.modelContext) var modelContext
     @Environment(\.openWindow) var openWindow
     @State var viewModel: RealityPanelViewModel
     var shoe: Shoe
@@ -61,7 +62,9 @@ private extension RealityPanelView {
     func toggleFavorite() {
         shoe.isFavorite.toggle()
         if shoe.isFavorite {
+            modelContext.insert(shoe)
         } else {
+            modelContext.delete(shoe)
         }
         viewModel.toggleFavorite(shoe)
         showFavoriteToast()
