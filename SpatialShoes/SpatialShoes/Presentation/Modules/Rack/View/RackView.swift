@@ -23,6 +23,11 @@ struct RackView: View {
     // MARK: - View
     
     var body: some View {
+        if favoriteShoes.isEmpty {
+            ContentUnavailableView(Localizables.emptyRackTitle,
+                                   systemImage: "heart.slash",
+                                   description: Text(Localizables.emptyRackDescription))
+        }
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(viewModel.favoriteShoes) { favoriteShoe in

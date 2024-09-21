@@ -13,10 +13,7 @@ struct RealityPanelView: View {
     
     @Environment(\.openWindow) var openWindow
     @State var viewModel: RealityPanelViewModel
-    let shoe: Shoe
-    
-    // MARK: - Private Properties
-
+    var shoe: Shoe
     
     // MARK: - View
     
@@ -35,7 +32,7 @@ struct RealityPanelView: View {
                                 Button(action: {
             toggleFavorite()
         }) {
-            Image(systemName: viewModel.isFavorite ? Constants.Icons.deleteFavorite : Constants.Icons.saveFavorite)
+            Image(systemName: shoe.isFavorite ? Constants.Icons.deleteFavorite : Constants.Icons.saveFavorite)
                 .foregroundColor(.red)
                 .font(.title2)
         })
@@ -62,6 +59,10 @@ struct RealityPanelView: View {
 
 private extension RealityPanelView {
     func toggleFavorite() {
+        shoe.isFavorite.toggle()
+        if shoe.isFavorite {
+        } else {
+        }
         viewModel.toggleFavorite(shoe)
         showFavoriteToast()
     }

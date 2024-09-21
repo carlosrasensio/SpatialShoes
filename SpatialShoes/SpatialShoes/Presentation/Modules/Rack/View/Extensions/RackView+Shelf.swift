@@ -37,6 +37,7 @@ extension RackView {
             }
             
             Button(Localizables.deleteFavoriteShoe) {
+                favoriteShoe.isFavorite = false
                 modelContext.delete(favoriteShoe)
             }
         }

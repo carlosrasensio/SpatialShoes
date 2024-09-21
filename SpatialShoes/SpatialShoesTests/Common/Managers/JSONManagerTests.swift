@@ -15,8 +15,8 @@ final class JSONManagerTests: XCTestCase {
         let bundle = Bundle(for: JSONManagerTests.self)
 
         // When
-        guard let shoes: [Shoe] = try JSONManager.shared.load(fileName: fileName,
-                                                              type: [Shoe].self,
+        guard let shoes: [ShoeDTO] = try JSONManager.shared.load(fileName: fileName,
+                                                              type: [ShoeDTO].self,
                                                               bundle: bundle) else {
             XCTFail("❌ Error decoding JSON file")
             return
