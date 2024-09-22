@@ -23,6 +23,15 @@ extension RackView {
             } placeholder: {
                 ProgressView("\(favoriteShoe.name) \(Global.Localizables.loaderText.lowercased())")
             }
+            .gesture(
+                TapGesture()
+                    .onEnded { _ in
+                        viewModel.isRotating.toggle()
+                    }
+            )
+            .sheet(isPresented: $viewModel.isRotating) {
+                createInfoPanel(with: favoriteShoe)
+            }
             
             Spacer()
 
@@ -30,10 +39,7 @@ extension RackView {
                 viewModel.showInfoPanel.toggle()
             }
             .sheet(isPresented: $viewModel.showInfoPanel) {
-                VStack {
-                    Spacer()
-                    InfoPanelView(shoe: favoriteShoe)
-                }
+                createInfoPanel(with: favoriteShoe)
             }
             
             Button(Localizables.deleteFavoriteShoe) {

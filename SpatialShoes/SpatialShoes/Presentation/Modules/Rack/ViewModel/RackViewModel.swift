@@ -15,6 +15,7 @@ final class RackViewModel {
     var favoriteShoes: [Shoe] = []
     var showLoader: Bool = false
     var showInfoPanel: Bool = false
+    var isRotating: Bool = false
     var showAlert: Bool = false
     @ObservationIgnored var errorMessage: String?
     
