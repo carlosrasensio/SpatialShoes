@@ -29,7 +29,7 @@ struct RackView: View {
     var body: some View {
         if favoriteShoes.isEmpty {
             ContentUnavailableView(Localizables.emptyRackTitle,
-                                   systemImage: "heart.slash",
+                                   systemImage: Constants.Icons.contentUnavailable,
                                    description: Text(Localizables.emptyRackDescription))
         }
         ScrollView {
@@ -43,6 +43,16 @@ struct RackView: View {
         .navigationTitle(Global.Localizables.favorites)
         .onAppear {
             viewModel.startRotation()
+        }
+    }
+}
+
+// MARK: - Constants
+
+private extension RackView {
+    enum Constants {
+        enum Icons {
+            static let contentUnavailable = "heart.slash"
         }
     }
 }

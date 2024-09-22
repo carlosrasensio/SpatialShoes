@@ -22,6 +22,12 @@ extension RealityPanelView {
         } placeholder: {
             ProgressView("\(shoe.name) \(Localizables.loaderText.lowercased())")
         }
+        .gesture(
+            TapGesture()
+                .onEnded { _ in
+                    viewModel.isRotating.toggle()
+                }
+        )
         
         Button(action: {
             viewModel.isRotating.toggle()
