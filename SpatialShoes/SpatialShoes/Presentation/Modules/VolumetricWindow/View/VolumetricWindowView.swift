@@ -6,7 +6,7 @@
 //
 
 import RealityKit
-import SpatialShoesScene
+import SpatialShoesVolumetricScene
 import SwiftUI
 
 struct VolumetricWindowView: View {
@@ -23,16 +23,16 @@ struct VolumetricWindowView: View {
         RealityView { content in
             guard let selectedShoe = catalogViewModel.selectedShoe else { return }
             do {
-                let shoe = try await Entity(named: selectedShoe.model3DName, in: SpatialShoesScene.spatialShoesSceneBundle)
+                let shoe = try await Entity(named: selectedShoe.model3DName, in: spatialShoesVolumetricSceneBundle)
                 content.add(shoe)
             } catch let error as VolumetricWindowError {
                 errorMessage = error.message
                 showAlert = true
-                print("❌ [ERROR] \(errorMessage)")
+                print("❌ [ERROR] \(error.localizedDescription)")
             } catch {
                 errorMessage = Localizables.unknownError
                 showAlert = true
-                print("❌ [ERROR] \(errorMessage)")
+                print("❌ [ERROR] \(error.localizedDescription)")
             }
         } placeholder: {
             if let selectedShoe = catalogViewModel.selectedShoe {
