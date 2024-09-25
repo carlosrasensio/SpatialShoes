@@ -28,11 +28,11 @@ struct VolumetricWindowView: View {
             } catch let error as VolumetricWindowError {
                 errorMessage = error.message
                 showAlert = true
-                print("❌ [ERROR] \(errorMessage)")
+                print("❌ [ERROR] \(error.localizedDescription)")
             } catch {
                 errorMessage = Localizables.unknownError
                 showAlert = true
-                print("❌ [ERROR] \(errorMessage)")
+                print("❌ [ERROR] \(error.localizedDescription)")
             }
         } placeholder: {
             if let selectedShoe = catalogViewModel.selectedShoe {
