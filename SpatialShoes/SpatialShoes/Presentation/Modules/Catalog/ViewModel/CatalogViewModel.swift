@@ -41,12 +41,12 @@ final class CatalogViewModel {
             errorMessage = error.message
             showLoader = false
             showAlert = true
-            print("❌ [ERROR] \(errorMessage)")
+            print("❌ [ERROR] \(error.localizedDescription)")
         } catch {
             errorMessage = Localizables.Errors.unknown
             showLoader = false
             showAlert = true
-            print("❌ [ERROR] \(errorMessage)")
+            print("❌ [ERROR] \(error.localizedDescription)")
         }
     }
 }

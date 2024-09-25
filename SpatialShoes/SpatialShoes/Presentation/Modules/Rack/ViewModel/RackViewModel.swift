@@ -43,12 +43,12 @@ final class RackViewModel {
             errorMessage = error.message
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.Errors.unknown)")
+            print("❌ [ERROR] \(error.localizedDescription)")
         } catch {
             errorMessage = Global.Localizables.Errors.unknown
             showLoader = true
             showAlert = true
-            print("❌ [ERROR] \(errorMessage ?? Global.Localizables.Errors.unknown)")
+            print("❌ [ERROR] \(error.localizedDescription)")
         }
     }
 }

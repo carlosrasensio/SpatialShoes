@@ -33,6 +33,7 @@
 		70500CB42C97B21D0042D23D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70500CB32C97B21D0042D23D /* SplashView.swift */; };
 		705CAD1C2C9E52E40024F31B /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CAD1B2C9E52E10024F31B /* Shoe.swift */; };
 		705CAD202C9E5A880024F31B /* ShoeDTO+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CAD1F2C9E5A860024F31B /* ShoeDTO+.swift */; };
+		706323A52CA48C1200DEB8AA /* SpatialShoesVolumetricScene in Frameworks */ = {isa = PBXBuildFile; productRef = 706323A42CA48C1200DEB8AA /* SpatialShoesVolumetricScene */; };
 		706AFAE72C9DED1D00585A5D /* Model3DRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AFAE62C9DECF600585A5D /* Model3DRotation.swift */; };
 		706C010A2C9D02220055F7F3 /* VolumetricWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */; };
 		706C010D2C9D039E0055F7F3 /* VolumetricWindowView_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706C010C2C9D03930055F7F3 /* VolumetricWindowView_Preview.swift */; };
@@ -101,6 +102,7 @@
 		70500CB32C97B21D0042D23D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		705CAD1B2C9E52E10024F31B /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
 		705CAD1F2C9E5A860024F31B /* ShoeDTO+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoeDTO+.swift"; sourceTree = "<group>"; };
+		706323A32CA48C0A00DEB8AA /* SpatialShoesVolumetricScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpatialShoesVolumetricScene; sourceTree = "<group>"; };
 		706AFAE62C9DECF600585A5D /* Model3DRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model3DRotation.swift; sourceTree = "<group>"; };
 		706C01092C9D02220055F7F3 /* VolumetricWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView.swift; sourceTree = "<group>"; };
 		706C010C2C9D03930055F7F3 /* VolumetricWindowView_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricWindowView_Preview.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				700D70582C9D00A1007815EF /* SpatialShoesScene in Frameworks */,
+				706323A52CA48C1200DEB8AA /* SpatialShoesVolumetricScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +601,7 @@
 		70E527812C9A428600C65367 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				706323A32CA48C0A00DEB8AA /* SpatialShoesVolumetricScene */,
 				700D70562C9D0092007815EF /* SpatialShoesScene */,
 			);
 			path = Packages;
@@ -692,6 +696,7 @@
 			name = SpatialShoes;
 			packageProductDependencies = (
 				700D70572C9D00A1007815EF /* SpatialShoesScene */,
+				706323A42CA48C1200DEB8AA /* SpatialShoesVolumetricScene */,
 			);
 			productName = SpatialShoes;
 			productReference = 707516782C93A680000BEE92 /* SpatialShoes.app */;
@@ -1095,6 +1100,10 @@
 		700D70572C9D00A1007815EF /* SpatialShoesScene */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpatialShoesScene;
+		};
+		706323A42CA48C1200DEB8AA /* SpatialShoesVolumetricScene */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpatialShoesVolumetricScene;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
