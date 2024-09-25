@@ -51,7 +51,6 @@
 		708376FD2C93D1DF008DC7AB /* JSONManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */; };
 		708376FF2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708376FE2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift */; };
 		708377012C93D355008DC7AB /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 708377002C93D355008DC7AB /* ShoesTest.json */; };
-		70B586FB2CA486F2001B6F04 /* SpatialShoesVolumetricScene in Frameworks */ = {isa = PBXBuildFile; productRef = 70B586FA2CA486F2001B6F04 /* SpatialShoesVolumetricScene */; };
 		70E5277C2C9A38D500C65367 /* GetShoesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */; };
 		70E5277E2C9A390700C65367 /* ShoesTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 70E5277D2C9A390700C65367 /* ShoesTest.json */; };
 		70E5278B2C9A659800C65367 /* RealityPanelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5278A2C9A659300C65367 /* RealityPanelViewTest.swift */; };
@@ -122,7 +121,6 @@
 		708376FC2C93D1DF008DC7AB /* JSONManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerTests.swift; sourceTree = "<group>"; };
 		708376FE2C93D1F0008DC7AB /* GetShoesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepositoryTests.swift; sourceTree = "<group>"; };
 		708377002C93D355008DC7AB /* ShoesTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
-		70B586F92CA4867F001B6F04 /* SpatialShoesVolumetricScene */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpatialShoesVolumetricScene; sourceTree = "<group>"; };
 		70E5277B2C9A38C500C65367 /* GetShoesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoesRepositoryTest.swift; sourceTree = "<group>"; };
 		70E5277D2C9A390700C65367 /* ShoesTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShoesTest.json; sourceTree = "<group>"; };
 		70E5278A2C9A659300C65367 /* RealityPanelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityPanelViewTest.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				700D70582C9D00A1007815EF /* SpatialShoesScene in Frameworks */,
-				70B586FB2CA486F2001B6F04 /* SpatialShoesVolumetricScene in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				700D70562C9D0092007815EF /* SpatialShoesScene */,
-				70B586F92CA4867F001B6F04 /* SpatialShoesVolumetricScene */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -693,7 +689,6 @@
 			name = SpatialShoes;
 			packageProductDependencies = (
 				700D70572C9D00A1007815EF /* SpatialShoesScene */,
-				70B586FA2CA486F2001B6F04 /* SpatialShoesVolumetricScene */,
 			);
 			productName = SpatialShoes;
 			productReference = 707516782C93A680000BEE92 /* SpatialShoes.app */;
@@ -1096,10 +1091,6 @@
 		700D70572C9D00A1007815EF /* SpatialShoesScene */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpatialShoesScene;
-		};
-		70B586FA2CA486F2001B6F04 /* SpatialShoesVolumetricScene */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SpatialShoesVolumetricScene;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
